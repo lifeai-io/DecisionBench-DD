@@ -1,0 +1,677 @@
+{
+  "R001": {
+    "condition": "freeform",
+    "run": 11,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R002": {
+    "condition": "prose",
+    "run": 40,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R003": {
+    "condition": "contract",
+    "run": 18,
+    "original_label": "COMPLIANT"
+  },
+  "R004": {
+    "condition": "freeform",
+    "run": 49,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R005": {
+    "condition": "contract",
+    "run": 21,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R006": {
+    "condition": "prose",
+    "run": 35,
+    "original_label": "COMPLIANT"
+  },
+  "R007": {
+    "condition": "contract",
+    "run": 42,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R008": {
+    "condition": "contract",
+    "run": 41,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R009": {
+    "condition": "prose",
+    "run": 22,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R010": {
+    "condition": "contract",
+    "run": 14,
+    "original_label": "COMPLIANT"
+  },
+  "R011": {
+    "condition": "freeform",
+    "run": 14,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R012": {
+    "condition": "contract",
+    "run": 26,
+    "original_label": "COMPLIANT"
+  },
+  "R013": {
+    "condition": "freeform",
+    "run": 16,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R014": {
+    "condition": "contract",
+    "run": 34,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R015": {
+    "condition": "freeform",
+    "run": 18,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R016": {
+    "condition": "contract",
+    "run": 30,
+    "original_label": "COMPLIANT"
+  },
+  "R017": {
+    "condition": "freeform",
+    "run": 33,
+    "original_label": "COMPLIANT"
+  },
+  "R018": {
+    "condition": "prose",
+    "run": 39,
+    "original_label": "COMPLIANT"
+  },
+  "R019": {
+    "condition": "prose",
+    "run": 29,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R020": {
+    "condition": "freeform",
+    "run": 48,
+    "original_label": "COMPLIANT"
+  },
+  "R021": {
+    "condition": "contract",
+    "run": 11,
+    "original_label": "COMPLIANT"
+  },
+  "R022": {
+    "condition": "contract",
+    "run": 37,
+    "original_label": "COMPLIANT"
+  },
+  "R023": {
+    "condition": "freeform",
+    "run": 35,
+    "original_label": "COMPLIANT"
+  },
+  "R024": {
+    "condition": "contract",
+    "run": 6,
+    "original_label": "COMPLIANT"
+  },
+  "R025": {
+    "condition": "prose",
+    "run": 42,
+    "original_label": "COMPLIANT"
+  },
+  "R026": {
+    "condition": "prose",
+    "run": 9,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R027": {
+    "condition": "prose",
+    "run": 6,
+    "original_label": "COMPLIANT"
+  },
+  "R028": {
+    "condition": "contract",
+    "run": 33,
+    "original_label": "COMPLIANT"
+  },
+  "R029": {
+    "condition": "contract",
+    "run": 9,
+    "original_label": "COMPLIANT"
+  },
+  "R030": {
+    "condition": "prose",
+    "run": 10,
+    "original_label": "COMPLIANT"
+  },
+  "R031": {
+    "condition": "prose",
+    "run": 7,
+    "original_label": "COMPLIANT"
+  },
+  "R032": {
+    "condition": "freeform",
+    "run": 24,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R033": {
+    "condition": "contract",
+    "run": 32,
+    "original_label": "COMPLIANT"
+  },
+  "R034": {
+    "condition": "freeform",
+    "run": 6,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R035": {
+    "condition": "contract",
+    "run": 22,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R036": {
+    "condition": "contract",
+    "run": 7,
+    "original_label": "COMPLIANT"
+  },
+  "R037": {
+    "condition": "freeform",
+    "run": 31,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R038": {
+    "condition": "freeform",
+    "run": 26,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R039": {
+    "condition": "prose",
+    "run": 15,
+    "original_label": "COMPLIANT"
+  },
+  "R040": {
+    "condition": "prose",
+    "run": 50,
+    "original_label": "COMPLIANT"
+  },
+  "R041": {
+    "condition": "freeform",
+    "run": 44,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R042": {
+    "condition": "freeform",
+    "run": 12,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R043": {
+    "condition": "prose",
+    "run": 43,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R044": {
+    "condition": "contract",
+    "run": 13,
+    "original_label": "COMPLIANT"
+  },
+  "R045": {
+    "condition": "contract",
+    "run": 44,
+    "original_label": "COMPLIANT"
+  },
+  "R046": {
+    "condition": "freeform",
+    "run": 25,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R047": {
+    "condition": "contract",
+    "run": 35,
+    "original_label": "COMPLIANT"
+  },
+  "R048": {
+    "condition": "contract",
+    "run": 28,
+    "original_label": "COMPLIANT"
+  },
+  "R049": {
+    "condition": "contract",
+    "run": 24,
+    "original_label": "COMPLIANT"
+  },
+  "R050": {
+    "condition": "prose",
+    "run": 28,
+    "original_label": "COMPLIANT"
+  },
+  "R051": {
+    "condition": "freeform",
+    "run": 29,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R052": {
+    "condition": "contract",
+    "run": 48,
+    "original_label": "COMPLIANT"
+  },
+  "R053": {
+    "condition": "prose",
+    "run": 12,
+    "original_label": "COMPLIANT"
+  },
+  "R054": {
+    "condition": "contract",
+    "run": 39,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R055": {
+    "condition": "prose",
+    "run": 33,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R056": {
+    "condition": "contract",
+    "run": 45,
+    "original_label": "COMPLIANT"
+  },
+  "R057": {
+    "condition": "contract",
+    "run": 38,
+    "original_label": "COMPLIANT"
+  },
+  "R058": {
+    "condition": "freeform",
+    "run": 42,
+    "original_label": "COMPLIANT"
+  },
+  "R059": {
+    "condition": "prose",
+    "run": 45,
+    "original_label": "COMPLIANT"
+  },
+  "R060": {
+    "condition": "prose",
+    "run": 26,
+    "original_label": "COMPLIANT"
+  },
+  "R061": {
+    "condition": "freeform",
+    "run": 46,
+    "original_label": "COMPLIANT"
+  },
+  "R062": {
+    "condition": "contract",
+    "run": 43,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R063": {
+    "condition": "contract",
+    "run": 17,
+    "original_label": "COMPLIANT"
+  },
+  "R064": {
+    "condition": "freeform",
+    "run": 30,
+    "original_label": "COMPLIANT"
+  },
+  "R065": {
+    "condition": "prose",
+    "run": 49,
+    "original_label": "COMPLIANT"
+  },
+  "R066": {
+    "condition": "freeform",
+    "run": 45,
+    "original_label": "COMPLIANT"
+  },
+  "R067": {
+    "condition": "freeform",
+    "run": 7,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R068": {
+    "condition": "contract",
+    "run": 50,
+    "original_label": "COMPLIANT"
+  },
+  "R069": {
+    "condition": "freeform",
+    "run": 23,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R070": {
+    "condition": "contract",
+    "run": 40,
+    "original_label": "COMPLIANT"
+  },
+  "R071": {
+    "condition": "freeform",
+    "run": 22,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R072": {
+    "condition": "freeform",
+    "run": 19,
+    "original_label": "COMPLIANT"
+  },
+  "R073": {
+    "condition": "prose",
+    "run": 41,
+    "original_label": "COMPLIANT"
+  },
+  "R074": {
+    "condition": "contract",
+    "run": 49,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R075": {
+    "condition": "contract",
+    "run": 20,
+    "original_label": "COMPLIANT"
+  },
+  "R076": {
+    "condition": "prose",
+    "run": 23,
+    "original_label": "COMPLIANT"
+  },
+  "R077": {
+    "condition": "freeform",
+    "run": 8,
+    "original_label": "COMPLIANT"
+  },
+  "R078": {
+    "condition": "prose",
+    "run": 48,
+    "original_label": "COMPLIANT"
+  },
+  "R079": {
+    "condition": "freeform",
+    "run": 36,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R080": {
+    "condition": "prose",
+    "run": 47,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R081": {
+    "condition": "prose",
+    "run": 14,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R082": {
+    "condition": "prose",
+    "run": 34,
+    "original_label": "COMPLIANT"
+  },
+  "R083": {
+    "condition": "prose",
+    "run": 27,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R084": {
+    "condition": "contract",
+    "run": 27,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R085": {
+    "condition": "freeform",
+    "run": 28,
+    "original_label": "COMPLIANT"
+  },
+  "R086": {
+    "condition": "contract",
+    "run": 47,
+    "original_label": "COMPLIANT"
+  },
+  "R087": {
+    "condition": "contract",
+    "run": 19,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R088": {
+    "condition": "freeform",
+    "run": 21,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R089": {
+    "condition": "prose",
+    "run": 13,
+    "original_label": "COMPLIANT"
+  },
+  "R090": {
+    "condition": "prose",
+    "run": 38,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R091": {
+    "condition": "prose",
+    "run": 44,
+    "original_label": "COMPLIANT"
+  },
+  "R092": {
+    "condition": "prose",
+    "run": 11,
+    "original_label": "COMPLIANT"
+  },
+  "R093": {
+    "condition": "prose",
+    "run": 31,
+    "original_label": "COMPLIANT"
+  },
+  "R094": {
+    "condition": "freeform",
+    "run": 27,
+    "original_label": "COMPLIANT"
+  },
+  "R095": {
+    "condition": "contract",
+    "run": 46,
+    "original_label": "COMPLIANT"
+  },
+  "R096": {
+    "condition": "contract",
+    "run": 31,
+    "original_label": "COMPLIANT"
+  },
+  "R097": {
+    "condition": "freeform",
+    "run": 41,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R098": {
+    "condition": "contract",
+    "run": 15,
+    "original_label": "COMPLIANT"
+  },
+  "R099": {
+    "condition": "prose",
+    "run": 16,
+    "original_label": "COMPLIANT"
+  },
+  "R100": {
+    "condition": "prose",
+    "run": 18,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R101": {
+    "condition": "prose",
+    "run": 19,
+    "original_label": "COMPLIANT"
+  },
+  "R102": {
+    "condition": "prose",
+    "run": 24,
+    "original_label": "COMPLIANT"
+  },
+  "R103": {
+    "condition": "prose",
+    "run": 37,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R104": {
+    "condition": "prose",
+    "run": 25,
+    "original_label": "COMPLIANT"
+  },
+  "R105": {
+    "condition": "freeform",
+    "run": 34,
+    "original_label": "COMPLIANT"
+  },
+  "R106": {
+    "condition": "prose",
+    "run": 20,
+    "original_label": "COMPLIANT"
+  },
+  "R107": {
+    "condition": "freeform",
+    "run": 38,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R108": {
+    "condition": "freeform",
+    "run": 15,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R109": {
+    "condition": "freeform",
+    "run": 47,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R110": {
+    "condition": "contract",
+    "run": 12,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R111": {
+    "condition": "prose",
+    "run": 21,
+    "original_label": "COMPLIANT"
+  },
+  "R112": {
+    "condition": "contract",
+    "run": 16,
+    "original_label": "COMPLIANT"
+  },
+  "R113": {
+    "condition": "prose",
+    "run": 8,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R114": {
+    "condition": "prose",
+    "run": 36,
+    "original_label": "COMPLIANT"
+  },
+  "R115": {
+    "condition": "freeform",
+    "run": 17,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R116": {
+    "condition": "freeform",
+    "run": 10,
+    "original_label": "COMPLIANT"
+  },
+  "R117": {
+    "condition": "contract",
+    "run": 23,
+    "original_label": "COMPLIANT"
+  },
+  "R118": {
+    "condition": "freeform",
+    "run": 40,
+    "original_label": "COMPLIANT"
+  },
+  "R119": {
+    "condition": "freeform",
+    "run": 32,
+    "original_label": "COMPLIANT"
+  },
+  "R120": {
+    "condition": "freeform",
+    "run": 39,
+    "original_label": "COMPLIANT"
+  },
+  "R121": {
+    "condition": "freeform",
+    "run": 13,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R122": {
+    "condition": "contract",
+    "run": 8,
+    "original_label": "COMPLIANT"
+  },
+  "R123": {
+    "condition": "freeform",
+    "run": 37,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R124": {
+    "condition": "prose",
+    "run": 30,
+    "original_label": "COMPLIANT"
+  },
+  "R125": {
+    "condition": "prose",
+    "run": 17,
+    "original_label": "COMPLIANT"
+  },
+  "R126": {
+    "condition": "freeform",
+    "run": 50,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R127": {
+    "condition": "contract",
+    "run": 36,
+    "original_label": "COMPLIANT"
+  },
+  "R128": {
+    "condition": "prose",
+    "run": 46,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R129": {
+    "condition": "contract",
+    "run": 29,
+    "original_label": "COMPLIANT"
+  },
+  "R130": {
+    "condition": "contract",
+    "run": 10,
+    "original_label": "COMPLIANT"
+  },
+  "R131": {
+    "condition": "prose",
+    "run": 32,
+    "original_label": "COMPLIANT"
+  },
+  "R132": {
+    "condition": "contract",
+    "run": 25,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R133": {
+    "condition": "freeform",
+    "run": 20,
+    "original_label": "NON-COMPLIANT"
+  },
+  "R134": {
+    "condition": "freeform",
+    "run": 43,
+    "original_label": "COMPLIANT"
+  },
+  "R135": {
+    "condition": "freeform",
+    "run": 9,
+    "original_label": "NON-COMPLIANT"
+  }
+}

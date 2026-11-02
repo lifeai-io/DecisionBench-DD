@@ -1,0 +1,115 @@
+{
+  "pooled": {
+    "molmim": {
+      "tool": "molmim",
+      "run_id": "pooled",
+      "requested": 300,
+      "returned": 300,
+      "valid_count": 295,
+      "validity_pct": 98.33333333333333,
+      "unique_count": 295,
+      "uniqueness_pct": 100.0,
+      "exact_seed_count": 0,
+      "exact_seed_rate_pct": 0.0,
+      "tanimoto_to_seed_mean": 0.16960579602408607,
+      "tanimoto_to_seed_median": 0.16666666666666666,
+      "internal_diversity": 0.8390303444648483,
+      "unique_scaffold_count": 267,
+      "seed_scaffold_retention_pct": 0.0,
+      "qed_mean": 0.7546493126260454,
+      "qed_median": 0.7795749940939869,
+      "sa_score_mean": 3.337003392026993,
+      "sa_score_median": 3.2925885661660264,
+      "mw_mean": 350.8282711864408,
+      "clogp_mean": 3.1197877966101712,
+      "tpsa_mean": 49.48722033898305,
+      "pains_pass_rate_pct": 98.30508474576271,
+      "r_brenk_pct": 42.71186440677966,
+      "r_seed_alert_pct": 0.0,
+      "r_new_alert_pct": 42.71186440677966,
+      "qualified_count": 2,
+      "qualified_yield_pct": 0.6666666666666667,
+      "qualified_yield_ci95_lo_pct": 0.0,
+      "qualified_yield_ci95_hi_pct": 1.6666666666666667,
+      "runtime_seconds": 6.3213333333333335,
+      "molecules_per_second": 15.83045235923608,
+      "run_to_run_validity_pct_stdev": 2.0816659994661326,
+      "run_to_run_qualified_yield_pct_stdev": 0.5773502691896257,
+      "cross_replicate_duplicate_canonical_smiles": 0
+    }
+  },
+  "funnel": [
+    {
+      "tool": "molmim",
+      "stage": "requested",
+      "count": 300,
+      "pct_of_requested": 100.0
+    },
+    {
+      "tool": "molmim",
+      "stage": "valid",
+      "count": 295,
+      "pct_of_requested": 98.33333333333333
+    },
+    {
+      "tool": "molmim",
+      "stage": "unique",
+      "count": 295,
+      "pct_of_requested": 98.33333333333333
+    },
+    {
+      "tool": "molmim",
+      "stage": "not_exact_seed",
+      "count": 295,
+      "pct_of_requested": 98.33333333333333
+    },
+    {
+      "tool": "molmim",
+      "stage": "similarity_band_0.30_to_0.95",
+      "count": 4,
+      "pct_of_requested": 1.3333333333333333
+    },
+    {
+      "tool": "molmim",
+      "stage": "qed",
+      "count": 4,
+      "pct_of_requested": 1.3333333333333333
+    },
+    {
+      "tool": "molmim",
+      "stage": "sa_score",
+      "count": 4,
+      "pct_of_requested": 1.3333333333333333
+    },
+    {
+      "tool": "molmim",
+      "stage": "molecular_weight",
+      "count": 4,
+      "pct_of_requested": 1.3333333333333333
+    },
+    {
+      "tool": "molmim",
+      "stage": "clogp",
+      "count": 4,
+      "pct_of_requested": 1.3333333333333333
+    },
+    {
+      "tool": "molmim",
+      "stage": "tpsa",
+      "count": 4,
+      "pct_of_requested": 1.3333333333333333
+    },
+    {
+      "tool": "molmim",
+      "stage": "no_pains",
+      "count": 4,
+      "pct_of_requested": 1.3333333333333333
+    },
+    {
+      "tool": "molmim",
+      "stage": "chemically_qualified",
+      "count": 2,
+      "pct_of_requested": 0.6666666666666666
+    }
+  ]
+}

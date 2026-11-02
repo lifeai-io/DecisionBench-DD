@@ -1,0 +1,24 @@
+{
+  "files": {
+    "candidate_manifest.csv": {
+      "sha256": "f8081c02611f609f16391a8c452661b805b67f4fcebd8f8399b15bb2e1c9a6df",
+      "bytes": 12119
+    },
+    "chemical_gate_audit.csv": {
+      "sha256": "89d79f794fdddd5cc3520f2c5200e527ccd8fe0f3ef76d374e672f73a53ea052",
+      "bytes": 167513
+    },
+    "candidate_manifest_summary.json": {
+      "sha256": "116d2cbe880f811115678844bfce6f58cbc4ee3bffe8d49c8f21243aec366863",
+      "bytes": 1768
+    },
+    "downstream_gcase_screening_protocol.md": {
+      "sha256": "8837b1b585becc18a735c635a0dccc2f7e25c62561a01bda291076d705146dc4",
+      "bytes": 8948
+    },
+    "README.md": {
+      "sha256": "3e4b964b085bf20a3bd5f21595d2fa5fa20ebf18b4b25f2e9a555ae68a2453a8",
+      "bytes": 733
+    }
+  }
+}

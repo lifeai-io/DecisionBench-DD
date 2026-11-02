@@ -1,0 +1,22 @@
+rdkit==2026.3.5
+numpy==2.5.2
+biopython==1.88
+pdb2pqr==3.7.1
+admet_ai==2.0.1
+molbloom==3.2.0
+scipy==1.18.0
+loguru==0.7.3
+statsmodels==0.15.0
+pandas==3.0.5
+matplotlib==3.11.1
+
+# dimorphite_dl==2.0.2 is intentionally NOT listed above: its published metadata
+# declares "rdkit<2026,>=2020.3.3", which makes pip's resolver reject this file
+# outright once rdkit==2026.3.5 is also requested. That upper bound is stale --
+# dimorphite_dl 2.0.2 runs correctly against rdkit 2026.3.5 (verified: used to
+# prepare all candidate-screen ligand microstates in this repo) -- so install it
+# separately, after this file, with its dependency check skipped:
+#   pip install -r requirements.txt
+#   pip install --no-deps dimorphite_dl==2.0.2
+# loguru (dimorphite_dl's only other dependency) is pinned above so --no-deps
+# doesn't leave it missing.

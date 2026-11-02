@@ -1,0 +1,33 @@
+{
+  "status": "success",
+  "molecules": [
+    {
+      "smiles": "C1=C(C(=C(C=C1Br)Br)N)CNC2CCC(CC2)O",
+      "score": 0.91
+    },
+    {
+      "smiles": "C1=C(C(=C(C=C1Cl)Br)N)CNC2CCC(CC2)O",
+      "score": 0.85
+    },
+    {
+      "smiles": "C1=C(C(=C(C=C1Cl)Br)N)CNC2CCC(CC2)O",
+      "score": 0.85
+    },
+    {
+      "smiles": "C1CC(N)(",
+      "score": null
+    },
+    {
+      "smiles": "CC(C)Cc1ccc(cc1)C(C)C(=O)O",
+      "score": 0.62
+    },
+    {
+      "smiles": "O=C1CSC(=S)N1",
+      "score": 0.4
+    },
+    {
+      "smiles": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+      "score": 0.1
+    }
+  ]
+}

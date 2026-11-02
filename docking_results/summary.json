@@ -1,0 +1,48 @@
+{
+  "gnina": {
+    "n_cases": 14,
+    "n_failed": 0,
+    "n_poses_charge_artifact_fixed": 0,
+    "success_at_1_2.0A_pct": 21.428571428571427,
+    "success_at_5_2.0A_pct": 57.142857142857146,
+    "median_top1_rmsd": 4.639280071708111,
+    "median_best_of_n_rmsd": 1.5544200100031784,
+    "top1_pose_valid_pct": 100.0,
+    "all_pose_valid_pct": 100.0,
+    "by_stratum": {
+      "allosteric": {
+        "n": 11,
+        "success_at_1_2.0A_pct": 27.272727272727273,
+        "success_at_5_2.0A_pct": 54.54545454545455
+      },
+      "active_site_chaperone": {
+        "n": 3,
+        "success_at_1_2.0A_pct": 0.0,
+        "success_at_5_2.0A_pct": 66.66666666666667
+      }
+    }
+  },
+  "diffdock": {
+    "n_cases": 14,
+    "n_failed": 0,
+    "n_poses_charge_artifact_fixed": 15,
+    "success_at_1_2.0A_pct": 14.285714285714286,
+    "success_at_5_2.0A_pct": 14.285714285714286,
+    "median_top1_rmsd": 4.2569374278944805,
+    "median_best_of_n_rmsd": 4.012898122992604,
+    "top1_pose_valid_pct": 78.57142857142857,
+    "all_pose_valid_pct": 64.28571428571429,
+    "by_stratum": {
+      "allosteric": {
+        "n": 11,
+        "success_at_1_2.0A_pct": 9.090909090909092,
+        "success_at_5_2.0A_pct": 9.090909090909092
+      },
+      "active_site_chaperone": {
+        "n": 3,
+        "success_at_1_2.0A_pct": 33.333333333333336,
+        "success_at_5_2.0A_pct": 33.333333333333336
+      }
+    }
+  }
+}

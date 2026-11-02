@@ -1,0 +1,128 @@
+{
+  "tool": "gnina",
+  "docker_image": "gnina/gnina:latest",
+  "docker_image_digest": "gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2",
+  "git_commit": "3efb2ce7586a08df64fca2c989d7dc2cc6734505",
+  "input_file_hashes_sha256": {
+    "redocking_protocol": "d7076310b5bfa058860bb536243c073e05a4b2fc8ba8362d27d747ff6e6896f7",
+    "case_list": "38bc7ab5ab02a39b84c74783feb63a54d26c173accf1c84ca5987a83bd4fc23c",
+    "docking_boxes": "cacc01eda07fbf5082a3771482b28caefa27c323c922fd862f5e345d1ddd6eca"
+  },
+  "run_started_at_utc": "2026-08-26T02:55:27.560299+00:00",
+  "run_finished_at_utc": "2026-08-26T02:59:49.578087+00:00",
+  "cases": [
+    {
+      "pdb_id": "9F9Z",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina:latest gnina -r /workspace/decisionbench_dd_configs_v1.0/gcase_validation/receptors_prepared/9F9Z_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/gcase_validation/docking_input_ligands/9F9Z_ligand_input.sdf --center_x -31.41 --center_y 10.53 --center_z 8.5 --size_x 16.21 --size_y 18.59 --size_z 15.09 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/docking_runs/gnina/9F9Z_poses.sdf --log /workspace/docking_runs/gnina/9F9Z_gnina.log",
+      "started_at_utc": "2026-08-26T02:55:27.561342+00:00",
+      "runtime_seconds": 14.45,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "pdb_id": "9FA3",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina:latest gnina -r /workspace/decisionbench_dd_configs_v1.0/gcase_validation/receptors_prepared/9FA3_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/gcase_validation/docking_input_ligands/9FA3_ligand_input.sdf --center_x -17.66 --center_y -10.33 --center_z 8.08 --size_x 15.56 --size_y 16.68 --size_z 17.81 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/docking_runs/gnina/9FA3_poses.sdf --log /workspace/docking_runs/gnina/9FA3_gnina.log",
+      "started_at_utc": "2026-08-26T02:55:42.009097+00:00",
+      "runtime_seconds": 10.91,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "pdb_id": "9FA6",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina:latest gnina -r /workspace/decisionbench_dd_configs_v1.0/gcase_validation/receptors_prepared/9FA6_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/gcase_validation/docking_input_ligands/9FA6_ligand_input.sdf --center_x -28.38 --center_y 11.57 --center_z 5.85 --size_x 16.46 --size_y 16.24 --size_z 20.78 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/docking_runs/gnina/9FA6_poses.sdf --log /workspace/docking_runs/gnina/9FA6_gnina.log",
+      "started_at_utc": "2026-08-26T02:55:52.920765+00:00",
+      "runtime_seconds": 14.52,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "pdb_id": "9FAD",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina:latest gnina -r /workspace/decisionbench_dd_configs_v1.0/gcase_validation/receptors_prepared/9FAD_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/gcase_validation/docking_input_ligands/9FAD_ligand_input.sdf --center_x -29.05 --center_y 12.08 --center_z 5.11 --size_x 15.61 --size_y 16.99 --size_z 20.67 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/docking_runs/gnina/9FAD_poses.sdf --log /workspace/docking_runs/gnina/9FAD_gnina.log",
+      "started_at_utc": "2026-08-26T02:56:07.439041+00:00",
+      "runtime_seconds": 12.13,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "pdb_id": "9FAL",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina:latest gnina -r /workspace/decisionbench_dd_configs_v1.0/gcase_validation/receptors_prepared/9FAL_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/gcase_validation/docking_input_ligands/9FAL_ligand_input.sdf --center_x -28.31 --center_y 13.26 --center_z 5.28 --size_x 17.6 --size_y 19.62 --size_z 20.12 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/docking_runs/gnina/9FAL_poses.sdf --log /workspace/docking_runs/gnina/9FAL_gnina.log",
+      "started_at_utc": "2026-08-26T02:56:19.565395+00:00",
+      "runtime_seconds": 18.72,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "pdb_id": "9FAY",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina:latest gnina -r /workspace/decisionbench_dd_configs_v1.0/gcase_validation/receptors_prepared/9FAY_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/gcase_validation/docking_input_ligands/9FAY_ligand_input.sdf --center_x -28.64 --center_y 13.09 --center_z 5.34 --size_x 18.12 --size_y 19.55 --size_z 20.29 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/docking_runs/gnina/9FAY_poses.sdf --log /workspace/docking_runs/gnina/9FAY_gnina.log",
+      "started_at_utc": "2026-08-26T02:56:38.288482+00:00",
+      "runtime_seconds": 19.66,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "pdb_id": "9FAZ",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina:latest gnina -r /workspace/decisionbench_dd_configs_v1.0/gcase_validation/receptors_prepared/9FAZ_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/gcase_validation/docking_input_ligands/9FAZ_ligand_input.sdf --center_x -29.29 --center_y 10.31 --center_z 5.31 --size_x 19.66 --size_y 16.72 --size_z 21.02 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/docking_runs/gnina/9FAZ_poses.sdf --log /workspace/docking_runs/gnina/9FAZ_gnina.log",
+      "started_at_utc": "2026-08-26T02:56:57.948900+00:00",
+      "runtime_seconds": 19.48,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "pdb_id": "9FB2",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina:latest gnina -r /workspace/decisionbench_dd_configs_v1.0/gcase_validation/receptors_prepared/9FB2_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/gcase_validation/docking_input_ligands/9FB2_ligand_input.sdf --center_x -29.29 --center_y 9.64 --center_z 5.94 --size_x 20.55 --size_y 18.54 --size_z 22.17 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/docking_runs/gnina/9FB2_poses.sdf --log /workspace/docking_runs/gnina/9FB2_gnina.log",
+      "started_at_utc": "2026-08-26T02:57:17.426492+00:00",
+      "runtime_seconds": 26.12,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "pdb_id": "9FDI",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina:latest gnina -r /workspace/decisionbench_dd_configs_v1.0/gcase_validation/receptors_prepared/9FDI_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/gcase_validation/docking_input_ligands/9FDI_ligand_input.sdf --center_x -17.4 --center_y -10.55 --center_z 7.24 --size_x 14.17 --size_y 15.94 --size_z 19.36 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/docking_runs/gnina/9FDI_poses.sdf --log /workspace/docking_runs/gnina/9FDI_gnina.log",
+      "started_at_utc": "2026-08-26T02:57:43.547396+00:00",
+      "runtime_seconds": 8.81,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "pdb_id": "8P3E",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina:latest gnina -r /workspace/decisionbench_dd_configs_v1.0/gcase_validation/receptors_prepared/8P3E_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/gcase_validation/docking_input_ligands/8P3E_ligand_input.sdf --center_x 60.04 --center_y 56.6 --center_z 19.28 --size_x 18.15 --size_y 20.34 --size_z 23.27 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/docking_runs/gnina/8P3E_poses.sdf --log /workspace/docking_runs/gnina/8P3E_gnina.log",
+      "started_at_utc": "2026-08-26T02:57:52.357007+00:00",
+      "runtime_seconds": 31.96,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "pdb_id": "8P41",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina:latest gnina -r /workspace/decisionbench_dd_configs_v1.0/gcase_validation/receptors_prepared/8P41_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/gcase_validation/docking_input_ligands/8P41_ligand_input.sdf --center_x 58.57 --center_y 39.84 --center_z -8.22 --size_x 20.69 --size_y 19.45 --size_z 18.39 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/docking_runs/gnina/8P41_poses.sdf --log /workspace/docking_runs/gnina/8P41_gnina.log",
+      "started_at_utc": "2026-08-26T02:58:24.322268+00:00",
+      "runtime_seconds": 36.71,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "pdb_id": "3GXF",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina:latest gnina -r /workspace/decisionbench_dd_configs_v1.0/gcase_validation/receptors_prepared/3GXF_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/gcase_validation/docking_input_ligands/3GXF_ligand_input.sdf --center_x -10.38 --center_y -36.88 --center_z 40.43 --size_x 17.09 --size_y 15.93 --size_z 14.81 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/docking_runs/gnina/3GXF_poses.sdf --log /workspace/docking_runs/gnina/3GXF_gnina.log",
+      "started_at_utc": "2026-08-26T02:59:01.029258+00:00",
+      "runtime_seconds": 16.95,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "pdb_id": "6Q1N",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina:latest gnina -r /workspace/decisionbench_dd_configs_v1.0/gcase_validation/receptors_prepared/6Q1N_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/gcase_validation/docking_input_ligands/6Q1N_ligand_input.sdf --center_x -64.73 --center_y 40.68 --center_z -9.31 --size_x 19.27 --size_y 14.63 --size_z 16.77 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/docking_runs/gnina/6Q1N_poses.sdf --log /workspace/docking_runs/gnina/6Q1N_gnina.log",
+      "started_at_utc": "2026-08-26T02:59:17.981149+00:00",
+      "runtime_seconds": 11.78,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "pdb_id": "6Q1P",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina:latest gnina -r /workspace/decisionbench_dd_configs_v1.0/gcase_validation/receptors_prepared/6Q1P_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/gcase_validation/docking_input_ligands/6Q1P_ligand_input.sdf --center_x -64.8 --center_y 42.2 --center_z -9.28 --size_x 19.69 --size_y 18.49 --size_z 17.5 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/docking_runs/gnina/6Q1P_poses.sdf --log /workspace/docking_runs/gnina/6Q1P_gnina.log",
+      "started_at_utc": "2026-08-26T02:59:29.762745+00:00",
+      "runtime_seconds": 19.82,
+      "returncode": 0,
+      "success": true
+    }
+  ],
+  "gpu": true
+}

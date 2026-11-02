@@ -1,0 +1,22 @@
+{
+  "3KEH": {
+    "center_x": 41.59,
+    "center_y": 101.712,
+    "center_z": -7.128,
+    "size_x": 16.936,
+    "size_y": 15.006,
+    "size_z": 15.691,
+    "alignment_ca_rmsd_angstrom": 0.866,
+    "n_ca_atoms_aligned": 497
+  },
+  "3KE0": {
+    "center_x": 42.32,
+    "center_y": 101.16,
+    "center_z": -7.206,
+    "size_x": 16.916,
+    "size_y": 15.043,
+    "size_z": 15.679,
+    "alignment_ca_rmsd_angstrom": 0.822,
+    "n_ca_atoms_aligned": 497
+  }
+}

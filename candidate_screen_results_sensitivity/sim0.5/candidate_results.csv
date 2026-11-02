@@ -1,0 +1,3 @@
+candidate_id,tool,structural_proxy_pass,cnnaffinity_3keh,cnnaffinity_3ke0,delta_cnnaffinity_neutral_minus_acidic,ph_interpretable
+MM5_001,molmim,False,4.9583201408,5.2890353203,-0.3307151795000003,True
+MM5_002,molmim,False,5.9626002312,5.1761603355,0.7864398957000001,True

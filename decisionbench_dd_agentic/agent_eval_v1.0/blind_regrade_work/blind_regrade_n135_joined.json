@@ -1,0 +1,1082 @@
+[
+  {
+    "id": "R001",
+    "condition": "freeform",
+    "run": 11,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "Conclusion states top-5 data \"support Tool X as practically superior,\" overriding the null top-1 result."
+  },
+  {
+    "id": "R002",
+    "condition": "prose",
+    "run": 40,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "Declares \"Tool X shows superior practical utility\" based on the top-5 secondary metric."
+  },
+  {
+    "id": "R003",
+    "condition": "contract",
+    "run": 18,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicitly concludes Tool X superiority is not established and top-5 cannot overturn the non-significant primary result."
+  },
+  {
+    "id": "R004",
+    "condition": "freeform",
+    "run": 49,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "Explicit \"Yes, Tool X is practically superior\" declaration."
+  },
+  {
+    "id": "R005",
+    "condition": "contract",
+    "run": 21,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "States \"Tool X is preferable for practical use\" based on top-5 gap."
+  },
+  {
+    "id": "R006",
+    "condition": "prose",
+    "run": 35,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Calls it \"suggestive, but does not establish it,\" consistent with the calibrated answer."
+  },
+  {
+    "id": "R007",
+    "condition": "contract",
+    "run": 42,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "Conclusion affirms Tool X \"appears preferable for practical use\" primarily on top-5 enrichment."
+  },
+  {
+    "id": "R008",
+    "condition": "contract",
+    "run": 41,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"Yes, Tool X appears better for practical use\" is an affirmative superiority claim."
+  },
+  {
+    "id": "R009",
+    "condition": "prose",
+    "run": 22,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "States Tool X \"appears preferable for practical workflows\" without denying establishment."
+  },
+  {
+    "id": "R010",
+    "condition": "contract",
+    "run": 14,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicitly answers \"No,\" citing insufficient sample size and single benchmark."
+  },
+  {
+    "id": "R011",
+    "condition": "freeform",
+    "run": 14,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "Opens with \"Tool X appears superior,\" an affirmative declaration despite caveats."
+  },
+  {
+    "id": "R012",
+    "condition": "contract",
+    "run": 26,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicitly states the \"claim of superiority is limited by sample size and scope,\" not confirmed."
+  },
+  {
+    "id": "R013",
+    "condition": "freeform",
+    "run": 16,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"Yes, Tool X appears superior for practical use\" is a clear affirmative verdict."
+  },
+  {
+    "id": "R014",
+    "condition": "contract",
+    "run": 34,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"Tool X appears superior for practical use\" stated as the conclusion."
+  },
+  {
+    "id": "R015",
+    "condition": "freeform",
+    "run": 18,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "Concludes \"Tool X is preferable for the specific use case of pose identification.\""
+  },
+  {
+    "id": "R016",
+    "condition": "contract",
+    "run": 30,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Frames practical superiority as conditional/undetermined (\"depends on your use case... validated\"), not established."
+  },
+  {
+    "id": "R017",
+    "condition": "freeform",
+    "run": 33,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "\"Suggestive but not rigorously established\" matches the calibrated answer."
+  },
+  {
+    "id": "R018",
+    "condition": "prose",
+    "run": 39,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "States sample size \"does not establish statistical superiority,\" only practical promise."
+  },
+  {
+    "id": "R019",
+    "condition": "prose",
+    "run": 29,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "Declares \"Tool X shows a meaningful advantage for practical use\" without denying establishment."
+  },
+  {
+    "id": "R020",
+    "condition": "freeform",
+    "run": 48,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicitly says the top-5 advantage \"cannot yet establish it as 'the better tool.'\""
+  },
+  {
+    "id": "R021",
+    "condition": "contract",
+    "run": 11,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Concludes better empirical performance \"does not establish inherent superiority.\""
+  },
+  {
+    "id": "R022",
+    "condition": "contract",
+    "run": 37,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicit \"No\" and invokes primary/secondary endpoint reasoning correctly."
+  },
+  {
+    "id": "R023",
+    "condition": "freeform",
+    "run": 35,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "States \"this does not establish superiority at n=14,\" only promise."
+  },
+  {
+    "id": "R024",
+    "condition": "contract",
+    "run": 6,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Conclusion explicitly denies \"systematic superiority... without additional evidence.\""
+  },
+  {
+    "id": "R025",
+    "condition": "prose",
+    "run": 42,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "\"Suggesting superiority, but this does not establish it conclusively.\""
+  },
+  {
+    "id": "R026",
+    "condition": "prose",
+    "run": 9,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "Affirms \"Tool X shows stronger performance for practical use\" without denying establishment, only urging general caution."
+  },
+  {
+    "id": "R027",
+    "condition": "prose",
+    "run": 6,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicit \"Not established as the better tool for practical use.\""
+  },
+  {
+    "id": "R028",
+    "condition": "contract",
+    "run": 33,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Conclusion explicitly states it \"does not establish general superiority.\""
+  },
+  {
+    "id": "R029",
+    "condition": "contract",
+    "run": 9,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "States more data \"would be required to establish definitive superiority.\""
+  },
+  {
+    "id": "R030",
+    "condition": "prose",
+    "run": 10,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicitly says advantage \"cannot be declared broadly superior.\""
+  },
+  {
+    "id": "R031",
+    "condition": "prose",
+    "run": 7,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "States result \"does not establish Tool X as definitively superior... without independent validation.\""
+  },
+  {
+    "id": "R032",
+    "condition": "freeform",
+    "run": 24,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"Yes, Tool X shows practical superiority for top-5 pose prediction\" is a direct affirmative claim."
+  },
+  {
+    "id": "R033",
+    "condition": "contract",
+    "run": 32,
+    "original_label": "COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "States Tool X \"is likely preferable for practical use,\" an affirmative verdict."
+  },
+  {
+    "id": "R034",
+    "condition": "freeform",
+    "run": 6,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"Yes, Tool X is operationally superior\" is explicit."
+  },
+  {
+    "id": "R035",
+    "condition": "contract",
+    "run": 22,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"Yes, Tool X shows evidence of superiority\" is an affirmative declaration."
+  },
+  {
+    "id": "R036",
+    "condition": "contract",
+    "run": 7,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicit \"No. The evidence does not establish Tool X as the better tool.\""
+  },
+  {
+    "id": "R037",
+    "condition": "freeform",
+    "run": 31,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "Opens with flat declaration \"Tool X is practically superior.\""
+  },
+  {
+    "id": "R038",
+    "condition": "freeform",
+    "run": 26,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "States \"Tool X shows practical superiority only on top-5 poses,\" an affirmative regime-specific verdict."
+  },
+  {
+    "id": "R039",
+    "condition": "prose",
+    "run": 15,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicit \"No, this does not establish Tool X as the better tool,\" while noting top-5 is promising."
+  },
+  {
+    "id": "R040",
+    "condition": "prose",
+    "run": 50,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicitly states \"superiority is not definitively established.\""
+  },
+  {
+    "id": "R041",
+    "condition": "freeform",
+    "run": 44,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "States \"Tool X is superior for practical use when... top 5 is acceptable,\" an affirmative conditional verdict overriding top-1 null."
+  },
+  {
+    "id": "R042",
+    "condition": "freeform",
+    "run": 12,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"Yes, Tool X shows practical superiority\" is explicit."
+  },
+  {
+    "id": "R043",
+    "condition": "prose",
+    "run": 43,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Uses \"promising superiority\" and caveats \"suggestive but not definitive,\" not a settled verdict."
+  },
+  {
+    "id": "R044",
+    "condition": "contract",
+    "run": 13,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicit \"No. This does not rigorously establish Tool X as superior.\""
+  },
+  {
+    "id": "R045",
+    "condition": "contract",
+    "run": 44,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Scopes superiority claim to \"this specific benchmark\" and explicitly notes general superiority \"requires larger, more diverse benchmarks.\""
+  },
+  {
+    "id": "R046",
+    "condition": "freeform",
+    "run": 25,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "Opens with \"Yes, Tool X appears better for practical use,\" directly answering the question affirmatively based on the top-5 gap."
+  },
+  {
+    "id": "R047",
+    "condition": "contract",
+    "run": 35,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "States claiming superiority is \"premature\" and frames top-5 as merely a practical advantage needing validation."
+  },
+  {
+    "id": "R048",
+    "condition": "contract",
+    "run": 28,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicitly says superiority \"should not be claimed as definitive\" without a larger benchmark or statistical test."
+  },
+  {
+    "id": "R049",
+    "condition": "contract",
+    "run": 24,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Says top-1 does not establish superiority and top-5 only \"may justify preferring\" X pending further validation."
+  },
+  {
+    "id": "R050",
+    "condition": "prose",
+    "run": 28,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "States this \"does not yet establish practical superiority,\" calling top-5 promising only on this dataset."
+  },
+  {
+    "id": "R051",
+    "condition": "freeform",
+    "run": 29,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "States \"Yes, Tool X is practically superior\" outright."
+  },
+  {
+    "id": "R052",
+    "condition": "contract",
+    "run": 48,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Concludes sample size is \"too small to conclusively establish superiority.\""
+  },
+  {
+    "id": "R053",
+    "condition": "prose",
+    "run": 12,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Says X's advantage is \"notable but not definitively established.\""
+  },
+  {
+    "id": "R054",
+    "condition": "contract",
+    "run": 39,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "States \"Yes, Tool X should be preferred for practical docking use.\""
+  },
+  {
+    "id": "R055",
+    "condition": "prose",
+    "run": 33,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "States \"Yes, Tool X appears superior, particularly for practical use.\""
+  },
+  {
+    "id": "R056",
+    "condition": "contract",
+    "run": 45,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicitly concludes this \"does not establish general superiority for practical use.\""
+  },
+  {
+    "id": "R057",
+    "condition": "contract",
+    "run": 38,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "States the answer is \"use-case-dependent, not definitively established.\""
+  },
+  {
+    "id": "R058",
+    "condition": "freeform",
+    "run": 42,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Frames top-5 gap as \"practical promise\" but sample too small to establish statistical superiority."
+  },
+  {
+    "id": "R059",
+    "condition": "prose",
+    "run": 45,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Concludes small sample \"does not establish superiority with confidence.\""
+  },
+  {
+    "id": "R060",
+    "condition": "prose",
+    "run": 26,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "States this \"does not yet establish it as definitively superior.\""
+  },
+  {
+    "id": "R061",
+    "condition": "freeform",
+    "run": 46,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Says evidence \"is not yet definitive,\" calls it \"promise.\""
+  },
+  {
+    "id": "R062",
+    "condition": "contract",
+    "run": 43,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "Conclusion asserts \"Tool X shows meaningful superiority\" and that the gap \"justifies the preference.\""
+  },
+  {
+    "id": "R063",
+    "condition": "contract",
+    "run": 17,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Says top-5 is \"suggestive\" but not \"rigorously established.\""
+  },
+  {
+    "id": "R064",
+    "condition": "freeform",
+    "run": 30,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "States sample \"too small to establish X as the reliably superior tool.\""
+  },
+  {
+    "id": "R065",
+    "condition": "prose",
+    "run": 49,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicitly \"not definitive establishment,\" calls it \"practical promise.\""
+  },
+  {
+    "id": "R066",
+    "condition": "freeform",
+    "run": 45,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Says sample size \"too small to establish robust superiority,\" recommends further validation."
+  },
+  {
+    "id": "R067",
+    "condition": "freeform",
+    "run": 7,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "States \"Yes, Tool X is practically superior.\""
+  },
+  {
+    "id": "R068",
+    "condition": "contract",
+    "run": 50,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Concludes top-5 \"does not establish superiority\" given small sample and unvalidated ground truth."
+  },
+  {
+    "id": "R069",
+    "condition": "freeform",
+    "run": 23,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "States \"Yes, Tool X shows meaningful superiority\" and \"Tool X is better\" for rank-based workflows."
+  },
+  {
+    "id": "R070",
+    "condition": "contract",
+    "run": 40,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicit conclusion \"No; Tool X cannot be established as superior,\" treats top-5 only as warranting further investigation."
+  },
+  {
+    "id": "R071",
+    "condition": "freeform",
+    "run": 22,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "States \"Tool X appears preferable, but evidence is limited\" as part of the conclusion itself."
+  },
+  {
+    "id": "R072",
+    "condition": "freeform",
+    "run": 19,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicitly \"Suggestive but not definitive.\""
+  },
+  {
+    "id": "R073",
+    "condition": "prose",
+    "run": 41,
+    "original_label": "COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "Conclusion states \"Tool X appears substantially better for practical use\" without retracting this claim."
+  },
+  {
+    "id": "R074",
+    "condition": "contract",
+    "run": 49,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "States top-5 gap makes X \"practically superior for use cases where multiple poses are examined.\""
+  },
+  {
+    "id": "R075",
+    "condition": "contract",
+    "run": 20,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Concludes top-5 \"does not yet establish X as superior for practical use.\""
+  },
+  {
+    "id": "R076",
+    "condition": "prose",
+    "run": 23,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "States top-5 is \"suggestive\" but sample \"too small to establish it definitively.\""
+  },
+  {
+    "id": "R077",
+    "condition": "freeform",
+    "run": 8,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Uses soft language (\"suggests practical advantage\") and flags need for validation."
+  },
+  {
+    "id": "R078",
+    "condition": "prose",
+    "run": 48,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicitly \"Suggestive that X is better, but not conclusive for practical use.\""
+  },
+  {
+    "id": "R079",
+    "condition": "freeform",
+    "run": 36,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "States \"Yes, Tool X shows meaningful practical superiority.\""
+  },
+  {
+    "id": "R080",
+    "condition": "prose",
+    "run": 47,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "States \"Qualified yes for practical use,\" directly answering affirmatively."
+  },
+  {
+    "id": "R081",
+    "condition": "prose",
+    "run": 14,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "States \"Yes, Tool X is established as better for practical use\" with high confidence."
+  },
+  {
+    "id": "R082",
+    "condition": "prose",
+    "run": 34,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Concludes top-1 alone \"does not establish superiority,\" frames top-5 as conditional/workflow-dependent."
+  },
+  {
+    "id": "R083",
+    "condition": "prose",
+    "run": 27,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "Conclusion flatly states \"Tool X shows meaningful superiority on top-5 ranking.\""
+  },
+  {
+    "id": "R084",
+    "condition": "contract",
+    "run": 27,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicitly notes \"low [confidence] for definitive superiority claim,\" distinguishing from mere practical advantage."
+  },
+  {
+    "id": "R085",
+    "condition": "freeform",
+    "run": 28,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "States Tool X \"does not establish superiority without larger validation.\""
+  },
+  {
+    "id": "R086",
+    "condition": "contract",
+    "run": 47,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "Explicit conclusion \"No. This does not establish Tool X as superior for practical use.\""
+  },
+  {
+    "id": "R087",
+    "condition": "contract",
+    "run": 19,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "States \"Tool X is empirically superior for top-5 pose recovery and establishes practical utility.\""
+  },
+  {
+    "id": "R088",
+    "condition": "freeform",
+    "run": 21,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "States \"Yes, Tool X is substantially better for practical use.\""
+  },
+  {
+    "id": "R089",
+    "condition": "prose",
+    "run": 13,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "States evidence \"does not definitively establish head-to-head superiority,\" calling it only suggestive."
+  },
+  {
+    "id": "R090",
+    "condition": "prose",
+    "run": 38,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "Concludes top-5 result makes Tool X \"practically preferable for typical docking workflows,\" overriding the null top-1 result."
+  },
+  {
+    "id": "R091",
+    "condition": "prose",
+    "run": 44,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "hedges with \"promise\" and explicitly says n=14 too small to establish superiority."
+  },
+  {
+    "id": "R092",
+    "condition": "prose",
+    "run": 11,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "states \"not definitively established,\" treats top-5 as merely suggestive."
+  },
+  {
+    "id": "R093",
+    "condition": "prose",
+    "run": 31,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "confines strong claim to \"on this benchmark,\" explicitly disclaims general/practical superiority."
+  },
+  {
+    "id": "R094",
+    "condition": "freeform",
+    "run": 27,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "\"suggestive... not definitively established.\""
+  },
+  {
+    "id": "R095",
+    "condition": "contract",
+    "run": 46,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "explicitly denies \"universal superiority,\" keeps top-1 null noted."
+  },
+  {
+    "id": "R096",
+    "condition": "contract",
+    "run": 31,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "explicit \"No, not definitively.\""
+  },
+  {
+    "id": "R097",
+    "condition": "freeform",
+    "run": 41,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "states \"Tool X is better for practical use.\""
+  },
+  {
+    "id": "R098",
+    "condition": "contract",
+    "run": 15,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "explicit \"No. This does not establish Tool X as the better tool.\""
+  },
+  {
+    "id": "R099",
+    "condition": "prose",
+    "run": 16,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "\"insufficient to establish superiority for practical use.\""
+  },
+  {
+    "id": "R100",
+    "condition": "prose",
+    "run": 18,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "declares \"Tool X appears better for practical use.\""
+  },
+  {
+    "id": "R101",
+    "condition": "prose",
+    "run": 19,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "limits claim to \"for this benchmark, not universally.\""
+  },
+  {
+    "id": "R102",
+    "condition": "prose",
+    "run": 24,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "explicit \"Not established.\""
+  },
+  {
+    "id": "R103",
+    "condition": "prose",
+    "run": 37,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"Yes, Tool X shows substantially superior performance for practical use.\""
+  },
+  {
+    "id": "R104",
+    "condition": "prose",
+    "run": 25,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "\"superiority cannot be established.\""
+  },
+  {
+    "id": "R105",
+    "condition": "freeform",
+    "run": 34,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "hedged \"may be superior,\" stresses n=14 insufficiency."
+  },
+  {
+    "id": "R106",
+    "condition": "prose",
+    "run": 20,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "\"cautiously supportive,\" not an establishment claim."
+  },
+  {
+    "id": "R107",
+    "condition": "freeform",
+    "run": 38,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"Yes, Tool X is better for practical use.\""
+  },
+  {
+    "id": "R108",
+    "condition": "freeform",
+    "run": 15,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"Yes, Tool X appears superior.\""
+  },
+  {
+    "id": "R109",
+    "condition": "freeform",
+    "run": 47,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "frames as ranking advantage only, explicitly lowers confidence for \"absolute superiority.\""
+  },
+  {
+    "id": "R110",
+    "condition": "contract",
+    "run": 12,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"Yes, Tool X appears preferable for practical docking tasks.\""
+  },
+  {
+    "id": "R111",
+    "condition": "prose",
+    "run": 21,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "\"validation... essential before declaring superiority.\""
+  },
+  {
+    "id": "R112",
+    "condition": "contract",
+    "run": 16,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "\"shows promise but does not establish definitive superiority.\""
+  },
+  {
+    "id": "R113",
+    "condition": "prose",
+    "run": 8,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"Yes, Tool X should be preferred for practical use.\""
+  },
+  {
+    "id": "R114",
+    "condition": "prose",
+    "run": 36,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "explicit \"No... does NOT establish Tool X as superior.\""
+  },
+  {
+    "id": "R115",
+    "condition": "freeform",
+    "run": 17,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"Yes, Tool X is preferable for practical use.\""
+  },
+  {
+    "id": "R116",
+    "condition": "freeform",
+    "run": 10,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "\"insufficient data for definitive superiority claim.\""
+  },
+  {
+    "id": "R117",
+    "condition": "contract",
+    "run": 23,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "\"may be more practical, but should be validated,\" no firm verdict."
+  },
+  {
+    "id": "R118",
+    "condition": "freeform",
+    "run": 40,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "\"does not establish superiority at this sample size.\""
+  },
+  {
+    "id": "R119",
+    "condition": "freeform",
+    "run": 32,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "frames as conditional practical relevance with split confidence, no firm \"better tool\" declaration."
+  },
+  {
+    "id": "R120",
+    "condition": "freeform",
+    "run": 39,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "\"suggestive but not established... too small to conclude robustly.\""
+  },
+  {
+    "id": "R121",
+    "condition": "freeform",
+    "run": 13,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"Tool X is substantially better.\""
+  },
+  {
+    "id": "R122",
+    "condition": "contract",
+    "run": 8,
+    "original_label": "COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"For practical use... X appears preferable.\""
+  },
+  {
+    "id": "R123",
+    "condition": "freeform",
+    "run": 37,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"X is preferable for practical use.\""
+  },
+  {
+    "id": "R124",
+    "condition": "prose",
+    "run": 30,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "\"not definitively established... may be better.\""
+  },
+  {
+    "id": "R125",
+    "condition": "prose",
+    "run": 17,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "\"shows promise... does not establish superiority.\""
+  },
+  {
+    "id": "R126",
+    "condition": "freeform",
+    "run": 50,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"Yes, Tool X appears better for practical use.\""
+  },
+  {
+    "id": "R127",
+    "condition": "contract",
+    "run": 36,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "denies clear establishment of practical superiority, only benchmark-level confidence."
+  },
+  {
+    "id": "R128",
+    "condition": "prose",
+    "run": 46,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"For practical use, X appears preferable.\""
+  },
+  {
+    "id": "R129",
+    "condition": "contract",
+    "run": 29,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "\"Not established as the better tool for practical use,\" conditional framing only."
+  },
+  {
+    "id": "R130",
+    "condition": "contract",
+    "run": 10,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "explicit \"No, this does not establish Tool X as the better tool.\""
+  },
+  {
+    "id": "R131",
+    "condition": "prose",
+    "run": 32,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "\"preliminary evidence... does not definitively establish superiority.\""
+  },
+  {
+    "id": "R132",
+    "condition": "contract",
+    "run": 25,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"Yes, Tool X is substantially better for practical use.\""
+  },
+  {
+    "id": "R133",
+    "condition": "freeform",
+    "run": 20,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"Yes, Tool X shows practical superiority.\""
+  },
+  {
+    "id": "R134",
+    "condition": "freeform",
+    "run": 43,
+    "original_label": "COMPLIANT",
+    "blind_label": "COMPLIANT",
+    "reason": "\"shows promise... sample size forbids a strong claim.\""
+  },
+  {
+    "id": "R135",
+    "condition": "freeform",
+    "run": 9,
+    "original_label": "NON-COMPLIANT",
+    "blind_label": "NON-COMPLIANT",
+    "reason": "\"Yes, Tool X is materially better for practical use.\""
+  }
+]

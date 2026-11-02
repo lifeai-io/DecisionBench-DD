@@ -1,0 +1,29 @@
+{
+  "n_duplicate_decoys": 0,
+  "all_candidates_have_5_decoys": true,
+  "n_candidates": 69,
+  "n_decoys": 345,
+  "candidate_decoy_smiles_overlap": [],
+  "smd_within_target_0_10": {
+    "MW": false,
+    "HAC": true,
+    "cLogP": true,
+    "TPSA": false,
+    "HBD": false,
+    "HBA": true,
+    "RotBonds": false,
+    "RingCount": false,
+    "HalogenCount": false
+  },
+  "smd_within_tolerance_0_20": {
+    "MW": true,
+    "HAC": true,
+    "cLogP": true,
+    "TPSA": true,
+    "HBD": false,
+    "HBA": true,
+    "RotBonds": true,
+    "RingCount": true,
+    "HalogenCount": false
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "ambroxol_cnnaffinity_3keh": 6.2056255341,
+  "controls_delta_cnnaffinity_neutral_minus_acidic": {
+    "CTRL_AMBROXOL": 0.05709266670000002,
+    "CTRL_IFM": -0.18930864340000042,
+    "CTRL_P9V": -0.08756780620000004,
+    "CTRL_P8Y": -1.6863908768
+  },
+  "ambroxol_directional_sanity_check_passed": true,
+  "ph_sensitivity_endpoint_status": "exploratory_unvalidated",
+  "ph_sensitivity_evidence": {
+    "n_other_controls_positive": 0,
+    "n_other_controls_total": 3,
+    "n_candidates_favoring_neutral": 23,
+    "n_candidates_interpretable": 57
+  },
+  "ph_sensitivity_note": "Ambroxol's own directional sanity check passes (positive neutral-minus-acidic CNNaffinity delta), but this does not by itself validate the pH-sensitivity endpoint: only 0/3 of the other controls (isofagomine, P9V, P8Y) agree, and only 23/57 interpretable candidates favor the neutral state. Status is reported as 'exploratory_unvalidated': these score differences may inform exploratory prioritization but do not establish pH-dependent binding, lysosomal release, or pharmacological-chaperone behavior. The primary neutral-state structural-proxy endpoint is unaffected and remains the frozen primary result.",
+  "generators": {
+    "genmol": {
+      "n_chemically_qualified": 66,
+      "n_structural_proxy_pass": 15,
+      "Y_structural_proxy": 0.05,
+      "Y_structural_proxy_95pct_exact_binomial_ci": [
+        0.0283,
+        0.0811
+      ],
+      "R_structural_given_chemical": 0.2273,
+      "R_structural_given_chemical_95pct_exact_binomial_ci": [
+        0.1331,
+        0.347
+      ]
+    },
+    "molmim": {
+      "n_chemically_qualified": 3,
+      "n_structural_proxy_pass": 1,
+      "Y_structural_proxy": 0.0033,
+      "Y_structural_proxy_95pct_exact_binomial_ci": [
+        0.0001,
+        0.0184
+      ],
+      "R_structural_given_chemical": 0.3333,
+      "R_structural_given_chemical_95pct_exact_binomial_ci": [
+        0.0084,
+        0.9057
+      ]
+    }
+  }
+}

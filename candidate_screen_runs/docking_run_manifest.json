@@ -1,0 +1,1335 @@
+{
+  "tool": "gnina_candidate_screen",
+  "docker_image": "gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2",
+  "docker_image_digest": "gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2",
+  "git_commit": "a304f1fbcaa98590052e765d78cb15dd4aa79ab3",
+  "input_file_hashes_sha256": {
+    "docking_boxes": "c6ec60321a3aad64e5444b54e4e0f64de4f7c3673bd49a3624c6a34a4044ba9a",
+    "ligand_microstate_manifest": "d0c994bc7981dc8b0aafc2b63e774fe2343379e4e1814b85e78d311cdacc01cb"
+  },
+  "run_started_at_utc": "2026-08-26T06:50:06.882366+00:00",
+  "run_finished_at_utc": "2026-08-26T07:48:01.722817+00:00",
+  "cases": [
+    {
+      "ligand_id": "GM_001",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_001_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_001_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_001_gnina.log",
+      "started_at_utc": "2026-08-26T06:50:06.883467+00:00",
+      "runtime_seconds": 14.24,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_001",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_001_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_001_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_001_gnina.log",
+      "started_at_utc": "2026-08-26T06:50:21.126396+00:00",
+      "runtime_seconds": 13.68,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_002",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_002_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_002_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_002_gnina.log",
+      "started_at_utc": "2026-08-26T06:50:34.810144+00:00",
+      "runtime_seconds": 15.18,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_002",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_002_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_002_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_002_gnina.log",
+      "started_at_utc": "2026-08-26T06:50:49.987678+00:00",
+      "runtime_seconds": 14.56,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_003",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_003_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_003_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_003_gnina.log",
+      "started_at_utc": "2026-08-26T06:51:04.546341+00:00",
+      "runtime_seconds": 20.55,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_003",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_003_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_003_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_003_gnina.log",
+      "started_at_utc": "2026-08-26T06:51:25.094166+00:00",
+      "runtime_seconds": 19.73,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_004",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_004_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_004_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_004_gnina.log",
+      "started_at_utc": "2026-08-26T06:51:44.827028+00:00",
+      "runtime_seconds": 20.6,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_004",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_004_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_004_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_004_gnina.log",
+      "started_at_utc": "2026-08-26T06:52:05.424771+00:00",
+      "runtime_seconds": 20.14,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_005",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_005_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_005_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_005_gnina.log",
+      "started_at_utc": "2026-08-26T06:52:25.563971+00:00",
+      "runtime_seconds": 19.37,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_005",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_005_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_005_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_005_gnina.log",
+      "started_at_utc": "2026-08-26T06:52:44.933383+00:00",
+      "runtime_seconds": 18.3,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_006",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_006_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_006_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_006_gnina.log",
+      "started_at_utc": "2026-08-26T06:53:03.231032+00:00",
+      "runtime_seconds": 19.79,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_006",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_006_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_006_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_006_gnina.log",
+      "started_at_utc": "2026-08-26T06:53:23.017421+00:00",
+      "runtime_seconds": 20.57,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_007",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_007_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_007_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_007_gnina.log",
+      "started_at_utc": "2026-08-26T06:53:43.593512+00:00",
+      "runtime_seconds": 22.56,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_007",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_007_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_007_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_007_gnina.log",
+      "started_at_utc": "2026-08-26T06:54:06.158727+00:00",
+      "runtime_seconds": 21.64,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_008",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_008_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_008_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_008_gnina.log",
+      "started_at_utc": "2026-08-26T06:54:27.796986+00:00",
+      "runtime_seconds": 19.48,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_008",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_008_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_008_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_008_gnina.log",
+      "started_at_utc": "2026-08-26T06:54:47.276507+00:00",
+      "runtime_seconds": 17.25,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_009",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_009_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_009_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_009_gnina.log",
+      "started_at_utc": "2026-08-26T06:55:04.529760+00:00",
+      "runtime_seconds": 25.43,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_009",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_009_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_009_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_009_gnina.log",
+      "started_at_utc": "2026-08-26T06:55:29.965024+00:00",
+      "runtime_seconds": 26.15,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_010",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_010_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_010_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_010_gnina.log",
+      "started_at_utc": "2026-08-26T06:55:56.114589+00:00",
+      "runtime_seconds": 25.25,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_010",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_010_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_010_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_010_gnina.log",
+      "started_at_utc": "2026-08-26T06:56:21.368977+00:00",
+      "runtime_seconds": 25.72,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_011",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_011_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_011_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_011_gnina.log",
+      "started_at_utc": "2026-08-26T06:56:47.086281+00:00",
+      "runtime_seconds": 19.47,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_011",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_011_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_011_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_011_gnina.log",
+      "started_at_utc": "2026-08-26T06:57:06.556143+00:00",
+      "runtime_seconds": 18.53,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_012",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_012_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_012_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_012_gnina.log",
+      "started_at_utc": "2026-08-26T06:57:25.087318+00:00",
+      "runtime_seconds": 27.63,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_012",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_012_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_012_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_012_gnina.log",
+      "started_at_utc": "2026-08-26T06:57:52.722028+00:00",
+      "runtime_seconds": 27.51,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_013",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_013_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_013_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_013_gnina.log",
+      "started_at_utc": "2026-08-26T06:58:20.238485+00:00",
+      "runtime_seconds": 22.64,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_013",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_013_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_013_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_013_gnina.log",
+      "started_at_utc": "2026-08-26T06:58:42.882500+00:00",
+      "runtime_seconds": 22.63,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_014",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_014_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_014_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_014_gnina.log",
+      "started_at_utc": "2026-08-26T06:59:05.518853+00:00",
+      "runtime_seconds": 26.17,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_014",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_014_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_014_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_014_gnina.log",
+      "started_at_utc": "2026-08-26T06:59:31.692493+00:00",
+      "runtime_seconds": 24.03,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_015",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_015_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_015_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_015_gnina.log",
+      "started_at_utc": "2026-08-26T06:59:55.725320+00:00",
+      "runtime_seconds": 31.66,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_015",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_015_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_015_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_015_gnina.log",
+      "started_at_utc": "2026-08-26T07:00:27.387161+00:00",
+      "runtime_seconds": 29.07,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_016",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_016_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_016_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_016_gnina.log",
+      "started_at_utc": "2026-08-26T07:00:56.459353+00:00",
+      "runtime_seconds": 23.89,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_016",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_016_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_016_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_016_gnina.log",
+      "started_at_utc": "2026-08-26T07:01:20.349311+00:00",
+      "runtime_seconds": 22.15,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_017",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_017_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_017_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_017_gnina.log",
+      "started_at_utc": "2026-08-26T07:01:42.496602+00:00",
+      "runtime_seconds": 26.84,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_017",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_017_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_017_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_017_gnina.log",
+      "started_at_utc": "2026-08-26T07:02:09.334319+00:00",
+      "runtime_seconds": 24.39,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_018",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_018_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_018_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_018_gnina.log",
+      "started_at_utc": "2026-08-26T07:02:33.723172+00:00",
+      "runtime_seconds": 37.02,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_018",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_018_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_018_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_018_gnina.log",
+      "started_at_utc": "2026-08-26T07:03:10.748922+00:00",
+      "runtime_seconds": 35.26,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_019",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_019_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_019_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_019_gnina.log",
+      "started_at_utc": "2026-08-26T07:03:46.010339+00:00",
+      "runtime_seconds": 24.84,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_019",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_019_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_019_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_019_gnina.log",
+      "started_at_utc": "2026-08-26T07:04:10.852818+00:00",
+      "runtime_seconds": 23.44,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_020",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_020_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_020_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_020_gnina.log",
+      "started_at_utc": "2026-08-26T07:04:34.292967+00:00",
+      "runtime_seconds": 25.75,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_020",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_020_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_020_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_020_gnina.log",
+      "started_at_utc": "2026-08-26T07:05:00.041398+00:00",
+      "runtime_seconds": 24.67,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_021",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_021_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_021_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_021_gnina.log",
+      "started_at_utc": "2026-08-26T07:05:24.713527+00:00",
+      "runtime_seconds": 33.1,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_021",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_021_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_021_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_021_gnina.log",
+      "started_at_utc": "2026-08-26T07:05:57.818228+00:00",
+      "runtime_seconds": 32.93,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_022",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_022_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_022_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_022_gnina.log",
+      "started_at_utc": "2026-08-26T07:06:30.746277+00:00",
+      "runtime_seconds": 29.65,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_022",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_022_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_022_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_022_gnina.log",
+      "started_at_utc": "2026-08-26T07:07:00.392638+00:00",
+      "runtime_seconds": 29.1,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_023",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_023_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_023_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_023_gnina.log",
+      "started_at_utc": "2026-08-26T07:07:29.495366+00:00",
+      "runtime_seconds": 24.52,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_023",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_023_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_023_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_023_gnina.log",
+      "started_at_utc": "2026-08-26T07:07:54.020759+00:00",
+      "runtime_seconds": 24.23,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_024",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_024_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_024_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_024_gnina.log",
+      "started_at_utc": "2026-08-26T07:08:18.248761+00:00",
+      "runtime_seconds": 42.75,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_024",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_024_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_024_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_024_gnina.log",
+      "started_at_utc": "2026-08-26T07:09:00.999481+00:00",
+      "runtime_seconds": 40.81,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_025",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_025_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_025_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_025_gnina.log",
+      "started_at_utc": "2026-08-26T07:09:41.808290+00:00",
+      "runtime_seconds": 18.96,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_025",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_025_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_025_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_025_gnina.log",
+      "started_at_utc": "2026-08-26T07:10:00.765148+00:00",
+      "runtime_seconds": 19.33,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_026",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_026_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_026_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_026_gnina.log",
+      "started_at_utc": "2026-08-26T07:10:20.101051+00:00",
+      "runtime_seconds": 40.82,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_026",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_026_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_026_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_026_gnina.log",
+      "started_at_utc": "2026-08-26T07:11:00.921131+00:00",
+      "runtime_seconds": 37.67,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_027",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_027_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_027_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_027_gnina.log",
+      "started_at_utc": "2026-08-26T07:11:38.589998+00:00",
+      "runtime_seconds": 23.81,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_027",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_027_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_027_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_027_gnina.log",
+      "started_at_utc": "2026-08-26T07:12:02.399763+00:00",
+      "runtime_seconds": 22.37,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_028",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_028_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_028_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_028_gnina.log",
+      "started_at_utc": "2026-08-26T07:12:24.774222+00:00",
+      "runtime_seconds": 40.48,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_028",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_028_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_028_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_028_gnina.log",
+      "started_at_utc": "2026-08-26T07:13:05.259601+00:00",
+      "runtime_seconds": 38.0,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_029",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_029_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_029_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_029_gnina.log",
+      "started_at_utc": "2026-08-26T07:13:43.263959+00:00",
+      "runtime_seconds": 34.19,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_029",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_029_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_029_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_029_gnina.log",
+      "started_at_utc": "2026-08-26T07:14:17.456956+00:00",
+      "runtime_seconds": 30.37,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_030",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_030_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_030_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_030_gnina.log",
+      "started_at_utc": "2026-08-26T07:14:47.831179+00:00",
+      "runtime_seconds": 33.55,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_030",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_030_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_030_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_030_gnina.log",
+      "started_at_utc": "2026-08-26T07:15:21.384492+00:00",
+      "runtime_seconds": 31.97,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_031",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_031_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_031_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_031_gnina.log",
+      "started_at_utc": "2026-08-26T07:15:53.360971+00:00",
+      "runtime_seconds": 15.15,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_031",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_031_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_031_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_031_gnina.log",
+      "started_at_utc": "2026-08-26T07:16:08.510146+00:00",
+      "runtime_seconds": 14.76,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_032",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_032_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_032_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_032_gnina.log",
+      "started_at_utc": "2026-08-26T07:16:23.274760+00:00",
+      "runtime_seconds": 16.0,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_032",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_032_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_032_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_032_gnina.log",
+      "started_at_utc": "2026-08-26T07:16:39.275144+00:00",
+      "runtime_seconds": 15.25,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_033",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_033_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_033_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_033_gnina.log",
+      "started_at_utc": "2026-08-26T07:16:54.521960+00:00",
+      "runtime_seconds": 20.18,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_033",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_033_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_033_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_033_gnina.log",
+      "started_at_utc": "2026-08-26T07:17:14.701290+00:00",
+      "runtime_seconds": 19.6,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_034",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_034_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_034_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_034_gnina.log",
+      "started_at_utc": "2026-08-26T07:17:34.299793+00:00",
+      "runtime_seconds": 15.61,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_034",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_034_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_034_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_034_gnina.log",
+      "started_at_utc": "2026-08-26T07:17:49.915602+00:00",
+      "runtime_seconds": 14.78,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_035",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_035_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_035_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_035_gnina.log",
+      "started_at_utc": "2026-08-26T07:18:04.698214+00:00",
+      "runtime_seconds": 18.05,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_035",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_035_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_035_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_035_gnina.log",
+      "started_at_utc": "2026-08-26T07:18:22.745647+00:00",
+      "runtime_seconds": 17.25,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_036",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_036_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_036_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_036_gnina.log",
+      "started_at_utc": "2026-08-26T07:18:39.998741+00:00",
+      "runtime_seconds": 24.04,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_036",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_036_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_036_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_036_gnina.log",
+      "started_at_utc": "2026-08-26T07:19:04.035330+00:00",
+      "runtime_seconds": 23.53,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_037",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_037_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_037_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_037_gnina.log",
+      "started_at_utc": "2026-08-26T07:19:27.566086+00:00",
+      "runtime_seconds": 20.06,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_037",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_037_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_037_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_037_gnina.log",
+      "started_at_utc": "2026-08-26T07:19:47.625443+00:00",
+      "runtime_seconds": 18.36,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_038",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_038_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_038_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_038_gnina.log",
+      "started_at_utc": "2026-08-26T07:20:05.983269+00:00",
+      "runtime_seconds": 19.9,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_038",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_038_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_038_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_038_gnina.log",
+      "started_at_utc": "2026-08-26T07:20:25.880146+00:00",
+      "runtime_seconds": 18.65,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_039",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_039_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_039_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_039_gnina.log",
+      "started_at_utc": "2026-08-26T07:20:44.527367+00:00",
+      "runtime_seconds": 19.69,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_039",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_039_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_039_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_039_gnina.log",
+      "started_at_utc": "2026-08-26T07:21:04.220845+00:00",
+      "runtime_seconds": 18.05,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_040",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_040_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_040_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_040_gnina.log",
+      "started_at_utc": "2026-08-26T07:21:22.270640+00:00",
+      "runtime_seconds": 23.97,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_040",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_040_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_040_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_040_gnina.log",
+      "started_at_utc": "2026-08-26T07:21:46.240742+00:00",
+      "runtime_seconds": 23.28,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_041",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_041_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_041_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_041_gnina.log",
+      "started_at_utc": "2026-08-26T07:22:09.520266+00:00",
+      "runtime_seconds": 23.08,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_041",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_041_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_041_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_041_gnina.log",
+      "started_at_utc": "2026-08-26T07:22:32.600750+00:00",
+      "runtime_seconds": 23.02,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_042",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_042_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_042_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_042_gnina.log",
+      "started_at_utc": "2026-08-26T07:22:55.618887+00:00",
+      "runtime_seconds": 33.04,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_042",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_042_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_042_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_042_gnina.log",
+      "started_at_utc": "2026-08-26T07:23:28.660046+00:00",
+      "runtime_seconds": 31.67,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_043",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_043_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_043_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_043_gnina.log",
+      "started_at_utc": "2026-08-26T07:24:00.329989+00:00",
+      "runtime_seconds": 22.87,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_043",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_043_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_043_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_043_gnina.log",
+      "started_at_utc": "2026-08-26T07:24:23.200335+00:00",
+      "runtime_seconds": 22.83,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_044",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_044_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_044_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_044_gnina.log",
+      "started_at_utc": "2026-08-26T07:24:46.031840+00:00",
+      "runtime_seconds": 24.03,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_044",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_044_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_044_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_044_gnina.log",
+      "started_at_utc": "2026-08-26T07:25:10.061046+00:00",
+      "runtime_seconds": 22.33,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_045",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_045_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_045_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_045_gnina.log",
+      "started_at_utc": "2026-08-26T07:25:32.395056+00:00",
+      "runtime_seconds": 20.92,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_045",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_045_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_045_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_045_gnina.log",
+      "started_at_utc": "2026-08-26T07:25:53.320355+00:00",
+      "runtime_seconds": 19.59,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_046",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_046_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_046_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_046_gnina.log",
+      "started_at_utc": "2026-08-26T07:26:12.915570+00:00",
+      "runtime_seconds": 31.37,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_046",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_046_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_046_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_046_gnina.log",
+      "started_at_utc": "2026-08-26T07:26:44.291040+00:00",
+      "runtime_seconds": 29.23,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_047",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_047_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_047_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_047_gnina.log",
+      "started_at_utc": "2026-08-26T07:27:13.520073+00:00",
+      "runtime_seconds": 15.89,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_047",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_047_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_047_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_047_gnina.log",
+      "started_at_utc": "2026-08-26T07:27:29.409287+00:00",
+      "runtime_seconds": 15.24,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_048",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_048_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_048_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_048_gnina.log",
+      "started_at_utc": "2026-08-26T07:27:44.655883+00:00",
+      "runtime_seconds": 26.98,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_048",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_048_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_048_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_048_gnina.log",
+      "started_at_utc": "2026-08-26T07:28:11.639601+00:00",
+      "runtime_seconds": 23.69,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_049",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_049_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_049_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_049_gnina.log",
+      "started_at_utc": "2026-08-26T07:28:35.332189+00:00",
+      "runtime_seconds": 23.2,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_049",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_049_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_049_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_049_gnina.log",
+      "started_at_utc": "2026-08-26T07:28:58.536210+00:00",
+      "runtime_seconds": 22.32,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_050",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_050_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_050_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_050_gnina.log",
+      "started_at_utc": "2026-08-26T07:29:20.856613+00:00",
+      "runtime_seconds": 26.32,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_050",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_050_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_050_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_050_gnina.log",
+      "started_at_utc": "2026-08-26T07:29:47.175490+00:00",
+      "runtime_seconds": 23.66,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_051",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_051_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_051_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_051_gnina.log",
+      "started_at_utc": "2026-08-26T07:30:10.841468+00:00",
+      "runtime_seconds": 28.91,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_051",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_051_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_051_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_051_gnina.log",
+      "started_at_utc": "2026-08-26T07:30:39.751174+00:00",
+      "runtime_seconds": 27.56,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_052",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_052_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_052_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_052_gnina.log",
+      "started_at_utc": "2026-08-26T07:31:07.309134+00:00",
+      "runtime_seconds": 32.77,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_052",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_052_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_052_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_052_gnina.log",
+      "started_at_utc": "2026-08-26T07:31:40.081692+00:00",
+      "runtime_seconds": 32.63,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_053",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_053_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_053_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_053_gnina.log",
+      "started_at_utc": "2026-08-26T07:32:12.714571+00:00",
+      "runtime_seconds": 18.96,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_053",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_053_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_053_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_053_gnina.log",
+      "started_at_utc": "2026-08-26T07:32:31.672566+00:00",
+      "runtime_seconds": 18.45,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_054",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_054_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_054_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_054_gnina.log",
+      "started_at_utc": "2026-08-26T07:32:50.121510+00:00",
+      "runtime_seconds": 34.65,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_054",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_054_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_054_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_054_gnina.log",
+      "started_at_utc": "2026-08-26T07:33:24.776829+00:00",
+      "runtime_seconds": 34.41,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_055",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_055_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_055_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_055_gnina.log",
+      "started_at_utc": "2026-08-26T07:33:59.190705+00:00",
+      "runtime_seconds": 34.98,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_055",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_055_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_055_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_055_gnina.log",
+      "started_at_utc": "2026-08-26T07:34:34.174236+00:00",
+      "runtime_seconds": 32.85,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_056",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_056_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_056_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_056_gnina.log",
+      "started_at_utc": "2026-08-26T07:35:07.027786+00:00",
+      "runtime_seconds": 43.75,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_056",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_056_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_056_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_056_gnina.log",
+      "started_at_utc": "2026-08-26T07:35:50.779673+00:00",
+      "runtime_seconds": 41.68,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_057",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_057_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_057_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_057_gnina.log",
+      "started_at_utc": "2026-08-26T07:36:32.462301+00:00",
+      "runtime_seconds": 22.82,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_057",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_057_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_057_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_057_gnina.log",
+      "started_at_utc": "2026-08-26T07:36:55.283606+00:00",
+      "runtime_seconds": 21.43,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_058",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_058_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_058_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_058_gnina.log",
+      "started_at_utc": "2026-08-26T07:37:16.716148+00:00",
+      "runtime_seconds": 28.17,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_058",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_058_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_058_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_058_gnina.log",
+      "started_at_utc": "2026-08-26T07:37:44.886348+00:00",
+      "runtime_seconds": 25.58,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_059",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_059_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_059_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_059_gnina.log",
+      "started_at_utc": "2026-08-26T07:38:10.463093+00:00",
+      "runtime_seconds": 35.94,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_059",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_059_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_059_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_059_gnina.log",
+      "started_at_utc": "2026-08-26T07:38:46.403790+00:00",
+      "runtime_seconds": 35.22,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_060",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_060_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_060_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_060_gnina.log",
+      "started_at_utc": "2026-08-26T07:39:21.620443+00:00",
+      "runtime_seconds": 14.83,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_060",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_060_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_060_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_060_gnina.log",
+      "started_at_utc": "2026-08-26T07:39:36.450726+00:00",
+      "runtime_seconds": 14.16,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_061",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_061_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_061_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_061_gnina.log",
+      "started_at_utc": "2026-08-26T07:39:50.610596+00:00",
+      "runtime_seconds": 15.33,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_061",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_061_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_061_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_061_gnina.log",
+      "started_at_utc": "2026-08-26T07:40:05.938430+00:00",
+      "runtime_seconds": 14.43,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_062",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_062_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_062_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_062_gnina.log",
+      "started_at_utc": "2026-08-26T07:40:20.371475+00:00",
+      "runtime_seconds": 22.18,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_062",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_062_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_062_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_062_gnina.log",
+      "started_at_utc": "2026-08-26T07:40:42.548082+00:00",
+      "runtime_seconds": 21.87,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_063",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_063_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_063_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_063_gnina.log",
+      "started_at_utc": "2026-08-26T07:41:04.423562+00:00",
+      "runtime_seconds": 27.79,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_063",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_063_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_063_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_063_gnina.log",
+      "started_at_utc": "2026-08-26T07:41:32.210793+00:00",
+      "runtime_seconds": 25.1,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_064",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_064_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_064_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_064_gnina.log",
+      "started_at_utc": "2026-08-26T07:41:57.309917+00:00",
+      "runtime_seconds": 24.87,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_064",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_064_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_064_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_064_gnina.log",
+      "started_at_utc": "2026-08-26T07:42:22.177307+00:00",
+      "runtime_seconds": 22.81,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_065",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_065_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_065_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_065_gnina.log",
+      "started_at_utc": "2026-08-26T07:42:44.984283+00:00",
+      "runtime_seconds": 27.12,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_065",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_065_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_065_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_065_gnina.log",
+      "started_at_utc": "2026-08-26T07:43:12.110207+00:00",
+      "runtime_seconds": 24.75,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_066",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_066_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_066_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_066_gnina.log",
+      "started_at_utc": "2026-08-26T07:43:36.858523+00:00",
+      "runtime_seconds": 40.42,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "GM_066",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_066_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/GM_066_poses.sdf --log /workspace/candidate_screen_runs/3KE0/GM_066_gnina.log",
+      "started_at_utc": "2026-08-26T07:44:17.276969+00:00",
+      "runtime_seconds": 36.5,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "MM_001",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/MM_001_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/MM_001_poses.sdf --log /workspace/candidate_screen_runs/3KEH/MM_001_gnina.log",
+      "started_at_utc": "2026-08-26T07:44:53.774668+00:00",
+      "runtime_seconds": 12.06,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "MM_001",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/MM_001_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/MM_001_poses.sdf --log /workspace/candidate_screen_runs/3KE0/MM_001_gnina.log",
+      "started_at_utc": "2026-08-26T07:45:05.835850+00:00",
+      "runtime_seconds": 11.43,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "MM_002",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/MM_002_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/MM_002_poses.sdf --log /workspace/candidate_screen_runs/3KEH/MM_002_gnina.log",
+      "started_at_utc": "2026-08-26T07:45:17.271543+00:00",
+      "runtime_seconds": 17.66,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "MM_002",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/MM_002_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/MM_002_poses.sdf --log /workspace/candidate_screen_runs/3KE0/MM_002_gnina.log",
+      "started_at_utc": "2026-08-26T07:45:34.931454+00:00",
+      "runtime_seconds": 17.18,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "MM_003",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/MM_003_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/MM_003_poses.sdf --log /workspace/candidate_screen_runs/3KEH/MM_003_gnina.log",
+      "started_at_utc": "2026-08-26T07:45:52.113836+00:00",
+      "runtime_seconds": 13.67,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "MM_003",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/MM_003_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/MM_003_poses.sdf --log /workspace/candidate_screen_runs/3KE0/MM_003_gnina.log",
+      "started_at_utc": "2026-08-26T07:46:05.784573+00:00",
+      "runtime_seconds": 13.62,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "CTRL_AMBROXOL",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/CTRL_AMBROXOL_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/CTRL_AMBROXOL_poses.sdf --log /workspace/candidate_screen_runs/3KEH/CTRL_AMBROXOL_gnina.log",
+      "started_at_utc": "2026-08-26T07:46:19.403816+00:00",
+      "runtime_seconds": 14.2,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "CTRL_AMBROXOL",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/CTRL_AMBROXOL_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/CTRL_AMBROXOL_poses.sdf --log /workspace/candidate_screen_runs/3KE0/CTRL_AMBROXOL_gnina.log",
+      "started_at_utc": "2026-08-26T07:46:33.603598+00:00",
+      "runtime_seconds": 14.27,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "CTRL_IFM",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/CTRL_IFM_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/CTRL_IFM_poses.sdf --log /workspace/candidate_screen_runs/3KEH/CTRL_IFM_gnina.log",
+      "started_at_utc": "2026-08-26T07:46:47.878663+00:00",
+      "runtime_seconds": 7.47,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "CTRL_IFM",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/CTRL_IFM_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/CTRL_IFM_poses.sdf --log /workspace/candidate_screen_runs/3KE0/CTRL_IFM_gnina.log",
+      "started_at_utc": "2026-08-26T07:46:55.351935+00:00",
+      "runtime_seconds": 7.4,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "CTRL_P9V",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/CTRL_P9V_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/CTRL_P9V_poses.sdf --log /workspace/candidate_screen_runs/3KEH/CTRL_P9V_gnina.log",
+      "started_at_utc": "2026-08-26T07:47:02.755045+00:00",
+      "runtime_seconds": 10.3,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "CTRL_P9V",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/CTRL_P9V_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/CTRL_P9V_poses.sdf --log /workspace/candidate_screen_runs/3KE0/CTRL_P9V_gnina.log",
+      "started_at_utc": "2026-08-26T07:47:13.054453+00:00",
+      "runtime_seconds": 9.97,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "CTRL_P8Y",
+      "receptor_state": "3KEH",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/CTRL_P8Y_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/CTRL_P8Y_poses.sdf --log /workspace/candidate_screen_runs/3KEH/CTRL_P8Y_gnina.log",
+      "started_at_utc": "2026-08-26T07:47:23.023772+00:00",
+      "runtime_seconds": 19.75,
+      "returncode": 0,
+      "success": true
+    },
+    {
+      "ligand_id": "CTRL_P8Y",
+      "receptor_state": "3KE0",
+      "cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace gnina/gnina@sha256:9da3dc61eef272cecb60798933a9a977d028c47024845fdf1f05a941ce5e25a2 gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KE0_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/CTRL_P8Y_3KE0.sdf --center_x 42.32 --center_y 101.16 --center_z -7.206 --size_x 16.916 --size_y 15.043 --size_z 15.679 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KE0/CTRL_P8Y_poses.sdf --log /workspace/candidate_screen_runs/3KE0/CTRL_P8Y_gnina.log",
+      "started_at_utc": "2026-08-26T07:47:42.774909+00:00",
+      "runtime_seconds": 18.95,
+      "returncode": 0,
+      "success": true
+    }
+  ],
+  "gpu": true,
+  "gnina_config": {
+    "exhaustiveness": 8,
+    "num_modes": 5,
+    "seed": 42,
+    "cnn_scoring": "rescore"
+  }
+}

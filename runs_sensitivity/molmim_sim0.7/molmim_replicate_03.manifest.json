@@ -1,0 +1,23 @@
+{
+  "benchmark": "DecisionBench-DD v1.0",
+  "tool": "molmim",
+  "run_id": "replicate_03",
+  "request_config_file": "molmim_primary.json (min_similarity overridden to 0.7; sensitivity rerun, not frozen protocol)",
+  "request_started_at_iso8601": "2026-08-31T08:19:01.214078+00:00",
+  "request_finished_at_iso8601": "2026-08-31T08:19:07.421292+00:00",
+  "endpoint": "https://health.api.nvidia.com/v1/biology/nvidia/molmim/generate",
+  "service_or_model_version": "hosted_api",
+  "container_image_or_api_build": "hosted_api",
+  "hardware": {
+    "gpu_model": "hosted_api",
+    "gpu_count": null,
+    "peak_vram_gb": null
+  },
+  "runtime_seconds": 6.206,
+  "http_status": 200,
+  "requested_molecules": 100,
+  "returned_records": 100,
+  "raw_response_file": "raw/molmim_replicate_03.json",
+  "min_similarity": 0.7,
+  "notes": ""
+}

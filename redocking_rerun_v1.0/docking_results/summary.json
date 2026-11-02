@@ -1,0 +1,25 @@
+{
+  "gnina": {
+    "n_cases": 14,
+    "n_failed": 0,
+    "n_poses_charge_artifact_fixed": 0,
+    "success_at_1_2.0A_pct": 28.571428571428573,
+    "success_at_5_2.0A_pct": 64.28571428571429,
+    "median_top1_rmsd": 5.163328629273887,
+    "median_best_of_n_rmsd": 1.6299037175116695,
+    "top1_pose_valid_pct": 100.0,
+    "all_pose_valid_pct": 100.0,
+    "by_stratum": {
+      "allosteric": {
+        "n": 11,
+        "success_at_1_2.0A_pct": 18.181818181818183,
+        "success_at_5_2.0A_pct": 63.63636363636363
+      },
+      "active_site_chaperone": {
+        "n": 3,
+        "success_at_1_2.0A_pct": 66.66666666666667,
+        "success_at_5_2.0A_pct": 66.66666666666667
+      }
+    }
+  }
+}

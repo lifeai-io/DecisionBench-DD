@@ -1,0 +1,13 @@
+tool,stage,count,pct_of_requested
+molmim,requested,300,100.0
+molmim,valid,297,99.0
+molmim,unique,296,98.66666666666667
+molmim,not_exact_seed,296,98.66666666666667
+molmim,similarity_band_0.30_to_0.95,14,4.666666666666667
+molmim,qed,14,4.666666666666667
+molmim,sa_score,14,4.666666666666667
+molmim,molecular_weight,14,4.666666666666667
+molmim,clogp,14,4.666666666666667
+molmim,tpsa,14,4.666666666666667
+molmim,no_pains,14,4.666666666666667
+molmim,chemically_qualified,10,3.3333333333333335

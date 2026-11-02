@@ -1,0 +1,16 @@
+{
+  "_benchmark": "DecisionBench-DD v1.0",
+  "_tool": "GenMol NIM",
+  "_task": "Ambroxol-conditioned molecular generation",
+  "_run_policy": "Execute this identical request 3 times as independent replicates; the API exposes no documented random-seed field.",
+  "smiles": "C1=C(C(=C(C=C1Br)Br)N)CNC2CCC(CC2)O",
+  "num_molecules": 100,
+  "temperature": 1.0,
+  "noise": 1.0,
+  "gamma": 0.0,
+  "min_add_len": 24,
+  "scoring": "QED",
+  "unique": false,
+  "filter": false,
+  "_selection_rationale": "Primary benchmark uses documented GenMol NIM defaults for temperature/noise to avoid selecting the previously observed exploratory noise=0 setting."
+}

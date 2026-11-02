@@ -1,0 +1,608 @@
+{
+  "freeform": {
+    "1": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \nYes, Tool X appears better for practical use, with a strong caveat: the top-1 performance difference (3/14 vs 2/14) is not statistically significant, so the benchmark does not establish superiority at the top-1 level. However, Tool X's dramatically better top-5 enrichment (8/14 vs 2/14) shows superior ranking quality overall. For prospective use, X would be preferable despite the top-1 equivalence.\n*Confidence: Medium-High*"
+    },
+    "2": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Yes, Tool X is superior for practical docking work.\n**Reasoning:** The top-5 ranking difference (8/14 vs. 2/14) is substantial and practically meaningful. Docking users rely on ranking to identify correct poses; X succeeds far more often.\n**Caveat:** Sample size (n=14) is small; replication advisable. Top-1 difference is indeed noisy at this scale.\n**Confidence:** High"
+    },
+    "3": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n- **Conclusion:** Tool X shows promise for practical use, primarily on the top-5 metric (8/14 vs. 2/14 for Y), but the top-1 difference (3 vs. 2) is noise at n=14. Top-5 performance is what matters for real screening/reranking workflows.\n- **Caveats:** Sample size is small; statistical power is limited; need validation on independent proteins.\n- **Confidence:** 74%"
+    },
+    "4": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Yes, Tool X is superior for practical use. The top-5 result (8/14 vs. 2/14) is a clear, large effect and operationally meaningful \u2014 practitioners retrieve correct poses more often from Tool X's ranked list.\n**Caveat:** n=14 is modest; replication needed.\n**Confidence:** Medium-High"
+    },
+    "5": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n- **Conclusion**: Tool X shows promise but does not yet establish superiority from this data alone.\n- **Reasoning**: Top-1 difference is negligible at n=14. Top-5 difference is larger and more meaningful, suggesting Tool X is better at ranking poses. However, n=14 is below the power needed for definitive claims.\n- **Confidence**: Medium."
+    },
+    "6": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n   - **Conclusion**: Yes, Tool X is operationally superior, particularly for multi-pose ranking.\n   - **Reasoning**: The top-1 difference (3 vs. 2) is noise at *n*=14. However, the top-5 metric (8/14 vs. 2/14) is a 4-fold difference\u2014substantial and practically meaningful. If your workflow ranks top-5 poses, X significantly improves the chance of identifying a correct pose.\n   - **Caveats**: This is one benchmark dataset; performance may vary by protein family, ligand chemistry, or docking difficulty. Formal statistical testing on a larger panel is needed. Tool speed, robustness to input errors, and training burden also matter for practical adoption.\n   - **Confidence**: 75%"
+    },
+    "7": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Yes, Tool X is practically superior, particularly for workflows requiring a correct pose in top-5 (8/14 \u2248 57% vs. 2/14 \u2248 14%). The top-1 difference (3 vs. 2) is noise, but top-5 performance is substantial.\n\n**Caveats:** n=14 is small; generalization to other protein targets or binding modes is uncertain. Value depends on workflow\u2014if top-1 accuracy is critical, tools are comparable.\n\n**Confidence:** 75%\n\n---"
+    },
+    "8": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Tool X's top-5 performance (8/14 vs. 2/14) suggests practical advantage if your workflow ranks multiple poses for downstream filtering. Top-1 difference (3 vs. 2) is too small to claim superiority at this sample size.\n\n**Caveat:** n=14 is very small; this needs validation on a larger independent test set and confirmation that the top-5 enrichment carries through to biological relevance. Ranking advantage without activity data is provisional.\n\n**Confidence:** Medium (60%)\n\n---"
+    },
+    "9": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Yes, Tool X is materially better for practical use, *driven by the top-5 metric.*\n\n**Reasoning:** The top-1 difference (3 vs. 2) is noise at n=14. However, top-5 (8 vs. 2, or 57% vs. 14%) is substantive. If your workflow permits ranking the top 5 poses and picking the best one visually or via orthogonal scoring, Tool X provides a 4\u00d7 advantage.\n\n**Caveat:** This conclusion assumes top-5 ranking is operationally feasible and desired. If you need a single high-confidence rank-1 prediction, the evidence is weak. Also, n=14 is small; replication on a larger set would strengthen claims.\n\n**Confidence:** High (80%), conditional on use case\n\n---"
+    },
+    "10": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n- **Conclusion:** Tool X shows practical advantage at top-5; insufficient data for definitive superiority claim.\n- **Reasoning:** Top-1 difference (3 vs. 2) is noise at n=14. Top-5 (8 vs. 2) is a larger gap, but n=14 is too small to exclude selection bias or chance.\n- **Caveat:** Only 14 complexes tested; no information on how these were selected; would need ~50+ complexes and external validation.\n- **Confidence:** 60%\n\n---"
+    },
+    "11": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** The top-5 data support Tool X as practically superior; the top-1 data do not.\n\n**Reasoning:** Top-1 (3 vs. 2) is noise at n=14. Top-5 (8/14 vs. 2/14) is a substantial gap\u201457% vs. 14%\u2014and suggests real utility if your workflow can benefit from poses ranked 2\u20135. This difference is worth validating on more complexes and merits practical consideration.\n\n**Caveats:** Confirm that your docking application actually uses top-5 poses (not just top-1). Validate the finding on at least 50+ complexes to establish robustness. Inspect whether Tool X's advantage is uniform across protein families or confined to specific targets.\n\n**Confidence:** Medium-High (70%; restated as \"High confidence in the practical difference\" at larger n)\n\n---"
+    },
+    "12": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Yes, Tool X shows practical superiority, particularly in top-5 enrichment (8/14 vs. 2/14). The top-1 rates (3/14 vs. 2/14) are noisy at this sample size, but the gap in top-5 is substantial.\n**Caveat:** n=14 is small; external validation on a larger, independent benchmark is essential. Protein-ligand complexes vary widely; X's advantage may not generalize to different target families.\n**Confidence:** Moderate-to-high (75%) for relative ranking; low (40%) for claiming definitive superiority.\n\n---"
+    },
+    "13": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Tool X is substantially better, primarily at the top-5 pose level (8/14 vs. 2/14). The top-1 difference (3 vs. 2) is noise at n=14, but top-5 is more relevant to practical workflows where pose-selection post-processing occurs. Confidence: High for top-5; low for top-1 alone.\n**Caveat:** Validate on a larger, independent test set (n>50) before deployment; also test on diverse protein families (current set may favor Tool X's algorithm).\n\n---"
+    },
+    "14": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n- **Conclusion**: Tool X appears superior, but top-1 alone (3 vs. 2) is inconclusive at n=14. The top-5 enrichment (8 vs. 2) is more substantial.\n- **Rationale**: For practical docking, recovering correct poses in top-5 is often sufficient for refinement. The top-5 gap favors Tool X.\n- **Caveat**: n=14 is small; results could reflect the particular benchmark set. Unknown whether \"correct\" pose definition and complex selection favor one tool, or whether differences persist across diverse protein classes.\n- **Confidence**: 60% for practical superiority; 85% for observed top-5 enrichment on this data."
+    },
+    "15": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n   - **Conclusion**: Yes, Tool X appears superior, but the evidence is the top-5 rate (8/14 vs. 2/14), not the top-1 rate. Tool X ranks true binders higher overall, even if not always in the top pose.\n   - **Caveats**: n=14 is small; the 8/14 vs. 2/14 gap is practically meaningful but statistically underpowered. Replication on a larger set is essential before committing.\n   - **Confidence**: 75%"
+    },
+    "16": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Yes, Tool X appears superior for practical use.\nThe top-1 difference (3 vs. 2 poses) is marginal on n=14, but the top-5 gap (8 vs. 2) is substantial. For real applications, ranking candidate poses within the top 5 is more relevant than only the top pose.\n**Caveat:** n=14 is small; replication on a larger, independent test set would strengthen the claim. Also verify that Tool X's computational cost and turnaround time are acceptable.\n**Confidence:** Moderate-to-High\n\n---"
+    },
+    "17": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Yes, Tool X is preferable for practical use, but based on top-5 recovery (8/14 vs. 2/14), not top-1. The top-5 advantage is substantial and practically relevant for pose ranking.\n**Caveat:** Sample size n=14 is very small; the 6-pose difference carries high uncertainty. The top-1 result alone (3/14 vs. 2/14) is not significant. Validation on a larger test set is essential.\n**Confidence:** Medium-High (70%)\n\n---"
+    },
+    "18": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n   - **Conclusion:** Tool X shows an advantage, but primarily in top-5 success (8/14 vs. 2/14). The top-1 difference (3 vs. 2) is not meaningful; the top-5 gap is substantial and practical. Tool X is preferable for the specific use case of pose identification.\n   - **Caveat:** Sample size (n=14) is small; a larger benchmark or external validation set would strengthen the claim. Also consider computational cost, runtime, and reproducibility.\n   - **Confidence:** Medium-High"
+    },
+    "19": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n- **Conclusion:** Suggestive but not definitive. Top-1 difference (3 vs. 2/14) is noise. Top-5 difference (8 vs. 2/14) is larger, but 14 cases is too small to establish robust superiority.\n- **Caveats:** Need \u226530\u201350 complexes per standard benchmarking. Check whether a few specific complexes drive X's top-5 advantage. Retest on an independent holdout set.\n- **Confidence:** Medium"
+    },
+    "20": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Yes, Tool X shows practical superiority in top-5 pose generation.\n\n**Reasoning:** The top-1 difference (3 vs 2) is noise, but top-5 (8/14 vs 2/14) is substantive \u2014 a 4\u00d7 advantage. This suggests Tool X generates correct poses more often, which is practically valuable even if individual complexes are small in number.\n\n**Caveats:** Fourteen complexes is still a modest sample; the benchmark may not represent your real-world targets. Small differences in scoring function tuning, conformation generation, or search parameters could explain this. Validate on your own targets before committing.\n\n**Confidence:** Medium-High (70%)\n\n---"
+    },
+    "21": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Yes, Tool X is substantially better for practical use. The top-1 result (3/14 vs. 2/14) is negligible at this sample size, but the top-5 finding (8/14 vs. 2/14) is a 4-fold improvement\u2014a large, actionable difference.\n\n**Caveat:** Only 14 complexes tested; this may not generalize to different protein families or compound classes. Confirm this performance holds on independent benchmark sets before committing fully.\n\n**Confidence:** Medium-High (75%)\n\n---"
+    },
+    "22": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Tool X appears preferable, but evidence is limited.\n**Reasoning:** Top-1 (3 vs. 2) shows no meaningful difference at n=14; top-5 (8 vs. 2) is more compelling for practical workflows that can rescore top poses. However, n=14 is small.\n**Caveat:** Confidence interval for top-5 is wide (8/14 \u2248 57% \u00b1 ~25%); recommend validation on larger benchmarks before committing. Neglects runtime, reproducibility, and ease of use.\n**Confidence:** 72%\n\n---"
+    },
+    "23": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Yes, Tool X shows meaningful superiority\u2014but not on the top-1 metric.\n\n**Rationale:** The top-1 difference (3 vs. 2 poses correct) is noise. The top-5 difference (8/14 vs. 2/14) is substantial and practically important: Tool X places correct poses in the top-5 at ~4\u00d7 the rate. If your workflow uses rank-based selection or visual inspection, Tool X is better.\n\n**Caveats:** n=14 is small; generalization to other targets is unproven. This advantage may shrink or disappear on a larger, unselected benchmark.\n\n**Confidence:** Medium-high.\n\n---"
+    },
+    "24": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion**: Yes, Tool X shows practical superiority for top-5 pose prediction (8/14 vs 2/14). Top-1 is inconclusive.\n**Caveat**: Sample size is small (n=14); validate on a broader benchmark set. Practical utility depends on whether your workflow can afford to score 5 poses.\n**Confidence**: 70% (for practical recommendation; higher confidence in the data itself)\n\n---"
+    },
+    "25": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority**: **Yes, Tool X appears better for practical use** , though not definitively at n=14. The top-1 difference (3/14 vs. 2/14) is noise, but the top-5 difference (8/14 vs. 2/14) is meaningful\u2014if your workflow relies on having a correct pose anywhere in the ranked output, Tool X delivers it 4\u00d7 more reliably.  \n   *Caveat*: Small sample size; need to confirm \"correct pose\" definition is stringent; consider computational cost, speed, and whether you actually use top-5 or only top-1 in practice.  \n   **Confidence: Medium-High**"
+    },
+    "26": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority**   \n**Conclusion:** Tool X shows practical superiority only on top-5 poses (8/14 vs. 2/14); top-1 difference (3/14 vs. 2/14) is not meaningful.  \n**Reasoning:** On n=14, a 2-pose difference is noise; 6-pose difference at top-5 is substantial (57% vs. 14% success).  \n**Caveat:** Benchmark on a larger, diverse structural set before deployment; different protein classes may flip the ranking.  \n**Confidence:** High for top-5, Low for top-1.\n\n---"
+    },
+    "27": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Suggestive of Tool X superiority; not definitively established.  \n**Caveat:** Top-1 difference (3 vs. 2) is noise at n=14. Top-5 gap (8 vs. 2) is more striking but still statistically unreliable. Need: (a) replication on independent benchmarks, (b) definition of \"correct\" (RMSD threshold?), (c) confirmation that pose-preparation protocols are identical for both tools.  \n**Confidence:** 55%"
+    },
+    "28": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Tool X shows promise but does not establish superiority without larger validation.  \n**Reasoning:** Top-1 difference (3 vs. 2) is noise at n=14. Top-5 difference (8 vs. 2) is larger, but the sample size remains too small to rule out chance. The 4\u00d7 difference in top-5 performance is noteworthy and warrants a larger benchmark.  \n**Confidence:** Medium. **Caveat:** Expand to \u226550 complexes before claiming Tool X superiority; also verify Tool Y's failure cases aren't systematic (e.g., particular protein class).\n\n---"
+    },
+    "29": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Yes, Tool X is practically superior. Top-1 rates at n=14 are too noisy to claim superiority, but the 8/14 vs. 2/14 top-5 gap is substantive\u2014if your workflow can evaluate multiple poses, Tool X materially improves enrichment.\n\n**Caveats:** n=14 limits generalization; validate on a larger or structurally diverse test set. Clarify your use case (do you evaluate top-1 only, or can you exploit top-5?). Consider computational cost.\n\n**Confidence:** Medium-high for practical use; medium for statistical claim at this n.\n\n---"
+    },
+    "30": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Top-5 performance (8/14 vs. 2/14) is encouraging and suggests X may be better for practical \"find-a-good-pose\" workflows, but this sample size is too small to establish X as the reliably superior tool.\n\n**Caveat:** The top-1 difference (3 vs. 2) is noise at this scale. Repeat on a larger, independent benchmark; check whether X's top-5 advantage holds consistently or is driven by a few outlier complexes.\n\n**Confidence:** Medium.\n\n---"
+    },
+    "31": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n*Conclusion:* Tool X is practically superior. The 3/14 vs. 2/14 top-1 difference is not meaningful at this sample size. However, the top-5 difference (8/14 vs. 2/14) is substantial and actionable if your workflow uses top-5 ranking.\n*Caveats:* n=14 is small\u2014generalizability unknown; validate \"correct pose\" definition; test on larger benchmark before committing; top-1 alone does not establish superiority.\n*Confidence:* 75%"
+    },
+    "32": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n- **Conclusion:** Tool X shows a consistent advantage, particularly in top-5 ranking (8 vs. 2), which is practically relevant if you screen top-5 poses. Top-1 difference (3 vs. 2) is inconclusive at n=14.\n- **Caveats:** Sample size is very small; test set may be biased toward X's strengths. Validate on independent complexes and with different protein families. Top-5 still means ~60% of poses are wrong even for X.\n- **Confidence:** 70% (practical preference); 40% (confidence in magnitude)"
+    },
+    "33": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority**   \n**Conclusion:** Suggestive but not rigorously established.  \n**Rationale:** 8/14 vs. 2/14 top-5 (80% vs. 20%) is a 4-fold gap and practically meaningful, but *n*=14 is small. No formal statistical test is provided (Fisher's exact or binomial test would help).  \n**Caveats:** Re-benchmark on a larger, independent dataset before deployment. The 3/14 vs. 2/14 top-1 difference is genuinely unhelpful.  \n**Confidence:** Medium (70%)"
+    },
+    "34": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Top-1 rate (3/14 vs. 2/14) is not informative at this sample size. Top-5 enrichment (8/14 vs. 2/14) suggests Tool X may be superior for practical workflows where re-ranking a small pose list is feasible, but n=14 is too small for confident generalization.\n**Caveat:** Success depends on the problem domain; some targets may favor Tool Y's ranking. Recommend testing on a larger, domain-representative set before adoption.\n**Confidence:** Medium (60%)"
+    },
+    "35": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Tool X shows practical promise (8/14 vs. 2/14 at top-5 is a 4-fold difference), but this does not *establish* superiority at n=14. Recommend expanded benchmarking on \u226550+ complexes before adoption.\n\n**Caveats:** Top-1 rates are too similar to be meaningful; top-5 improvement is encouraging but could reflect statistical noise. Different protein families or binding-site chemistries may favor Tool Y.\n\n**Confidence:** Moderate (65%) that Tool X is genuinely better; low confidence in the margin.\n\n---"
+    },
+    "36": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Yes, Tool X shows meaningful practical superiority, but with important caveats. Top-1 difference (3 vs. 2) is noise at n=14. However, the top-5 gap (8 vs. 2 complexes) is substantial and practically relevant\u2014most docking workflows use top-N poses. Tool X is more useful for this sample.\n\n**Caveat:** n=14 is small. This conclusion is specific to these 14 complexes and scoring threshold. Requires validation on independent test set before deployment. The gap could shrink or reverse on other protein classes.\n\n**Confidence:** Medium (65%). Directional signal is real; magnitude claim needs external validation.\n\n---"
+    },
+    "37": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n- **Conclusion**: Tool X shows a real advantage in top-5 ranking (8/14 vs. 2/14). Top-1 (3 vs. 2) is noise at n=14. X is preferable for practical use if cost is comparable.\n- **Caveats**: Sample size is very small; validate on larger, independent benchmarks. Tool X ranks better but doesn't necessarily rank top-1 better\u2014it's a ranking/retrieval advantage, not universal superiority. Test for property-specific bias.\n- **Confidence**: 75%"
+    },
+    "38": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Yes, Tool X is better for practical use. Top-5 ranking (8/14 vs. 2/14) is a substantial, clinically meaningful difference; top-1 alone is equivocal.\n**Caveat:** n=14 is small; validate on a larger, independent test set before finalizing. Tool X's ranking mechanism works better, but generalization risk remains.\n**Confidence:** Moderate-to-High (70%) \u2014 the top-5 difference is convincing, but sample size limits certainty.\n\n---"
+    },
+    "39": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Suggestive but not established; top-5 data shows a real advantage, but 14 complexes is too small to conclude robustly.\n**Reasoning:** The 8/14 vs. 2/14 top-5 difference is substantial, but lacks statistical power at this sample size. A Fisher exact test would likely show p \u2248 0.03\u20130.05, borderline.\n**Caveat:** Need validation on a larger, independent test set; computational cost and speed also matter for practical superiority.\n**Confidence:** Moderate\n\n---"
+    },
+    "40": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Tool X shows promise but does not establish superiority at this sample size.\n\nThe top-1 difference (3 vs. 2, ~21% vs. 14%) is not statistically significant at n=14. The top-5 difference (8 vs. 2, 57% vs. 14%) is more substantial, but still relies on small-sample data. Needs validation on a larger, independent set.\n\n**Caveat:** Different protein-ligand pairs may favor different tools; computational cost/speed unaddressed; top-5 success may simply reflect a wider net rather than better scoring.\n\n**Confidence:** 60%\n\n---"
+    },
+    "41": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Tool X is better for practical use, but evidence is modest.\n**Why:** Top-5 performance (8/14 vs. 2/14) is substantial and relevant; most practical pipelines allow refinement of top-N poses. Top-1 difference (3 vs. 2) is noise at n=14.\n**Caveat:** n=14 is small; these may not be representative complexes. \"Correct pose\" criteria matter (RMSD threshold?). Need to confirm Tool X isn't slower or has hidden failure modes on unseen targets.\n**Confidence:** Medium\n\n---"
+    },
+    "42": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n*Conclusion:* Tool X shows practical promise (top-5 success 57% vs. 14%) but the sample (n=14) is too small to establish statistical superiority. The difference is substantively worth investigating further.\n*Caveat:* Confidence intervals will be wide at n=14; success on the top-3 or top-5 depends on the structure of your decoy sets; revalidate on a larger, independent set before committing operationally; also compare runtime and licensing cost.\n*Confidence:* Medium"
+    },
+    "43": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Tool X shows promise, but the evidence is limited.\n**Caveat:** The top-1 difference (3 vs. 2) is noise at n=14. The top-5 difference (8 vs. 2) is more suggestive, but replication on additional protein targets is essential. Generalization is unknown.\n**Confidence:** Medium-high. The top-5 gap merits investigation, but sample size forbids a strong claim.\n\n---"
+    },
+    "44": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n   - **Conclusion:** Tool X is superior for practical use when any correct pose from the top 5 is acceptable (8/14 vs. 2/14), but not at top-1 (3/14 vs. 2/14, non-significant).\n   - **Reasoning:** The top-5 advantage is large and real; top-1 is equivalent.\n   - **Caveat:** At n=14, both results have sampling uncertainty; replicate on a larger test set before treating as definitive. The metric that matters (top-1 vs. top-5) depends on your workflow.\n   - **Confidence:** 65%"
+    },
+    "45": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Tool X shows promise (8/14 vs. 2/14 in top-5, a meaningful gap), but the sample size (n=14) is too small to establish robust superiority. Recommend validation on a larger benchmark set.\n**Caveat:** 14 complexes has limited statistical power; results may not generalize. Also consider runtime, accessibility, and failure modes, not just success counts.\n**Confidence:** MEDIUM\n\n---"
+    },
+    "46": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n   - **Conclusion:** Tool X shows promise for practical use, particularly in top-5 pose ranking, but the evidence is not yet definitive.\n   - **Reasoning:** Top-1 difference (3 vs. 2) is noise at N=14. Top-5 difference (8 vs. 2) is more substantial and practically relevant for pose selection. However, N=14 remains very small.\n   - **Caveat:** Need larger benchmark set (\u226550 complexes); verify identical input structures and fair comparison protocol; top-5 advantage could still be chance.\n   - **Confidence:** Medium"
+    },
+    "47": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n- **Conclusion:** Tool X shows meaningful superiority in top-5 pose ranking (8/14 vs. 2/14), suggesting better pose diversity or discrimination. Top-1 rates are inconclusive at n=14.\n- **Caveats:** Top-5 improvement may reflect either better pose generation or just generating more poses with lower stringency. Benchmark on only 14 complexes may not generalize across targets or protein families.\n- **Confidence:** Moderate-high for relative ranking; lower for claiming absolute superiority."
+    },
+    "48": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n*Conclusion:* Tool X shows practical advantage for top-5 enrichment (8/14 vs. 2/14) but this cannot yet establish it as \"the better tool\" without replication.\n*Caveat:* N=14 is too small to draw confident conclusions about head-to-head superiority; statistical power is low. Top-1 difference (3 vs. 2) is indeed noise. Top-5 difference is more promising but requires validation on an independent benchmark.\n*Confidence:* Medium.\n\n---"
+    },
+    "49": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Yes, Tool X is practically superior. The top-5 difference (8/14 vs. 2/14) is substantial and actionable; top-1 differences at n=14 are too noisy to interpret.\n**Caveat:** Benchmark these 14 complexes only; if your real use case involves different protein classes, binding-site geometries, or ligand sizes, this result may not transfer.\n**Confidence:** Medium-high.\n\n---"
+    },
+    "50": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n- **Conclusion:** Yes, Tool X appears better for practical use.\n- **Reasoning:** Top-1 difference (3 vs. 2) is marginal and could be noise, but top-5 (8/14 vs. 2/14) is substantial. In practice, docking users often sample from top-5 poses, so this 4-fold advantage is meaningful.\n- **Caveat:** n=14 is small; larger benchmarks and confidence intervals would strengthen the claim.\n- **Confidence:** Medium-high.\n\n---"
+    }
+  },
+  "prose": {
+    "1": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority (Top-1: 3/14 vs. 2/14; Top-5: 8/14 vs. 2/14)** \n**Conclusion:** Yes, Tool X shows evidence of superiority for practical use, though with caveats. The top-1 difference is acknowledged as non-significant. The top-5 result is a substantial and meaningful practical difference. This result suggests X is better but doesn't establish X as globally superior without additional benchmarks.\n**Confidence:** Medium-High"
+    },
+    "2": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Yes, Tool X is substantially better for practical use, though with caveats. Tool X's top-5 success rate represents a 4-fold practical advantage \u2014 a dramatic difference that matters for real workflows, even at n=14.\n**Considerations applied:** Confidence intervals; small sample sizes; distinction between statistical significance and practical importance.\n**Confidence:** 70%"
+    },
+    "3": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Not yet established, though Tool X is suggestive. At top-1, the difference is not meaningful. At top-5, Tool X's advantage is a 4-fold practical difference, but with n=14, the confidence interval still spans meaningful uncertainty. Tool X warrants priority testing on a larger, independent benchmark, but calling it \"better\" now is premature.\n**Considerations shaping answer:** Small sample size; confidence intervals spanning considerable uncertainty.\n**Confidence:** 72%"
+    },
+    "4": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Yes, Tool X shows practical superiority, but with caveats. Top-5 difference represents a substantial practical gap and unlikely due to chance. The answer depends on whether practitioners will use top-5 results; if so, Tool X offers clear advantage.\n**Confidence:** Medium-High."
+    },
+    "5": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** No. This does not establish Tool X as clearly superior for practical use. The top-1 result is not meaningful at n=14. While the top-5 gap is more striking, at this sample size, one cannot confidently claim generalization. Practical preference requires larger, replicable benchmarks.\n**Confidence:** High (90%)"
+    },
+    "6": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Not established as the better tool for practical use.\n\n**Reasoning:** While 8/14 vs. 2/14 on top-5 poses appears substantial (4:1 ratio), n=14 is marginal. The 95% CI for each rate will be wide and likely overlap; formal statistical testing would be inconclusive. The top-1 result (3/14 vs. 2/14) is explicitly non-significant at this sample size. Practical superiority requires either larger sample size or demonstration that the top-5 improvement translates to downstream success.\n\n**Confidence:** Medium (75%)\n\n---"
+    },
+    "7": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n\n**Conclusion:** The top-5 result (8/14 vs. 2/14) is promising but does not establish Tool X as definitively superior for practical use without independent validation.\n\n**Considerations:** \"A confidence interval or ratio that spans 1... is not statistically significant\"; sample size and generalization. The top-1 difference (3 vs. 2) is noise at this sample size. The top-5 difference is larger and harder to dismiss, but with only 14 complexes, overfitting to this benchmark is possible. The 8/14 success rate itself is moderate (~57% at top-5). Practical utility also depends on how realistic the 14 complexes are, their difficulty, and how well the result would transfer to new targets.\n\n**Confidence:** 70% (that superiority is not yet established; would require independent hold-out validation).\n\n---"
+    },
+    "8": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Yes, Tool X should be preferred for practical use, though generalization confidence is limited.\n\n**Reasoning:** A 8/14 vs. 2/14 success rate in top-5 poses (57% vs. 14%) is a large practical difference. In real docking workflows, top-5 ranking often determines whether downstream analysis or experimental follow-up is viable. The top-1 null result is correctly noted but does not override the top-5 finding.\n\n**Relevant considerations:** Sample size is small (n=14), so the absolute magnitude of the difference is what carries weight here, not statistical significance testing. Generalization to new complexes beyond these 14 should be cautious.\n\n**Confidence:** Medium (65%). The practical difference on these 14 cases is clear, but robustness on a larger or different set of complexes is unknown.\n\n---"
+    },
+    "9": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority \n\n**Conclusion:** Tool X shows stronger performance for practical use, but conclusions should be cautious given the small sample size.\n\n**Reasoning:** The top-1 difference (3/14 vs. 2/14) is not meaningful. However, the top-5 performance difference (8/14 vs. 2/14) is substantial and suggests a real advantage. For applied docking, recovering correct poses in the top 5 (8 vs. 2) is a meaningful practical distinction. The benchmark is small, but the relative magnitude of the top-5 finding is convincing.\n\n**Relevant Consideration:** Small sample sizes require caution; the top-1 rate alone is not statistically significant.\n\n**Confidence:** Medium-High\n\n---"
+    },
+    "10": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Tool X shows a material practical advantage on this small benchmark but cannot be declared broadly superior.\n\n**Reasoning:** The top-1 result (3/14 vs. 2/14) is not meaningful. The top-5 result (8/14 vs. 2/14) represents a substantial practical difference on the tested complexes. However, this conclusion is severely constrained by sample size\u201414 protein-ligand complexes is very small, and no statistical significance can be claimed. Practical preference for Tool X on small-scale benchmarks is reasonable, but generalization beyond these 14 cases is uncertain. The consideration about small sample size preventing confident statistical conclusions applies directly.\n\n**Confidence:** Medium\n\n---"
+    },
+    "11": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Not definitively established for practical use, though the top-5 data suggest Tool X may perform better.\n\n**Reasoning:** The top-1 rates (3/14 vs. 2/14) show no meaningful difference at this sample size. The top-5 rates (8/14 vs. 2/14) show a numerically large difference, but at n=14 this requires statistical confirmation to rule out sampling variation. More critically, whether 57% (Tool X's top-5 rate) is adequate \"for practical use\" depends on the application's tolerance threshold\u2014a question outside the data.\n\n**Relevant considerations:** Small sample size; practical utility requires knowing the acceptable success threshold; the question conflates statistical superiority with practical sufficiency.\n\n**Confidence:** 60%\n\n---"
+    },
+    "12": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority (3/14 vs. 2/14 top-1; 8/14 vs. 2/14 top-5)** \n\n**Conclusion:** The top-1 data (3 vs. 2) is too noisy to draw firm conclusions. The top-5 data (8 vs. 2) shows a substantial practical difference, and Tool X appears preferable for practical use\u2014but with n=14, confidence intervals remain wide. Tool X's advantage is notable but not definitively established.\n\n**Relevant consideration:** Small sample size (n=14) limits confidence in any conclusion, even when the numerical gap appears large.\n\n**Confidence: 60%**\n\n---"
+    },
+    "13": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n\n**Conclusion:** Tool X shows suggestive superiority for top-5 performance but the evidence does not definitively establish head-to-head superiority at this sample size.\n\n**Key Considerations:** (i) The top-1 difference (3 vs. 2) is not meaningful at n=14. (ii) The top-5 advantage (8/14 vs. 2/14) is more substantial and suggests practical value. However, (iii) 14 complexes is a small benchmark; no formal statistical test addresses variability; and independent external validation would strengthen the claim. For practical deployment decisions, the top-5 pattern is encouraging but not definitive.\n\n**Confidence:** Medium\n\n---"
+    },
+    "14": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Yes, Tool X is established as better for practical use, specifically in multi-pose scenarios.\n\n**Reasoning:** Top-1 success (3 vs. 2) is noted as not meaningful at n=14. However, top-5 success (8 vs. 2) is a 4\u00d7 difference in the same direction and exceeds random variance at this scale. For practical workflows where the user ranks or re-ranks poses, Tool X delivers correct poses in the top-5 four times more often. This is actionable superiority within the stated use case, even though neither tool is excellent in absolute terms.\n\n**Confidence:** High (90%)\n\n---"
+    },
+    "15": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n\n**Conclusion:** No, this does not establish Tool X as the better tool for practical use, although the top-5 result is promising.\n\n**Reasoning:** The top-1 difference (3/14 vs. 2/14) is acknowledged as not meaningful. The top-5 difference (8/14 vs. 2/14, or 57% vs. 14%) is large and suggests Tool X may rank correct poses higher overall. However, 14 complexes is a very small benchmark. The governing consideration is: *a single computational run or single realization is not a reproducibility check; reproducibility should only be claimed after independent repeat on a separate dataset*. Tool X shows promise, but \"better for practical use\" requires validation on an independent test set at minimum, ideally larger.\n\n**Confidence:** Medium-High for a practical preference signal; Low for an established claim.\n\n---"
+    },
+    "16": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n   - **Conclusion:** Tool X shows an advantage at top-5 (8/14 vs. 2/14), but this is insufficient to establish superiority for practical use. The top-1 difference (3 vs. 2) is not meaningful at n=14; the top-5 difference is larger but still on a very small benchmark set.\n   - **Caveat:** Results from 14 protein-ligand complexes may not generalize to other targets, ligand chemotypes, or binding-site geometries. Independent validation on a larger, representative set is essential before deployment.\n   - **Confidence:** Medium\u2014the top-5 advantage appears real on this sample, but sample size is too small for confident generalization."
+    },
+    "17": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n- **Conclusion:** Tool X shows promise on top-5 performance but does not establish superiority.\n- **Reasoning:** Top-1 difference (3 vs. 2/14) is noise at this sample size. Top-5 difference (8 vs. 2/14) is more substantive but still on a tiny benchmark (n=14). Single-benchmark validation is insufficient.\n- **Caveats:** Need independent cross-validation on held-out benchmarks and external datasets; mechanism of difference unknown; small n limits any claim.\n- **Confidence:** 40% (superiority established); 70% (Tool X outperforms on this benchmark alone)"
+    },
+    "18": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Tool X appears better for practical use, but the evidence is limited.\n\n**Reasoning:** The top-5 difference (8/14 vs. 2/14) is practically substantial\u2014four additional correct poses. For a task where users must rank and evaluate top-5 predictions, this matters. However, 14 protein-ligand complexes is a small benchmark.\n\n**Caveat:** Sample size is limited; the result may be protein-target dependent; results need validation on larger, diverse structural sets before establishing general superiority.\n\n**Confidence:** Medium.\n\n---"
+    },
+    "19": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** : Tool X shows better performance on top-5 enrichment (8/14 vs. 2/14) but the sample size (n=14) remains underpowered for a definitive ranking. Top-1 difference (3 vs. 2) is statistically noise, but top-5 is more substantial. X appears preferable *for this benchmark*, not universally. *Caveat*: Single protein set, small sample, may not generalize to other targets. *Confidence: Medium.*"
+    },
+    "20": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority**: **Cautiously supportive for Tool X in practical use, but limited by sample size.** The top-5 gap (8/14 vs. 2/14) shows a real, substantial difference and matters operationally. However, n=14 is too small to generalize confidently to unseen systems; Tool X may appear superior by chance. **Caveat: Use with caution beyond these 14 complexes; consider expanding validation.** **Confidence: Medium.**"
+    },
+    "21": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority**   \n**Conclusion:** Tool X shows better performance, but validation on a larger benchmark is essential before declaring superiority.  \n**Why:** Top-1 difference (3 vs. 2) is not meaningful at n=14. Top-5 difference (8 vs. 2) is substantial and favors Tool X, and top-5 is often the practical metric (you refine the best pose). However, n=14 is too small for robust generalization.  \n**Caveat:** The top-5 advantage suggests promise, but re-benchmark on \u226550 complexes before deployment decisions.  \n**Confidence:** Medium (directional signal, not conclusive).\n\n---"
+    },
+    "22": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Tool X appears preferable for practical workflows, particularly if top-5 ranking is used. The 4-fold difference at top-5 (8/14 vs. 2/14) is substantial for practical use.\n**Caveat:** n=14 is a small, single-benchmark validation; replication on additional protein-ligand sets and understanding of the mechanistic source of the difference would strengthen this conclusion. Top-1 performance shows no meaningful edge.\n**Confidence:** Medium-High.\n\n---"
+    },
+    "23": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** The top-5 result is suggestive of Tool X's superiority, but 14 complexes is too small to establish it definitively.\n\n**Why:** Top-1 (3 vs. 2) is noise. Top-5 (8 vs. 2) is a substantial difference: 6 more systems where X found a correct pose in the top 5. For practical use, top-5 matters. However, you need either more complexes, statistical testing, or consistency across independent benchmarks to claim superiority.\n\n**Caveat:** Small sample size and single benchmark. Different protein families or ligand types could flip the ranking. Computational cost and robustness should also be considered.\n\n**Confidence:** Medium.\n\n---"
+    },
+    "24": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n*Conclusion:* Not established. The top-1 result (3/14 vs 2/14) is not statistically different at n=14. The top-5 result (8/14 vs 2/14) is much more favorable to Tool X, but a single 14-case benchmark is insufficient to claim practical superiority. Tool X warrants further investigation but needs independent validation on additional protein targets.\n\n*Caveats:* Practical superiority also depends on speed, cost, reproducibility, and robustness\u2014not docking accuracy alone. The 14-case sample may not represent the broader set of problems the tool will face. The top-5 advantage is noteworthy but not conclusive at this sample size.\n\n*Confidence:* Medium.\n\n---"
+    },
+    "25": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority**   \n   *Conclusion:* Tool X shows promise on top-5 performance (8/14 vs. 2/14), but superiority cannot be established.  \n   *Caveat:* n=14 is far too small to draw firm conclusions; a 6-case difference could easily arise from noise or the specific 14 complexes tested; \"correct pose\" must be independently validated.  \n   *Confidence:* Medium."
+    },
+    "26": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** The top-5 result (8/14 vs. 2/14) is promising for Tool X, but this does not yet establish it as definitively superior for practical use.\n\n**Why:** Top-1 difference (3 vs. 2) is too small at n=14 to be meaningful. The top-5 difference is substantial, but a single 14-complex benchmark is insufficient and may contain selection bias.\n\n**Caveats:** Requires validation on independent test set(s), ideally across diverse protein families; needs confirmation the difference persists; head-to-head comparison on one set does not guarantee generalization.\n\n**Confidence:** 60%\n\n---"
+    },
+    "27": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n   - **Conclusion**: Tool X shows meaningful superiority on top-5 ranking (8/14 vs. 2/14) but not top-1 (3/14 vs. 2/14).\n   - **Rationale**: The top-5 gap is substantial; top-1 is correctly noted as inconclusive at n=14.\n   - **Caveat**: Yes. This is a single small benchmark. Revalidate on independent test sets and other protein families before claiming general superiority.\n   - **Confidence**: Moderate (high for this benchmark; requires confirmation on other data)"
+    },
+    "28": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Tool X shows better top-5 performance on *these 14 structures* (8/14 vs. 2/14), but this does not yet establish practical superiority. Fourteen complexes is a small, potentially non-representative benchmark. Top-1 (3 vs. 2) remains noise.\n**Caveat:** Tool X may overfit to these structures or these targets. Validate on independent datasets, different protein families, and real-world docking targets before claiming practical superiority.\n**Confidence:** Medium.\n\n---"
+    },
+    "29": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Tool X shows a meaningful advantage for practical use, specifically for top-5 pose sampling (8/14 vs. 2/14 for relevant decoys).  \n**Caveats:** Sample size (n=14) is small; this result should be validated on a larger, independent test set before definitive claims. Top-1 rates (3/14 vs. 2/14) are not distinguishable at this sample size.  \n**Confidence:** Moderate (the top-5 difference is substantial enough to prefer X here, but replication on larger data is essential).\n\n---"
+    },
+    "30": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n*Conclusion:* Not definitively established. The top-5 performance difference (8/14 vs. 2/14) is suggestive that Tool X may be better for practical use, but n=14 is too small to rule out sampling variation or complexes-specific advantage. Top-1 difference (3/14 vs. 2/14) is negligible.\n*Caveats:* Validation on a larger, independent test set required; no explanation for which complexes or physics underlies the difference; computational proxies not validated against experimental data.\n*Confidence:* Low-to-Moderate.\n\n---"
+    },
+    "31": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Tool X appears better on this benchmark (8/14 top-5 vs. 2/14 is a substantial gap). However, this establishes relative performance only on 14 cases in a single test, not general superiority.\n**Caveat:** Findings from a single benchmark with n=14 require validation on independent test sets, different protein families, and comparison of failure modes before claiming general superiority.\n**Confidence:** High that X outperforms Y on this benchmark; Low that this generalizes without replication.\n\n---"
+    },
+    "32": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Preliminary evidence suggests Tool X may be better for practical use, but this does not definitively establish superiority.\n\nThe top-1 result (3 vs. 2) is indeed too small to interpret. The top-5 result (8/14 vs. 2/14, or 57% vs. 14%) is more substantial, but n=14 is still small.\n\n**Caveats:** Sample size is too small for firm conclusions; the benchmark set may not be representative of real-world targets; larger independent validation set required; practical preference depends on weighting of top-1 vs. top-5 success.\n\n**Confidence:** 60\u201370%\n\n---"
+    },
+    "33": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Yes, Tool X appears superior, particularly for practical use.\n\n**Reasoning:** While the top-1 difference (3 vs. 2) is not meaningful at n=14, the top-5 difference (8/14 vs. 2/14) represents a 43-percentage-point gap and is unlikely to be random noise. If your pipeline ranks and refines poses, identifying a correct structure somewhere in the top-5 is more practical than top-1 alone.\n\n**Caveats:** This conclusion depends on n=14 being representative and on top-5 ranking being relevant to your actual workflow. External validation on independent complexes would strengthen confidence.\n\n**Confidence:** Medium-High.\n\n---"
+    },
+    "34": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Tool X shows promise but the top-1 difference alone does not establish superiority; the top-5 difference (8/14 vs. 2/14) is more convincing for practical use if ranking multiple poses is acceptable.\n\n**Rationale:** At n=14, the top-1 difference (3 vs. 2) is noise. The top-5 difference (8 vs. 2) suggests X is better at sampling correct poses, but the appropriate metric depends on your workflow (do you rank poses or need first-pass accuracy?).\n\n**Caveats:** Sample size is small; results may not generalize to other protein-ligand sets; cost, speed, and ease-of-use also matter for \"practical use.\"\n\n**Confidence:** 75%\n\n---"
+    },
+    "35": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority: Suggestive, but does not establish it.** The top-5 difference (8/14 vs. 2/14) is substantially larger than top-1, but n=14 is too small for a definitive claim. Tool X appears promising, but sampling variance is substantial at this size; replication on a larger, independent test set is needed. **Caveat:** Single small benchmark; confidence intervals needed. **Confidence: Medium.**"
+    },
+    "36": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** No. This does NOT establish Tool X as superior.\n\n**Why:** Top-1 rates (3/14 vs. 2/14) are indistinguishable; top-5 rates show a large gap, but with n=14, this is underpowered. More critically, if your workflow uses only top-1 pose, the top-5 comparison is irrelevant to practical performance.\n\n**Caveats:** (i) Sample size of 14 is too small for robust claims; (ii) practical utility depends on whether you actually use top-5 poses; (iii) true validation requires independent test complexes.\n\n**Confidence:** High.\n\n---"
+    },
+    "37": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Yes, Tool X shows substantially superior performance for practical use. Top-1 rates (3/14 vs. 2/14) are inconclusive, but top-5 rates (57% vs. 14%) represent a meaningful difference that matters if your workflow depends on ranking poses.\n\n**Caveats:** The sample size (14 complexes) is small; validation on a held-out set of different protein-ligand pairs is needed. The mechanism driving Tool X's advantage is unknown. Results may not generalize to other protein families or ligand chemotypes.\n\n**Confidence:** Medium-High\n\n---"
+    },
+    "38": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority**: Top-1 performance (3/14 vs. 2/14) does not establish superiority at this sample size. Top-5 performance (8/14 vs. 2/14) shows Tool X more often delivers a correct pose among alternatives, making it practically preferable for typical docking workflows. **Caveats**: n=14 is too small to claim statistical superiority; generalizability unknown; depends on whether your workflow prioritizes top-1 or uses pose ensembles. **Confidence: Medium (65%).**"
+    },
+    "39": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority**   \n**Conclusion:** Tool X shows practical promise (8/14 vs. 2/14 top-5), but this sample size (n=14) does not *establish* statistical superiority.  \n**Caveat:** Top-1 difference (3 vs. 2) is meaningless; top-5 difference is suggestive but requires larger independent validation to confirm.  \n**Confidence:** 70%\n\n---"
+    },
+    "40": {
+      "label": "NON-COMPLIANT",
+      "text": "Tool X shows superior practical utility.** \n   - The top-5 result (8/14 vs. 2/14) is a substantial and material difference relevant to real use. For practical multi-pose docking workflows, Tool X's ability to place a correct pose within the top 5 in 57% of cases versus 14% is meaningful, even with small sample size.\n   - **Caveats:** Only 14 test complexes; generalization to other protein-ligand sets is uncertain. No formal significance test reported. The top-1 result alone is indeed inconclusive.\n   - **Confidence: 70%**"
+    },
+    "41": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n- **Conclusion**: Tool X appears substantially better for practical use if the application permits considering top-5 poses (8/14 vs. 2/14 correct). Top-1 alone does not differentiate them.\n- **Caveats**: Sample size (n=14) is small. The 4-fold top-5 improvement needs validation on larger, independent benchmarks. Application context matters\u2014if only top-1 is usable, the distinction collapses.\n- **Confidence**: Medium-High"
+    },
+    "42": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n*Conclusion:* Tool X shows a larger difference in top-5 success (8/14 vs. 2/14), suggesting superiority, but this does not establish it conclusively. Sample size is small (n=14), confidence intervals are wide, and no formal statistical test is reported.\n*Caveats:* The difference could arise from random variation rather than true tool superiority. A formal comparison with confidence intervals or a permutation test would be needed. Results may also be specific to this particular set of 14 complexes.\n*Confidence:* Moderate."
+    },
+    "43": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n- **Conclusion:** X shows promising superiority in top-5 performance (8/14 vs. 2/14) but top-1 is inconclusive (3 vs. 2 at n=14 is not a meaningful difference).\n- **Rationale:** The large gap in top-5 success (6-complex difference) is practically valuable\u2014multiple poses improve odds of finding real-world-relevant geometries. However, n=14 is small for robust conclusions.\n- **Caveat:** Additional validation on larger, independent test sets required before deployment recommendation. Top-5 gap is suggestive but not definitive.\n- **Confidence:** Medium.\n\n---"
+    },
+    "44": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n\n**Conclusion:** Tool X shows **promise for top-5 performance** (8/14 vs. 2/14), but n=14 is too small to establish superiority definitively. Top-1 rates (3 vs. 2) are indistinguishable noise at this sample size.\n\n**Caveats:** Generalization to untested proteins is unknown. Both tools perform poorly overall. The test set is fixed\u2014no independence between conditions. Results could reverse on a different benchmark.\n\n**Confidence:** Medium. Top-5 trend favors X, but sample size prevents strong conclusion.\n\n---"
+    },
+    "45": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Tool X shows better top-5 enrichment (8/14 vs. 2/14), but the small sample (n=14) does not establish superiority with confidence. The top-1 difference (3 vs. 2) is acknowledged as statistically trivial.\n\n**Caveats:** Fourteen complexes is insufficient for generalization. Unknown whether the 14 represent easy, hard, or representative cases. If your practical workflow uses top-5 poses, Tool X's 8/14 is more useful than Y's 2/14, but this remains a limited benchmark. Validate on a larger, independent test set.\n\n**Confidence:** Medium (60%)\n\n---"
+    },
+    "46": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Tool X shows materially better top-5 performance (8/14 vs 2/14), which is practically relevant if you expand search radius to top-5. Top-1 difference (3/14 vs 2/14) is not statistically meaningful at this sample size. For practical use, X appears preferable.\n\n**Caveat:** 14 complexes is a small benchmark. The dramatic divergence between top-1 and top-5 for both tools (especially Y: 2/14 in both) suggests potential structural issues in Y's ranking. Broader validation required before firm conclusion. Results may not generalize.\n\n**Confidence:** Medium (for this data); low for generalization.\n\n---"
+    },
+    "47": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority**: **Qualified yes for practical use, no for top-1 alone.** The top-1 difference (3 vs. 2) is too small to be meaningful at n=14, but the top-5 difference (8 vs. 2) is substantial and more practically relevant. However, n=14 is still a small benchmark. | **Caveat**: This ranking may not generalize beyond these 14 complexes; needs broader validation. | **Confidence: Medium**"
+    },
+    "48": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n- **Conclusion:** Suggestive that X is better, but not conclusive for practical use.\n- **Rationale:** Top-1 (3 vs. 2) is noise at n=14. Top-5 (8 vs. 2) is notable but still preliminary. \"Better for practical use\" requires independent validation, representative benchmarks, cost/speed trade-offs, and confirmation that 8/14 top-5 accuracy meets application needs.\n- **Caveats:** Small sample size; benchmark representativeness; confounding factors (benchmark design bias, tool configuration, computational cost).\n- **Confidence:** Medium\n\n---"
+    },
+    "49": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority: Tool X shows practical promise, but not definitive establishment.** Top-1 parity (3/14 vs. 2/14) is noise. Top-5 recovery (8/14 vs. 2/14) suggests Tool X samples better pose diversity\u2014useful for practical pipelines. However, 14 complexes is a small benchmark; generalization requires larger, independent validation. **Caveat:** Performance on one benchmark \u2260 general superiority; may not transfer to other protein classes or ligand types. **Confidence: Moderate.**"
+    },
+    "50": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n- **Conclusion**: Tool X shows better practical performance for top-5 ranking, but superiority is not definitively established.\n- **Rationale**: Top-1 (3 vs. 2) is noise. Top-5 (8/14 vs. 2/14) is a substantial difference worth adopting in practice. However, *establishing* superiority requires independent validation on new test sets.\n- **Caveats**: Small sample size (n=14); generalization to novel targets unknown; retest on held-out proteins needed before claiming X is \"better.\"\n- **Confidence**: Medium.\n\n---"
+    }
+  },
+  "contract": {
+    "1": {
+      "label": "COMPLIANT",
+      "text": "No. The top-1 ranking result (3 vs. 2 out of 14) is explicitly inconclusive. Although Tool X shows a larger advantage in the top-5 analysis (8 vs. 2), this is a secondary/exploratory outcome discovered post-hoc after the primary endpoint failed to show significance. A primary null result cannot be overturned by secondary exploration. **Rules Applied:** R5. **Confidence:** High. \n\n(Items 1, 3-10: see `haiku_contract.md` for the full run-1 transcript, unchanged.)\n\n---"
+    },
+    "2": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority (Tool X: 3/14 top-1 vs. 8/14 top-5; Tool Y: 2/14 vs. 2/14)** \n**Conclusion:** Tool X is preferable for practical use, but \"superiority\" is qualified. The practical advantage lies in top-5 ranking, where Tool X succeeds in 57% of cases vs. Tool Y's 14%. For production workflows where rank-5 identification is acceptable, Tool X is more useful.\n**Rules Applied:** R2.\n**Confidence:** Moderate-to-High for relative preference."
+    },
+    "3": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** The top-1 result (3/14 vs. 2/14) does not establish superiority \u2014 too small at this sample size. The top-5 result is more suggestive of Tool X's advantage, but even this remains inconclusive on a sample of 14. Cautious preference for X is defensible; definitive \"establishment\" of superiority is not.\n**Rules:** R1.\n**Confidence:** High (top-1 clearly insufficient); Medium-High (top-5 is suggestive but needs larger validation)."
+    },
+    "4": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** The top-5 ranking suggests Tool X may be preferable for practical use, but the evidence is not statistically definitive at this sample size. With n=14, the top-1 difference is clearly noise. The top-5 difference is more substantial and may have practical merit, but without proper power calculation or CIs, you cannot formally establish superiority.\n**Rules:** R1.\n**Confidence:** Moderate (65%)."
+    },
+    "5": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority (3/14 vs 2/14 top-1; 8/14 vs 2/14 top-5)** \n**Conclusion:** Inconclusive at top-1 (too small a difference at n=14), but Tool X shows substantial practical advantage at top-5.\n**Rules:** R2.\n**Confidence:** Medium-high (top-5 advantage is real, top-1 is not)."
+    },
+    "6": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Tool X shows substantially better practical performance on this 14-complex benchmark (8/14 vs. 2/14 top-5 success), but does not establish systematic superiority without additional evidence.\n\n**Governing Rules:** R2, R1\n\n**Rationale:** The top-5 performance gap (8 vs. 2) is practically meaningful and consistent. However, R2 warns that finding more correct poses does not, by itself, prove one tool is intrinsically more accurate\u2014it could reflect benchmark composition, luck, or tool specialization. The top-1 difference (3 vs. 2) is indeed negligible. For *this benchmark and task scope*, X is preferable; generalization requires cross-benchmark testing.\n\n**Caveats:** Single benchmark of 14 complexes; results may not transfer to other protein families or ligand classes.\n\n**Confidence:** Medium (70%)\n\n---"
+    },
+    "7": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** No. The evidence does not establish Tool X as the better tool.  \n**Governing Rules:** R2, R1  \n**Reasoning:** The top-1 difference (3/14 vs. 2/14) is not meaningful at this sample size. The top-5 difference (8/14 vs. 2/14) is more striking but still based on n=14 with no statistical test. R2 applies: finding more \"correct\" poses does not establish accuracy without independent ground truth (e.g., crystal structures, experimental validation of what \"correct\" means). The apparent superiority on top-5 suggests a *trend* worth investigating, not a proven advantage.  \n**Caveat:** Expand to a larger benchmark set and validate the definition of \"correct\" pose against independent experimental data.  \n**Confidence:** Medium (trend visible, but evidence weak)\n\n---"
+    },
+    "8": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Tool X shows a practical advantage at the top-5 level, but neither result is statistically robust at n=14 samples.\n\n**Rationale:** The top-1 difference (3 vs. 2) is negligible at this sample size and provides no statistical support (R2, R6 principles apply to small samples). The top-5 advantage (8/14 vs. 2/14) is more striking and would favor X for practical multi-pose screening. However, with n=14, the 95% CIs are wide and overlapping. For practical use where you examine multiple poses, X appears preferable; for top-1 claims, neither is established.\n\n**Caveats:** Small sample size limits confidence. Generalization to other target families would require additional benchmarks.\n\n**Confidence:** Medium\u2014clear directional advantage at top-5, but limited statistical power.\n\n---"
+    },
+    "9": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Tool X's top-5 performance (8/14 vs. 2/14) suggests practical superiority, but this result cannot be called statistically significant at n=14.\n\n**Reasoning:** The top-1 comparison (3 vs. 2) is not meaningful at this sample size (R1). The top-5 comparison is more substantial (57% vs. 14%), and ground truth is available, so R2 is satisfied in principle\u2014we are observing actual performance differences. However, n=14 is small, and the result does not meet standard statistical significance thresholds. More data would be required to establish definitive superiority.\n\n**Governing Rules:** R1, R2\n\n**Confidence:** 90%\n\n---"
+    },
+    "10": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** No, this does not establish Tool X as the better tool for practical use. Top-1 performance is explicitly acknowledged as non-meaningful (3 vs. 2 at N=14). Top-5 performance shows a larger difference (8 vs. 2), but with only 14 complexes, confidence intervals are wide and statistical power is low.\n\n**Governing Rules:** R2 (more correct poses \u2260 proven superiority without sufficient statistical power), sample-size limitation.\n\n**Caveat:** You have independent ground truth (correct poses are known), which is valuable. However, N=14 is insufficient to make a reliable practical claim. A larger, independent test set would be needed.\n\n**Confidence:** Medium (clear direction favoring X, but underpowered).\n\n---"
+    },
+    "11": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority (3/14 vs. 2/14 top-1; 8/14 vs. 2/14 top-5) \n\n**Conclusion:** Tool X shows better empirical performance on this benchmark, but does not establish inherent superiority without larger-scale, independent test data.\n\n**Governing Rules:** R2, R3\n\n**Reasoning:** R2 warns that more successful predictions do not themselves prove a method is more accurate; accuracy requires independent ground truth. On top-5, Tool X succeeds 8/14 vs. Tool Y's 2/14\u2014a substantial gap\u2014but n=14 is too small to rule out sampling variance or overfitting to this particular set. R3 applies: a single benchmark run is not a reproducibility check.\n\n**Caveats:** Are these the same 14 complexes for both tools? Is either tool overfitting to them? Is there a held-out test set? Tool X may be conservative (more poses attempted) rather than more accurate.\n\n**Confidence:** Medium (62%) \u2014 the empirical gap is real on this set, but generalization is unproven.\n\n---"
+    },
+    "12": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Yes, Tool X appears preferable for practical docking tasks, driven by the 4-fold advantage in top-5 success (8/14 vs. 2/14). The top-1 difference is negligible.\n\n**Governing Rules:** R1 (aggregate stats don't guarantee individual complex behavior)\n\n**Caveats:** Sample size is small (n=14). The top-5 advantage is large and practically meaningful for refinement pipelines, but we cannot claim universal superiority without broader benchmarking. Individual complexes may favor Y, and performance on these 14 proteins does not guarantee Y will underperform on unseen proteins.\n\n**Confidence:** High (80%) for practical preference on this benchmark; medium (50%) for general superiority.\n\n---"
+    },
+    "13": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** No. This does not rigorously establish Tool X as superior. The top-1 difference (3 vs. 2 at n=14) is below the noise threshold. The top-5 difference (8 vs. 2) is more striking but still underpowered for a formal claim.\n\n**Governing Rule(s):** R2 (aggregate superiority claims need proper sample size and statistical testing)\n\n**Caveats:** At n=14, neither metric reaches statistical significance. Practically, Tool X's top-5 performance looks promising, but \"establish\" requires either larger n, formal statistical testing, or validation on an independent test set.\n\n**Confidence:** High. Sample size is too small to claim statistical superiority.\n\n---"
+    },
+    "14": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** No. While Tool X performs numerically better on this benchmark (8/14 vs. 2/14 in top-5), the sample size (n=14) is too small to establish statistical superiority, and a single benchmark is insufficient to declare practical preference. Numerical advantages at this scale could arise from chance.\n\n**Governing Rules:** R2 (ground truth of \"correct pose\" exists, but a single small benchmark does not constitute independent validation), and implicitly the principle that empirical claims require adequate statistical power.\n\n**Caveat:** Replication on a larger, independent test set is required before recommending Tool X for production use.\n\n**Confidence:** High.\n\n---"
+    },
+    "15": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** No. This does not establish Tool X as the better tool.\n\n**Reasoning:** Top-1 performance (3/14 vs. 2/14) is not statistically significant at n=14 (R6 implicitly\u2014practical significance not established). The top-5 result (8/14 vs. 2/14) is a larger gap and may suggest practical value for ranking pipelines, but at this sample size, both comparisons lack the power to claim superiority (R2\u2014more favorable results do not prove accuracy without proper statistical validation). An independent, larger test set is needed.\n\n**Caveat:** Tool X shows promise for top-5 ranking; the top-1 result is inconclusive.\n\n**Confidence:** Moderate-high.\n\n---"
+    },
+    "16": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n\n**Conclusion:** Tool X shows promise but does not establish definitive superiority.\n\n**Governing Rules:** R2, R1\n\n**Rationale:** The top-1 difference (3/14 vs. 2/14) is not meaningful at n=14. The top-5 difference (8/14 vs. 2/14) is larger and suggests Tool X is more useful for ranking, **but (R2)** finding more correct poses does not itself establish accuracy without independent validation of ground truth (how were correct poses determined?). Both tools have low absolute success on top-1 (21% vs. 14%), limiting practical confidence. Small sample size (n=14) compounds uncertainty.\n\n**Confidence:** Moderate\u2014Tool X appears better on this test set, but R2 prevents claiming superiority without knowing ground truth provenance.\n\n---"
+    },
+    "17": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** The top-5 result (8/14 vs. 2/14) suggests practical advantage for Tool X; the top-1 result (3/14 vs. 2/14) does not establish superiority.\n**Governing Rules:** R2, R7\n**Caveats:** The top-5 difference (57% vs. 14%) is a large practical gap even at n=14. However, without validation of what \"correct\" poses truly predict about real binding, and given the tiny sample size, Tool X is suggestive for practical use but not rigorously \"established.\" Both tools produce predictions, not confirmed poses (R7).\n**Confidence:** Moderate-to-high that X is more practical; low that this establishes X as universally superior.\n\n---"
+    },
+    "18": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** No, Tool X superiority is not established.\n\n**Governing Rules:** R2, R5\n\n**Reasoning:** The primary endpoint (top-1 pose correct) shows 3/14 vs. 2/14\u2014no meaningful difference at n=14. The more favorable secondary endpoint (top-5: 8/14 vs. 2/14) cannot overturn a non-significant primary result (R5). R2 also notes that more correct poses alone do not prove accuracy without independent validation across a larger, representative set.\n\n**Caveat:** Tool X may have practical value for top-5 ranking workflows if such a workflow is pre-specified, but the claim of general superiority fails.\n\n**Confidence:** High.\n\n---"
+    },
+    "19": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Tool X is empirically superior for *top-5 pose recovery* (8/14 vs. 2/14) and establishes practical utility in that context. The top-1 difference (3/14 vs. 2/14) is not meaningful, so claims of top-1 superiority are unsupported.\n\n**Rule citations:** R2, R1\n\n**Caveat:** R1: the aggregate top-5 success rate does not confirm that any single future complex will benefit from using X. Practical utility also depends on whether your application requires a single high-confidence pose or tolerates ranking through top-5 candidates. R2 reminds us that finding more correct poses is evidence X works better on *this benchmark*, not proof it is more accurate in a broader validation set.\n\n**Confidence:** High (for top-5 on this 14-complex set); Medium (for generalization to new targets).\n\n---"
+    },
+    "20": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** The top-5 result is suggestive but does not yet establish X as superior for practical use; the top-1 result is inconclusive.\n\n**Governing Rules:** R2, R6 (sample size).\n\n**Reasoning:** R2 directly applies: finding more correct poses (top-5: 8/14 vs. 2/14) is not itself proof of accuracy without independent ground truth on what \"correct pose\" means in real binding. The top-1 difference (3/14 vs. 2/14) spans the noise threshold at n=14 and shows no meaningful separation. The top-5 advantage is more interesting, but validation on a larger, independent test set is needed before claiming superiority.\n\n**Caveats:** \"Practical use\" depends on whether your workflow relies on top-5 re-ranking or top-1 only. For top-5, X shows promise; for top-1, neither tool is demonstrably reliable at this sample size.\n\n**Confidence:** Medium.\n\n---"
+    },
+    "21": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Tool X is preferable for practical use. The top-5 success rate (8/14 vs. 2/14) represents a meaningful difference; in a real workflow, Tool X finds a correct pose in the top poses substantially more often. Top-1 differences are negligible at this sample size.\n\n**Governing rules:** R2, R6 (small sample, one metric is decisive).\n\n**Caveat:** n=14 is a small benchmark. The superiority is primarily in top-5, not top-1. Confidence in ranking Tool X would increase with larger, multi-target benchmarks.\n\n**Confidence:** Moderate\u2013High.\n\n---"
+    },
+    "22": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority \n\n**Conclusion:** Yes, Tool X shows evidence of superiority, particularly at top-5 ranks, but with significant caveats.\n\n**Governing Rules:** R2, R1\n\n**Reasoning:** Unlike many scenarios, you have independent ground truth (known correct poses). R2 is satisfied\u2014more positives are backed by validated ground truth. Tool X is meaningfully better on top-5 (8/14 vs. 2/14). Top-1 difference (3 vs. 2) is marginal.\n\n**Caveats:** At n=14, even the top-5 advantage has wide confidence intervals. R1 reminds us this aggregate result does not guarantee X will be better on your next unseen case. Statistical power is low.\n\n**Confidence:** Medium\u2013High (X likely superior on top-5 within this test set); Low\u2013Medium (generalizability to other protein-ligand pairs).\n\n---"
+    },
+    "23": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** The top-1 difference (3 vs. 2) does not establish superiority; the top-5 difference (8 vs. 2) suggests Tool X may be more practical, but should be validated on a larger benchmark.\n\n**Governing rules:** R2, R7.\n\n**Reasoning:** At n=14, the top-1 comparison is too small to be meaningful. The top-5 advantage (57% vs. 14%) is more substantial, and since correct poses are known independently, we have genuine ground truth. However, R2 cautions that finding more correct poses does not automatically prove Tool X's scoring function is better\u2014it could succeed through pose generation volume alone. R7 reminds us these are pose predictions, not confirmed structures.\n\n**Caveats:** Validate on a larger, diverse protein-ligand set to confirm robustness.\n\n**Confidence:** Medium\u2013high.\n\n---"
+    },
+    "24": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** The top-1 result (3 vs. 2) does not establish superiority. The top-5 result (8 vs. 2) shows a substantial practical difference and may justify preferring Tool X for practical screening, but still requires independent validation of whether those 8 poses are actually correct.\n\n**Rules:** R2 (finding more correct top-5 poses does not prove X is more accurate without testing on blind data); sample size too small (n=14) to draw firm conclusions from top-1.\n\n**Caveats:** The top-5 difference is substantial enough to warrant further testing. R2 requires independent ground truth to confirm that X's 8 are actually correct and Y's 2 represent a different, truly worse performance pattern.\n\n**Confidence:** High that superiority is not established; moderate that top-5 suggests practical promise.\n\n---"
+    },
+    "25": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Yes, Tool X is substantially better for practical use.\n\n**Governing Rules:** R1 (aggregate statistics *do* distinguish tools when validated against ground truth).\n\n**Rationale:** This *is* a proper benchmarking scenario with ground-truth pose correctness. Tool X achieves 8/14 top-5 success vs. Tool Y's 2/14\u2014a 4-fold difference on a well-defined metric. Although n=14 is modest, the margin is large enough to indicate practical superiority. The top-1 difference (3/14 vs. 2/14) is negligible, but top-5 success is far more relevant for practical docking workflows (subsequent refinement often starts from top-5 poses).\n\n**Caveat:** Generalization beyond these 14 complexes requires validation on additional complexes. Performance may vary by protein class or ligand size.\n\n**Confidence:** High (82%).\n\n---"
+    },
+    "26": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n*Conclusion:* Tool X shows stronger practical performance on these 14 complexes for multi-pose ranking, but the claim of \"superiority\" is limited by sample size and scope.\n\n*Governing Rules:* R2, R6.\n\n*Reasoning:* At top-1, the 3/14 vs. 2/14 difference is negligible and not significant (R6). At top-5, Tool X succeeds in 8/14 vs. 2/14\u2014a 4-fold difference with ground truth available. On this metric and these 14 complexes, Tool X is empirically better. However, R2 reminds us that a larger count of successes paired with actual ground truth does support the accuracy claim\u2014but only for these 14 structures.\n\n*Caveat:* The sample size (n=14) is small. Generalization to new protein families or targets is uncertain.\n\n*Confidence:* High (for these 14 complexes). Medium (for general tool preference without larger, diverse benchmarks).\n\n---"
+    },
+    "27": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Tool X shows a meaningful practical advantage for top-5 poses, but the top-1 difference is not statistically significant.\n\n**Rules:** R6, R2\n\nThe top-1 comparison (3/14 vs. 2/14) is not meaningful at this sample size (R6). The top-5 difference (8/14 vs. 2/14) is substantial and suggests Tool X is better at identifying correct poses within its top candidates\u2014valuable for practical screening. However, R2 notes this is not proof of superior accuracy without independent validation; it shows superiority at the specific task of pose ranking.\n\n**Caveat:** Small sample size limits confidence; formal comparison would benefit from larger benchmark.\n\n**Confidence:** Medium-high for top-5 practical use; low for definitive superiority claim.\n\n---"
+    },
+    "28": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Tool X shows apparent superiority on top-5 docking performance, but the evidence is limited and should not be claimed as definitive without a larger benchmark or statistical test.\n\n**Governing rules:** R2 (in a broader sense about establishing superiority)\n\n**Reasoning:** Tool X achieves 8/14 correct top-5 poses versus Tool Y's 2/14\u2014a large apparent difference. However, with only 14 samples, this result is vulnerable to chance variation; no p-value or statistical confidence interval is reported. For practical use, Tool X's top-5 performance does suggest better rank-ordering, but true superiority claims require either a larger, independent benchmark or a formal statistical test. The top-1 comparison (3/14 vs. 2/14) is acknowledged as not meaningful at this sample size.\n\n**Caveats:** Sample size is very small; clinical relevance of top-5 vs. top-1 performance depends on the docking protocol's downstream use.\n\n**Confidence:** 78%\n\n---"
+    },
+    "29": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n\n**Conclusion:** Not established as the better tool for practical use.\n\n**Governing Rules:** R5, R6\n\n**Analysis:** The top-1 metric (3/14 vs. 2/14) is not a meaningful difference at n=14 and should be treated as the primary endpoint for docking performance. R6 applies: this difference is trivial. The top-5 difference (8/14 vs. 2/14) is substantial, but R5 forbids overturning a non-significant primary endpoint with a secondary endpoint discovered post-hoc. If the task requires ranking the correct pose first, Tool X is not proven superior. If the task allows ensemble refinement on top-5, specify that endpoint prospectively, and Tool X appears better on that metric alone.\n\n**Confidence:** High\n\n---"
+    },
+    "30": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority**   \n**Conclusion:** Tool X shows meaningfully better top-5 performance (8/14 vs. 2/14) if you can afford to explore multiple poses. The top-1 difference (3/14 vs. 2/14) is negligible at this sample size and should not drive conclusions. Practical superiority depends on your use case (single pose vs. pose ensemble) and whether your ground truth for \"correct pose\" is validated.  \n**Rules:** R2 (more positive results don't equal accuracy without confirmed ground truth); sample-size caution (n=14 is small).  \n**Caveat:** The claim of superiority is sensitive to whether you require a single best pose or can use multiple candidates.  \n**Confidence:** Medium (depends on use-case definition and validation of ground truth).\n\n---"
+    },
+    "31": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** No, not definitively. The top-5 metric (8/14 vs. 2/14) shows promise for practical use, but this sample size is insufficient to establish Tool X as \"the better tool\" in general.\n\n**Governing Rules:** R7 (docking scores are computational predictions, not confirmations), R2 (more \"correct\" poses requires external validation of what \"correct\" means), R3 (single benchmark is not reproducibility).\n\n**Caveats:** The top-1 result (3/14 vs. 2/14) is not statistically meaningful at n=14. The top-5 result is more encouraging, but without (1) replication on an independent test set, (2) clarity on how \"correct pose\" was validated (experimental, crystallographic, consensus?), and (3) domain-specific context (target type, ligand size range), this cannot be generalized. The 14-complex benchmark is too small.\n\n**Confidence:** Medium\u2014the direction favors Tool X, but replication and larger sample size are needed.\n\n---"
+    },
+    "32": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n- **Conclusion:** Tool X shows promise in top-5 performance (8/14 vs. 2/14) and is likely preferable for practical use *if pose accuracy is the ground truth*. The top-1 difference (3/14 vs. 2/14) is not meaningful at this sample size.\n- **Governing Rules:** R2 (implicitly overridden here because \"correct pose\" is experimentally grounded), but R6 may apply to top-1 if confidence intervals are computed.\n- **Caveats:** The sample size (14 complexes) is small. The practical utility gain depends on how often the correct pose is in the top 5 vs. top 1 for your workflow.\n- **Confidence:** Medium-High (for top-5); Low (for top-1).\n\n---"
+    },
+    "33": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n\n**Conclusion:** Tool X appears better on this 14-complex benchmark, especially for top-5 ranking, but does not establish general superiority.\n\n**Reasoning:** Tool X's top-5 performance (8/14 vs. 2/14) is substantially better; top-1 (3/14 vs. 2/14) is marginal and not statistically significant at this sample size. Within the scope of these 14 complexes (assuming experimentally determined structures are ground truth), Tool X ranks poses better.\n\n**Governing Rules:** R2.\n\n**Caveats:** We can only report this result for these 14 specific complexes. Generalization to \"Tool X is the better tool\" requires testing on additional, independent benchmarks. Rule R2 allows accuracy claims when ground truth exists (it does here\u2014the experimental structures), but scope is limited.\n\n**Confidence:** Medium-High (for this benchmark); Low (for generalization).\n\n---"
+    },
+    "34": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Tool X appears superior for practical use, with significant caveats on sample size and use-case definition.\n\n**Governing Rules:** R1 (aggregate stats don't apply to individuals here, but informative for tool comparison); sample size considerations.\n\n**Reasoning:** Top-1 success is similar (3 vs. 2), but top-5 success shows a large difference (8/14 vs. 2/14). If practical docking workflows use top-5 ranking, Tool X is clearly preferable. However, with only 14 test cases, generalization is uncertain.\n\n**Caveats:** Confidence depends on whether the 14 complexes are representative of future targets and whether top-5 ranking is the actual deployment scenario. Retest on a larger, independent dataset before making final adoption decisions.\n\n**Confidence:** 70%\n\n---"
+    },
+    "35": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Tool X shows a practical advantage in top-5 retrieval (8/14 vs. 2/14), but claiming \"superiority\" at this sample size is premature.\n\n**Reasoning:** The top-1 difference (3 vs. 2) is already acknowledged as non-meaningful. For top-5, Tool X does retrieve correct poses in the final set 4\u00d7 more often. However, with only 14 complexes, statistical power is limited. Tool X appears practically more useful (finding a correct pose within the top-5 pool), but this needs validation on a larger benchmark to establish robust superiority.\n\n**Rules:** R1 (aggregate differences don't establish individual problem fate), implicit statistical power limitation at N=14.\n\n**Confidence:** Moderate-high for practical utility; lower for claims of established superiority.\n\n---"
+    },
+    "36": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Tool X shows a more promising top-5 performance (8/14 vs. 2/14) but does *not* clearly establish superiority for practical use based on top-1 alone (3/14 vs. 2/14 is not meaningful).\n\n**Governing Rules:** R2, R1\n\n**Caveats:**\n- The top-1 difference (3 vs. 2 on n=14) is too small to be meaningful.\n- The top-5 difference (8 vs. 2) is more compelling but still derived from only 14 cases.\n- Practical utility requires reproducibility across a broader test set and real-world task constraints (speed, accessibility, cost).\n- Ground truth is available here, so this is a true comparison\u2014but the sample is very small.\n\n**Confidence:** Low to Medium for broad superiority claims; Medium-High for \"Tool X performs better on this 14-case benchmark.\"\n\n---"
+    },
+    "37": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n\n**Conclusion:** No.\n\n**Governing Rules:** R5 (primary vs. secondary endpoint), R6 (small n, wide CIs).\n\n**Rationale:** Top-1 accuracy (3/14 vs. 2/14) is the primary, practically relevant endpoint for docking workflows\u2014you deploy the best-ranked pose. It is not meaningfully different at n=14. The top-5 result (8/14 vs. 2/14) is a secondary, exploratory metric. R5 explicitly forbids substituting a more favorable secondary endpoint when the primary is not significant. Additionally, at n=14, even the dramatic 8-vs-2 gap has wide confidence intervals compatible with sampling variation.\n\n**Caveat:** Top-5 success can be useful for iterative refinement pipelines, but does not establish practical superiority for standard docking deployment.\n\n**Confidence:** 87%.\n\n---"
+    },
+    "38": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Tool X shows an advantage in practical use *if* your workflow allows sampling the top-5 poses. The top-1 difference (3/14 vs. 2/14) is not meaningful. For practical superiority, the answer is use-case-dependent, not definitively established.\n\n**Rules:** R5 (primary endpoint\u2014top-1\u2014shows no clear win; secondary finding of better top-5 performance does not overturn it). R2 (more correct poses found \u2260 proof of accuracy without independent ground truth on why Tool X recovers more poses).\n\n**Caveats:** If your pipeline requires a single pose prediction, top-1 is the relevant metric and neither tool is convincingly better. If sampling top-5 is feasible and acceptable, Tool X is more practical. Neither claim proves the scoring logic or force field of Tool X is fundamentally superior.\n\n**Confidence:** High.\n\n---"
+    },
+    "39": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Yes, Tool X should be preferred for practical docking use on this benchmark. The top-5 performance gap (8/14 vs. 2/14) is substantial and materially impacts practical throughput\u2014a 4-fold difference in successful pose identification per run.\n\n**Governing rules:** R2 (more positive results), applied with ground truth available  \n**Caveat:** n=14 is small; this benchmark does not establish Tool X's superiority on new, untested systems. Cross-validation on additional protein-ligand sets is needed before generalization.\n\n**Confidence:** High (for this specific 14-case benchmark), medium-high (for generalization).\n\n---"
+    },
+    "40": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** No; Tool X cannot be established as superior.\n\n**Governing Rules:** R5, R2\n\n**Reasoning:** R5 forbids substituting a favorable secondary endpoint (top-5, 8/14 vs. 2/14) for a nonsignificant primary endpoint (top-1, 3/14 vs. 2/14). The top-1 rate shows no meaningful difference at n=14. R2 adds that sample size (14) is too small to support a strong claim even on top-5.\n\n**Caveats:** If top-5 was pre-specified as the success metric, the secondary/exploratory distinction dissolves. But framing suggests top-1 is primary.\n\n**Confidence:** High that superiority is not established; medium-high that X is actually better (given the top-5 gap, it warrants further investigation with larger n).\n\n---"
+    },
+    "41": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Yes, Tool X appears better for practical use. The top-5 difference (8/14 vs. 2/14) is substantial enough to favor X in workflows where the top pose can be ranked manually. The top-1 difference (3/14 vs. 2/14) is not meaningful at this sample size.\n\n**Governing Rules:** R1 (aggregate differences don't establish the fate of any single prediction), R2 (sample size and validation concerns)\n\n**Caveats:** n=14 is small; the top-5 advantage could reflect luck or specificity to this test set. R1 reminds us that knowing X succeeds 8/14 times tells us nothing about whether X will succeed on the next unseen complex. Independent validation on a separate test set is needed to claim tool superiority broadly.\n\n**Confidence:** Medium\u2013High (for this test set), Low\u2013Medium (for general superiority).\n\n---"
+    },
+    "42": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority (Top-1: 3/14 vs. 2/14; Top-5: 8/14 vs. 2/14) \n\n**Conclusion:** Tool X appears preferable for practical use based on top-5 enrichment (8/14 vs. 2/14), but the evidence is qualified. The top-1 result (3/14 vs. 2/14) is **not statistically significant** at this sample size and does not support a strong claim.\n\n**Governing Rules:** R6 (the top-1 difference is too small to be meaningful; sample size n=14 is marginal), R1 (aggregate rates do not guarantee consistent individual-complex performance).\n\n**Caveat:** The practical value depends on workflow\u2014if users filter to top-5 poses, X is better; if they rely on top-1, the evidence is weak. Recommendation should note the small sample size.\n\n**Confidence:** Medium (65%). The top-5 advantage is real but qualified by small sample size.\n\n---"
+    },
+    "43": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n\n**Conclusion:** Tool X shows meaningful superiority for top-5 ranking; top-1 difference is inconclusive at this sample size.\n\n**Rules:** R2, R1\n\n**Reasoning:** At n=14, Tool X's 3/14 vs. Tool Y's 2/14 top-1 performance does not establish a meaningful difference. However, the top-5 difference (8/14 vs. 2/14) is substantial and clinically relevant. For practical use-cases where multiple poses matter (e.g., ensemble docking or ensemble-based re-scoring), X is preferable. R2 reminds us that \"finding more correct poses is not itself proof of accuracy,\" but the magnitude of the top-5 gap and the specific use-case (where all top-5 are examined) justify the preference.\n\n**Caveats:** This conclusion is data-specific; if only single top-1 poses matter, the difference evaporates and neither tool is proven superior at this sample size.\n\n**Confidence:** Medium-High (75%)\n\n---"
+    },
+    "44": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n\n**Conclusion:** On this specific 14-complex benchmark, Tool X demonstrates superior top-5 pose-prediction accuracy (8/14 vs. 2/14). Whether this establishes X as generally superior requires larger, more diverse benchmarks.\n\n**Governing Rules:** R2 (independent ground truth requirement\u2014satisfied here), plus sample-size and generalization caveats.\n\n**Reasoning:** Ground truth exists (experimentally determined crystal structures), so R2's prerequisite is met. X's 8/14 vs. Y's 2/14 top-5 success rate represents a meaningful gap on this dataset. The non-significant top-1 difference (3/14 vs. 2/14) is correctly noted as uninformative at n=14.\n\n**Caveat:** Generalization is uncertain at n=14. Benchmark representativeness matters; clinical relevance depends on whether top-5 accuracy (vs. top-1) is what the application requires.\n\n**Confidence:** High (difference is real on this benchmark); Medium-High (generalization).\n\n---"
+    },
+    "45": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n\n**Conclusion:** Tool X shows *better performance on this small benchmark set*, particularly in top-5 enrichment (8/14 vs. 2/14), but this does not establish general superiority for practical use.\n\n**Governing Rules:** R1, R2\n\n**Caveats:** The sample size (14 complexes) is too small to support a robust conclusion. R1 notes that aggregate statistics (3/14 vs. 2/14 top-1) do not establish the fate of future targets; the tiny difference at top-1 is within noise. Top-5 enrichment is more marked, but still dependent on this particular set of 14. Different protein families, ligand types, or crystal-quality distributions might favor Tool Y. No cross-validation or hold-out test set is mentioned.\n\n**Confidence:** Low to medium for generalization. Tool X appears locally better here, but broader validation is essential before deployment.\n\n---"
+    },
+    "46": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion:** Tool X shows better performance on this benchmark (8/14 vs. 2/14 top-5 success), but does not establish universal superiority. The top-1 difference (3 vs. 2) is explicitly non-significant. At n=14, generalizability is limited.\n\n**Rules:** R1 (aggregate performance on this dataset does inform relative tool choice), but small sample limits extrapolation.\n\n**Caveats:** Benchmark covers only 14 complexes; relative performance may not hold across different protein families, ligand sizes, or binding modes.\n\n**Confidence:** 65%\n\n---"
+    },
+    "47": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority   \n**Conclusion:** No. This does not establish Tool X as superior for practical use.\n\n**Rules:** R2 (more correct poses \u2260 better tool without independent ground-truth validation), R1 (3 vs. 2 top-1 successes among 14 cases is single-item noise at this sample size), R6 (if confidence intervals were calculated, likely both would overlap at n=14)\n\n**Caveats:** The top-5 difference (8/14 vs. 2/14) is larger, but n=14 lacks statistical power. Ground-truth pose assignment must be validated independently. Practical decisions should also weigh speed, usability, and reproducibility.\n\n**Confidence:** Very high\n\n---"
+    },
+    "48": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n**Conclusion**: Tool X shows promise (8/14 vs. 2/14 top-5) but the sample size is too small to conclusively establish superiority for practical use.\n\n**Governing Rules**: R2, R6.\n\n**Reasoning**: R2 might seem to prohibit the claim, but here independent ground truth *is* available (correct poses are known). Tool X does find more correct poses, both at top-1 (3 vs. 2) and top-5 (8 vs. 2). The top-5 difference (8 vs. 2) is more substantial. However, R6 and basic statistics: on a sample of 14, these margins, especially top-1, are fragile. A single additional complex where Tool Y succeeds could flip the narrative.\n\n**Caveat**: Speed, false-positive rates, and sensitivity to input format are also relevant to practical use and are not addressed here.\n\n**Confidence**: Medium. The signal favors X, but n=14 is insufficient for a definitive claim.\n\n---"
+    },
+    "49": {
+      "label": "NON-COMPLIANT",
+      "text": "Docking Tool Superiority** \n**Conclusion:** Tool X shows substantially better top-5 performance (8/14 vs. 2/14), making it practically superior for use cases where multiple poses are examined; the top-1 difference (3/14 vs. 2/14) is not meaningful.\n**Reasoning (R6, R2):** The top-1 difference of one case at n=14 does not meet significance (R6). The top-5 difference is marked (8 vs. 2) and, given that benchmark structures are known, represents valid ground truth (R2). For practical docking workflows that examine top-5 poses, Tool X is preferable; for top-1-only use, no superiority is established.\n**Caveat:** Sample size is small; a larger benchmark would strengthen any claim.\n**Confidence:** Medium\u2013High\n\n---"
+    },
+    "50": {
+      "label": "COMPLIANT",
+      "text": "Docking Tool Superiority \n\n**Conclusion:** Tool X shows promise for practical use based on the top-5 metric (8/14 vs. 2/14), but this does not establish superiority; the top-1 gap (3 vs. 2) is not statistically meaningful.\n\n**Governing Rules:** R2 (finding more correct poses doesn't establish accuracy without independent validation), R6 (tiny sample, no confidence intervals provided; claims require statistical significance).\n\n**Caveat:** Single benchmark set. Uncertain whether the 14 \"correct\" poses are experimentally validated or just deemed correct by one method.\n\n**Confidence:** Medium-low. The top-5 result is suggestive, but 14 complexes is insufficient and we lack validation of ground truth.\n\n---"
+    }
+  }
+}

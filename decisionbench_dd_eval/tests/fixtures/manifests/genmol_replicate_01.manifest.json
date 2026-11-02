@@ -1,0 +1,22 @@
+{
+  "benchmark": "DecisionBench-DD v1.0",
+  "tool": "genmol",
+  "run_id": "replicate_01",
+  "request_config_file": "genmol_primary.json",
+  "request_started_at_iso8601": "2026-08-15T09:00:00Z",
+  "request_finished_at_iso8601": "2026-08-15T09:01:00Z",
+  "endpoint": "https://health.api.nvidia.com/v1/biology/nvidia/genmol/generate",
+  "service_or_model_version": "test-fixture",
+  "container_image_or_api_build": "hosted_api",
+  "hardware": {
+    "gpu_model": "hosted_api",
+    "gpu_count": null,
+    "peak_vram_gb": null
+  },
+  "runtime_seconds": 42.5,
+  "http_status": 200,
+  "requested_molecules": 100,
+  "returned_records": 7,
+  "raw_response_file": "../raw/genmol_replicate_01.json",
+  "notes": "synthetic fixture for pipeline smoke-testing, not a real API response"
+}

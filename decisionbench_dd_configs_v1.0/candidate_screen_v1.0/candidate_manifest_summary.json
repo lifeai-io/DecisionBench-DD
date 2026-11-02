@@ -1,0 +1,68 @@
+{
+  "schema_version": "DecisionBench-DD_candidate_screen_inputs_v1.0",
+  "seed_smiles": "C1=C(C(=C(C=C1Br)Br)N)CNC2CCC(CC2)O",
+  "seed_canonical_smiles": "Nc1c(Br)cc(Br)cc1CNC1CCC(O)CC1",
+  "rdkit_version": "2026.03.5",
+  "gates": {
+    "valid": "RDKit MolFromSmiles succeeds",
+    "deduplication": "within each generator replicate by isomeric canonical SMILES; first occurrence retained",
+    "not_exact_seed": true,
+    "ecfp4": {
+      "radius": 2,
+      "n_bits": 2048,
+      "tanimoto_min_inclusive": 0.3,
+      "tanimoto_max_exclusive": 0.95
+    },
+    "qed_min_inclusive": 0.5,
+    "sa_max_inclusive": 5.0,
+    "mw_da": [
+      200,
+      550
+    ],
+    "clogp": [
+      0,
+      5
+    ],
+    "tpsa_a2_max_inclusive": 100,
+    "pains": "none",
+    "brenk": "only the single seed-position dibrominated-core aniline occurrence is allowlisted"
+  },
+  "generators": {
+    "genmol": {
+      "requested": 300,
+      "qualified_unique": 66,
+      "qualified_yield_of_requested": 0.22,
+      "stage_counts": {
+        "valid": 300,
+        "unique": 201,
+        "not_exact_seed": 199,
+        "similarity_band_0.30_to_0.95": 148,
+        "qed": 87,
+        "sa_score": 84,
+        "molecular_weight": 83,
+        "clogp": 70,
+        "tpsa": 68,
+        "no_pains": 68,
+        "chemically_qualified": 66
+      }
+    },
+    "molmim": {
+      "requested": 300,
+      "qualified_unique": 3,
+      "qualified_yield_of_requested": 0.01,
+      "stage_counts": {
+        "valid": 297,
+        "unique": 297,
+        "not_exact_seed": 297,
+        "similarity_band_0.30_to_0.95": 12,
+        "qed": 11,
+        "sa_score": 11,
+        "molecular_weight": 11,
+        "clogp": 9,
+        "tpsa": 8,
+        "no_pains": 8,
+        "chemically_qualified": 3
+      }
+    }
+  }
+}

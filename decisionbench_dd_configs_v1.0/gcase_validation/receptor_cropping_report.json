@@ -1,0 +1,86 @@
+[
+  {
+    "pdb_id": "9F9Z",
+    "residues_kept": 72,
+    "residues_total": 497,
+    "crop_radius_angstrom": 15.0
+  },
+  {
+    "pdb_id": "9FA3",
+    "residues_kept": 83,
+    "residues_total": 498,
+    "crop_radius_angstrom": 15.0
+  },
+  {
+    "pdb_id": "9FA6",
+    "residues_kept": 82,
+    "residues_total": 501,
+    "crop_radius_angstrom": 15.0
+  },
+  {
+    "pdb_id": "9FAD",
+    "residues_kept": 75,
+    "residues_total": 496,
+    "crop_radius_angstrom": 15.0
+  },
+  {
+    "pdb_id": "9FAL",
+    "residues_kept": 76,
+    "residues_total": 497,
+    "crop_radius_angstrom": 15.0
+  },
+  {
+    "pdb_id": "9FAY",
+    "residues_kept": 74,
+    "residues_total": 497,
+    "crop_radius_angstrom": 15.0
+  },
+  {
+    "pdb_id": "9FAZ",
+    "residues_kept": 80,
+    "residues_total": 498,
+    "crop_radius_angstrom": 15.0
+  },
+  {
+    "pdb_id": "9FB2",
+    "residues_kept": 83,
+    "residues_total": 499,
+    "crop_radius_angstrom": 15.0
+  },
+  {
+    "pdb_id": "9FDI",
+    "residues_kept": 80,
+    "residues_total": 498,
+    "crop_radius_angstrom": 15.0
+  },
+  {
+    "pdb_id": "8P3E",
+    "residues_kept": 69,
+    "residues_total": 994,
+    "crop_radius_angstrom": 15.0
+  },
+  {
+    "pdb_id": "8P41",
+    "residues_kept": 89,
+    "residues_total": 994,
+    "crop_radius_angstrom": 15.0
+  },
+  {
+    "pdb_id": "3GXF",
+    "residues_kept": 122,
+    "residues_total": 1988,
+    "crop_radius_angstrom": 15.0
+  },
+  {
+    "pdb_id": "6Q1N",
+    "residues_kept": 109,
+    "residues_total": 983,
+    "crop_radius_angstrom": 15.0
+  },
+  {
+    "pdb_id": "6Q1P",
+    "residues_kept": 104,
+    "residues_total": 986,
+    "crop_radius_angstrom": 15.0
+  }
+]

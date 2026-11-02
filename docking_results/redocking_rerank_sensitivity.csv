@@ -1,0 +1,15 @@
+pdb_id,native_rank1_rmsd,native_rank1_success_at_1,cnn_vs_desc_rmsd,cnn_vs_desc_success_at_1,minimized_affinity_asc_rmsd,minimized_affinity_asc_success_at_1
+9F9Z,0.889,True,0.889,True,1.072,True
+9FA3,2.208,False,2.208,False,2.208,False
+9FA6,5.891,False,5.891,False,5.891,False
+9FAD,6.044,False,6.044,False,5.289,False
+9FAL,5.244,False,6.416,False,6.416,False
+9FAY,5.557,False,6.315,False,6.286,False
+9FAZ,0.882,True,0.882,True,0.874,True
+9FB2,7.267,False,7.585,False,7.267,False
+9FDI,1.534,True,1.534,True,1.176,True
+8P3E,4.171,False,4.171,False,4.24,False
+8P41,5.107,False,5.107,False,6.962,False
+3GXF,3.434,False,3.434,False,1.617,True
+6Q1N,8.73,False,1.492,True,1.956,True
+6Q1P,3.397,False,3.249,False,3.249,False

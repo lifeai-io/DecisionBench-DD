@@ -1,0 +1,14 @@
+{
+  "_benchmark": "DecisionBench-DD v1.0",
+  "_tool": "MolMIM NIM",
+  "_task": "Ambroxol-conditioned molecular generation",
+  "_run_policy": "Execute this identical request 3 times as independent replicates; the API exposes no documented random-seed field.",
+  "smi": "C1=C(C(=C(C=C1Br)Br)N)CNC2CCC(CC2)O",
+  "algorithm": "CMA-ES",
+  "num_molecules": 100,
+  "property_name": "QED",
+  "minimize": false,
+  "min_similarity": 0.3,
+  "particles": 100,
+  "iterations": 10
+}

@@ -1,0 +1,4 @@
+selector,ambroxol_cnnaffinity_under_selector,n_pass_genmol,n_pass_molmim,n_pass_total,Y_structural_proxy_genmol,Y_structural_proxy_molmim,note
+native_rank1,6.206,15,1,16,0.05,0.0033,
+cnn_vs_desc,6.206,20,1,21,0.0667,0.0033,
+minimized_affinity_asc,6.206,11,1,12,0.0367,0.0033,

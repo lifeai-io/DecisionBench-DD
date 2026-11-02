@@ -1,0 +1,82 @@
+{
+  "schema": "DecisionBench-DD candidate_screen receptor_state_manifest v1.0",
+  "cleanup_policy": "Same as the 14-case redocking benchmark: chain A only, standard amino acids only (waters/SO4/glycerol/glycans removed), PDB2PQR 3.7.1 AMBER/propka at the state-specific pH, --pdb-output.",
+  "states": {
+    "3KEH": {
+      "role": "primary_neutral_ER_like",
+      "experimental_ph": 7.4,
+      "chain_used": "A",
+      "n_residues": 497,
+      "pdb2pqr_warnings": {
+        "missing_atom_warnings": [
+          "GLN A 497: missing OXT (C-terminal carboxylate oxygen, routine/expected)"
+        ],
+        "debump_failures": 0,
+        "multiple_occupancy_warnings": 0,
+        "backbone_gaps": 0
+      },
+      "catalytic_residues_resolved": {
+        "E235": true,
+        "E340": true
+      },
+      "pocket_proximity_qc": {
+        "method": "distance from GLN497 CA (the only missing-atom-warning residue) to the docking box center",
+        "distance_angstrom": 44.88,
+        "threshold_angstrom": 6.0,
+        "flagged": false,
+        "note": "GLN497 is the protein's C-terminal residue; its only missing atom is OXT, a routine unresolved terminal carboxylate oxygen, not a pocket-lining side chain."
+      },
+      "docking_box": {
+        "center_x": 41.59,
+        "center_y": 101.712,
+        "center_z": -7.128,
+        "size_x": 16.936,
+        "size_y": 15.006,
+        "size_z": 15.691,
+        "alignment_ca_rmsd_angstrom": 0.866,
+        "n_ca_atoms_aligned": 497
+      }
+    },
+    "3KE0": {
+      "role": "secondary_acidic_lysosome_like",
+      "experimental_ph": 5.4,
+      "chain_used": "A",
+      "n_residues": 497,
+      "pdb2pqr_warnings": {
+        "missing_atom_warnings": [
+          "GLN A 497: missing OXT (C-terminal carboxylate oxygen, routine/expected)"
+        ],
+        "debump_failures": 0,
+        "multiple_occupancy_warnings": 0,
+        "backbone_gaps": 0
+      },
+      "catalytic_residues_resolved": {
+        "E235": true,
+        "E340": true
+      },
+      "pocket_proximity_qc": {
+        "method": "distance from GLN497 CA (the only missing-atom-warning residue) to the docking box center",
+        "distance_angstrom": 45.01,
+        "threshold_angstrom": 6.0,
+        "flagged": false,
+        "note": "GLN497 is the protein's C-terminal residue; its only missing atom is OXT, a routine unresolved terminal carboxylate oxygen, not a pocket-lining side chain."
+      },
+      "docking_box": {
+        "center_x": 42.32,
+        "center_y": 101.16,
+        "center_z": -7.206,
+        "size_x": 16.916,
+        "size_y": 15.043,
+        "size_z": 15.679,
+        "alignment_ca_rmsd_angstrom": 0.822,
+        "n_ca_atoms_aligned": 497
+      }
+    }
+  },
+  "box_derivation": {
+    "method": "3GXF_prepared.pdb chain D (the chain the case's IFM ligand is actually bound to, per gcase_validation_set_v1.0.json auth_chain) C-alpha atoms superposed onto each new receptor's chain A C-alpha atoms (Bio.PDB.Superimposer, Kabsch algorithm, all 497 common residues); reference_ligands/3GXF_IFM.sdf heavy-atom coordinates transformed with the same rotation/translation; box = transformed heavy-atom extent + 6 A padding per axis (same padding convention as the 14-case GNINA boxes).",
+    "alignment_ca_rmsd_3KEH": 0.866,
+    "alignment_ca_rmsd_3KE0": 0.822,
+    "sanity_check": "Box center lies 8.4-8.8 A from both catalytic-residue C-alpha atoms (E235, E340) in both states -- consistent with a pocket-centered box (a mis-mapped chain/residue-numbering error would put this at 20+ A)."
+  }
+}

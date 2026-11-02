@@ -1,0 +1,210 @@
+{
+  "embedding_reproducibility_diagnostic": {
+    "n_candidates_compared": 69,
+    "frozen_primary_pass": 16,
+    "this_run_redock_pass": 24,
+    "n_flipped": 18,
+    "n_newly_passing": 13,
+    "n_newly_failing": 5,
+    "cnnaffinity_diff_redock_minus_primary": {
+      "mean": 0.1601,
+      "std": 0.6339,
+      "min": -1.3034,
+      "max": 2.2401
+    },
+    "plausible_major_source": "RDKit ETKDGv3 embedding is not reproducible across separate process invocations despite an explicit fixed randomSeed=42 (decisionbench_dd_docking/prepare_ligands.py) -- verified directly for GM_009 (blinded PMD_0133): identical canonical/protonated SMILES and atom count between the frozen primary docking_input_ligands/GM_009_3KEH.sdf and this run's freshly-prepared SDF, but starting-conformer heavy-atom coordinates differ by up to 1.6953 A (mean 0.2744 A). This is a substantially larger effect than the previously-documented ~0.0009 cross-machine CNNaffinity drift (Appendix H), which characterized only Ambroxol's own score, not the full candidate population. This is not a controlled experiment isolating embedding as the sole varying input: which physical machine ran which docking batch was not recorded, so an additional contribution from other run-level or hardware factors cannot be ruled out on top of the embedding effect.",
+    "bootstrap_interval_caveat": "The matched cluster-bootstrap interval below conditions on one embedding-and-docking realization per molecule and therefore does not capture within-molecule procedural variability from repeated ligand embedding."
+  },
+  "posthoc_amended_samebatch_analysis": {
+    "note": "Post-hoc amended same-batch analysis: candidates and decoys docked in the same blinded batch, emphasized as the less-confounded DESCRIPTIVE estimate (not a confirmatory primary analysis -- this emphasis was adopted after inspecting results; see decoy_addendum_v1.0.md's amendment log).",
+    "p_candidate_samebatch": 0.3478,
+    "n_candidate_pass": 24,
+    "n_candidate": 69,
+    "p_decoy": 0.2377,
+    "n_decoy_pass": 82,
+    "n_decoy": 345,
+    "p_decoy_cluster_bootstrap_95ci": [
+      0.1913,
+      0.287
+    ],
+    "bootstrap_interval_caveat": "The matched cluster-bootstrap interval below conditions on one embedding-and-docking realization per molecule and therefore does not capture within-molecule procedural variability from repeated ligand embedding.",
+    "risk_difference_candidate_minus_decoy": 0.1101,
+    "risk_difference_95ci": [
+      -0.0116,
+      0.2377
+    ],
+    "risk_ratio_candidate_over_decoy": 1.4634,
+    "risk_ratio_95ci": [
+      0.9551,
+      2.1155
+    ],
+    "interpretation": "Decoy rate below candidate rate but >10%, or RR CI includes 1: possible but weak discrimination; gate remains poorly calibrated."
+  },
+  "preregistered_crossrun_analysis_confounded": {
+    "note": "Preregistered cross-run analysis, subsequently identified as confounded: as originally pre-registered in decoy_addendum_v1.0.md, decoy rate vs. the FROZEN primary 16/69. Retained, not withdrawn -- known to be confounded by cross-run embedding variance (see embedding_reproducibility_diagnostic).",
+    "p_candidate_frozen_16_of_69": 0.2318840579710145,
+    "p_decoy": 0.2377,
+    "n_decoy_pass": 82,
+    "n_decoy": 345,
+    "risk_difference_candidate_minus_decoy": -0.0058,
+    "risk_difference_95ci": [
+      -0.0551,
+      0.0406
+    ],
+    "risk_ratio_candidate_over_decoy": 0.9756,
+    "risk_ratio_95ci": [
+      0.8081,
+      1.2121
+    ],
+    "interpretation": "Decoy rate >= candidate rate: no evidence the structural proxy enriches pipeline candidates over matched unrelated molecules."
+  },
+  "n_bootstrap_resamples": 5000,
+  "n_matched_clusters": 69,
+  "stage_decomposition_decoys": [
+    {
+      "receptor_state": "3KE0",
+      "requested": 345,
+      "returned_5_poses": 343,
+      "geometry_valid_top1": 338,
+      "catalytic_contact_top1": 293
+    },
+    {
+      "receptor_state": "3KEH",
+      "requested": 345,
+      "returned_5_poses": 344,
+      "geometry_valid_top1": 343,
+      "catalytic_contact_top1": 238
+    }
+  ],
+  "gate_mechanism_table_3keh": [
+    {
+      "population": "Same-batch candidates",
+      "n": 69,
+      "five_poses_returned": 69,
+      "geometry_valid_top1": 67,
+      "catalytic_contact_top1": 64,
+      "cnnaffinity_ge_ambroxol": 25,
+      "complete_structural_proxy": 24
+    },
+    {
+      "population": "Decoys",
+      "n": 345,
+      "five_poses_returned": 344,
+      "geometry_valid_top1": 343,
+      "catalytic_contact_top1": 238,
+      "cnnaffinity_ge_ambroxol": 85,
+      "complete_structural_proxy": 82
+    }
+  ],
+  "gate_mechanism_interpretation": "The gates are conjunctive, so this table decomposes them marginally (each column scored independently against the full population, not cumulatively): reordering them cannot change the final pass set, only which gate receives marginal attribution. Both catalytic-site contact (92.8% vs. 69.0%) and the CNNaffinity-vs-Ambroxol threshold (36.2% vs. 24.6%) show a descriptive population difference; CNNaffinity is the more restrictive filter in absolute terms for both populations, but contact is not merely incidental -- it is not the only gate component that differs between populations.",
+  "size_bias_checks": {
+    "spearman_cnnaffinity_vs_hac": {
+      "rho": 0.3734,
+      "p": 0.0
+    },
+    "logit_pass_on_hac_clogp": {
+      "const": -5.6378,
+      "decoy_hac": 0.2716,
+      "decoy_clogp": -0.522
+    },
+    "logit_pass_on_hac_clogp_pvalues": {
+      "const": 0.0,
+      "decoy_hac": 0.0,
+      "decoy_clogp": 0.0117
+    },
+    "halogen_count_balance": {
+      "candidate_n": 69,
+      "candidate_mean": 2.0435,
+      "candidate_median": 2.0,
+      "candidate_range": [
+        1,
+        5
+      ],
+      "candidate_value_counts": {
+        "1": 1,
+        "2": 66,
+        "3": 1,
+        "5": 1
+      },
+      "candidate_proportions_0_1_2_gt2": {
+        "0": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "1": {
+          "n": 1,
+          "pct": 1.4
+        },
+        "2": {
+          "n": 66,
+          "pct": 95.7
+        },
+        ">2": {
+          "n": 2,
+          "pct": 2.9
+        }
+      },
+      "decoy_n": 345,
+      "decoy_mean": 1.8783,
+      "decoy_median": 2.0,
+      "decoy_range": [
+        1,
+        4
+      ],
+      "decoy_value_counts": {
+        "1": 73,
+        "2": 246,
+        "3": 21,
+        "4": 5
+      },
+      "decoy_proportions_0_1_2_gt2": {
+        "0": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "1": {
+          "n": 73,
+          "pct": 21.2
+        },
+        "2": {
+          "n": 246,
+          "pct": 71.3
+        },
+        ">2": {
+          "n": 26,
+          "pct": 7.5
+        }
+      },
+      "smd": 0.3385
+    },
+    "spearman_cnnaffinity_vs_halogen": {
+      "rho": 0.0143,
+      "p": 0.79118
+    },
+    "pass_rate_by_halogen_stratum": {
+      "monohalogenated_or_fewer": {
+        "n": 72,
+        "n_pass": 24,
+        "pass_rate": 0.3333
+      },
+      "dihalogenated_or_more": {
+        "n": 272,
+        "n_pass": 58,
+        "pass_rate": 0.2132
+      }
+    },
+    "logit_pass_on_hac_clogp_halogen": {
+      "const": -5.4302,
+      "decoy_hac": 0.2679,
+      "decoy_clogp": -0.489,
+      "decoy_halogen_count": -0.1315
+    },
+    "logit_pass_on_hac_clogp_halogen_pvalues": {
+      "const": 0.0,
+      "decoy_hac": 0.0,
+      "decoy_clogp": 0.0233,
+      "decoy_halogen_count": 0.5939
+    }
+  },
+  "caveat": "Decoys are not experimentally confirmed GCase inactives; this estimates background acceptance/discrimination, not biological specificity or target-specific binding. Without measured affinities, the CNNaffinity-HAC association below cannot distinguish model bias from a genuine physical size-affinity relationship."
+}

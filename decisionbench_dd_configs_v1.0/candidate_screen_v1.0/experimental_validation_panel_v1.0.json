@@ -1,0 +1,143 @@
+{
+  "schema": "DecisionBench-DD experimental_validation_panel v1.0 (amended v1.1, corrected v1.1.1)",
+  "status": "frozen before any wet-lab data exists -- see experimental_validation_panel_v1.0.md for full narrative and rationale",
+  "frozen_date_utc": "2026-08-26",
+  "v1_1_amendment_date_utc": "2026-08-26",
+  "v1_1_1_correction_date_utc": "2026-08-26T23:31:21Z",
+  "v1_1_amendment_summary": "External review caught a mechanistic self-contradiction: v1.0's Tier 1 gate required GCase 'activation' at neutral pH while this same document's pH-dependence-hypothesis section already described Ambroxol as a pH-dependent INHIBITOR. Fixed: assay 3 replaced by a binding/stabilization assay (3a) plus a sign-agnostic catalytic-modulation assay (3b, reporting inhibition IC50 and/or activation EC50 plus a pH-selectivity ratio); the tier_1_to_tier_2 gate now requires neutral-pH engagement of either sign plus acceptable acidic-pH residual activity, not activation specifically. Compound membership (Tranche 1/Tranche 2) is unchanged -- the review confirmed this partition as defensible.",
+  "v1_1_1_correction_summary": "External review of v1.1 confirmed panel membership/architecture as acceptable and found 8 further pre-data corrections, all applied: (1) Ambroxol recharacterized as mixed-type, not competitive, inhibitor (Maegawa et al. explicitly reports mixed-type inhibition); (2) N370S and N409S are the SAME variant (GBA1 c.1226A>G, p.Asn409Ser) under legacy vs. HGVS numbering, not two candidate variants -- every occurrence corrected; (3) section 3a's statistical pre-registration now specifies concrete default values, not just a checklist of categories; (4) the Tier1->Tier2 cytotoxicity gate now branches for stabilization-only vs. catalytic-modulator candidates, previously undefined for the former; (5) the overall-pass criteria's 'ALL required' claim contradicted describing hepatocyte stability as non-excluding -- resolved by moving it to an explicit optimization flag outside the mandatory set; (6) PAMPA-BBB (passive-only) is now explicitly separated from a required MDCK-MDR1/BCRP-competent transporter-efflux assay; (7) the 30x hERG index must now come from validated patch-clamp, not thallium-flux triage, and 'GBA1-specific lysosomal activity' is now operationally defined (CBE-inhibitable fraction); (8) this document's own v1.1 amendment date was mislabeled one day into the future -- corrected to real UTC timestamps, and the companion README's stale docking-outputs sentence and patent-membership wording were also fixed.",
+  "relationship_to_computational_funnel": "All 16 primary candidate_screen_results/summary.md passers remain qualified and unchanged. This selects a first experimental tranche of 6 for practical reasons; the other 10 are an explicit Tranche 2 reserve, not excluded.",
+  "tranche_1_panel": [
+    {
+      "candidate_id": "GM_035", "panel_priority": 1, "original_triage_rank_cnnaffinity_desc": 3, "tool": "genmol",
+      "canonical_smiles": "COC1CC(O)CCC1NCc1cc(Br)cc(Br)c1N",
+      "role": "comparatively_balanced_predicted_profile",
+      "selection_rationale": "CNNaffinity 7.017, ligand-efficiency proxy 0.351, no invalid ADMET predictions -- balanced relative to the rest of the panel, not 'clean': predicted hERG (0.766) remains elevated and must still be tracked.",
+      "key_computational_values": {"cnnaffinity_3keh": 7.017, "ligand_efficiency_proxy": 0.351, "qed": 0.671, "sa_score": 3.666, "mw": 408.1, "clogp": 2.81, "herg": 0.766, "ames": 0.256, "dili": 0.269, "delta_cnnaffinity_neutral_minus_acidic": 0.631}
+    },
+    {
+      "candidate_id": "GM_015", "panel_priority": 2, "original_triage_rank_cnnaffinity_desc": 1, "tool": "genmol",
+      "canonical_smiles": "COC1CC(N(Cc2cc(Br)cc(Br)c2N)c2ccccn2)CCC1O",
+      "role": "binding_efficacy_anchor",
+      "selection_rationale": "Highest CNNaffinity of all 16 primary passers (7.370); tests whether top computational affinity translates to real potency despite weaker predicted solubility/clearance.",
+      "key_computational_values": {"cnnaffinity_3keh": 7.370, "ligand_efficiency_proxy": 0.283, "qed": 0.624, "sa_score": 3.722, "mw": 485.2, "clogp": 4.12, "herg": 0.759, "ames": 0.040, "dili": 0.587, "delta_cnnaffinity_neutral_minus_acidic": 0.473}
+    },
+    {
+      "candidate_id": "MM_002", "panel_priority": 3, "original_triage_rank_cnnaffinity_desc": 4, "tool": "molmim",
+      "canonical_smiles": "C=C(Br)Cc1cc(Br)c(CNC2CCC(O)CC2)s1",
+      "role": "orthogonal_generator_representative",
+      "selection_rationale": "The sole MolMIM passer -- kept in the experimental funnel to represent that chemotype, but n=1 cannot support a statistically meaningful generator-level (GenMol-vs-MolMIM) efficacy comparison; any result is a single data point about this compound only.",
+      "key_computational_values": {"cnnaffinity_3keh": 6.924, "ligand_efficiency_proxy": 0.364, "qed": 0.758, "sa_score": 3.175, "mw": 409.2, "clogp": 4.36, "herg": 0.783, "ames": 0.366, "dili": 0.269, "delta_cnnaffinity_neutral_minus_acidic": 0.679}
+    },
+    {
+      "candidate_id": "GM_034", "panel_priority": 4, "original_triage_rank_cnnaffinity_desc": 8, "tool": "genmol",
+      "canonical_smiles": "CC1CC(O)CCC1NCc1cc(Br)cc(Br)c1N",
+      "role": "ambroxol_like_anchor",
+      "selection_rationale": "Smallest, most Ambroxol-proximal analogue (MW 392, cLogP 3.43) in the panel; a mechanistic bridge to the reference compound.",
+      "key_computational_values": {"cnnaffinity_3keh": 6.583, "ligand_efficiency_proxy": 0.346, "qed": 0.691, "sa_score": 3.591, "mw": 392.1, "clogp": 3.43, "herg": 0.857, "ames": 0.189, "dili": 0.198, "delta_cnnaffinity_neutral_minus_acidic": 0.345}
+    },
+    {
+      "candidate_id": "GM_054", "panel_priority": 5, "original_triage_rank_cnnaffinity_desc": 2, "tool": "genmol",
+      "canonical_smiles": "CN1CCC(OC2CCC(NCc3cc(Br)cc(Br)c3N)C(N)C2)CC1",
+      "role": "prediction_challenge_comparator",
+      "selection_rationale": "Second-highest CNNaffinity (7.060) but near-zero pH-sensitivity delta (-0.028) -- included to directly challenge the pH-dependence hypothesis with a compound predicted NOT to fit it, not a validated negative control (no data exist yet to validate anything against). Also has the panel's invalid (negative) predicted hepatocyte clearance, making it the priority case for real metabolic-stability data.",
+      "key_computational_values": {"cnnaffinity_3keh": 7.060, "ligand_efficiency_proxy": 0.272, "qed": 0.553, "sa_score": 3.876, "mw": 490.3, "clogp": 3.24, "herg": 0.919, "ames": 0.402, "dili": 0.066, "delta_cnnaffinity_neutral_minus_acidic": -0.028, "clearance_hepatocyte_az_valid": false}
+    },
+    {
+      "candidate_id": "GM_057", "panel_priority": 6, "original_triage_rank_cnnaffinity_desc": 9, "tool": "genmol",
+      "canonical_smiles": "Nc1c(Br)cc(Br)cc1CNC1CCC(O)CC1CC(=O)O",
+      "role": "low_toxicity_ph_sensitivity_lead",
+      "selection_rationale": "Lowest hERG (0.352) and AMES (0.126) risk of the panel, plus the single largest neutral-vs-acidic CNNaffinity delta of all 16 candidates (+0.935) -- strongest computational candidate for genuine Ambroxol-like pH-dependent chaperone behavior, traded off against reduced predicted BBB/HIA.",
+      "key_computational_values": {"cnnaffinity_3keh": 6.571, "ligand_efficiency_proxy": 0.299, "qed": 0.533, "sa_score": 3.701, "mw": 436.1, "clogp": 2.89, "herg": 0.352, "ames": 0.126, "dili": 0.181, "delta_cnnaffinity_neutral_minus_acidic": 0.935, "bbb_martins": 0.540, "hia_hou": 0.784}
+    }
+  ],
+  "tranche_2_reserve": ["GM_007", "GM_024", "GM_031", "GM_032", "GM_033", "GM_039", "GM_047", "GM_053", "GM_055", "GM_064"],
+  "target_variant": {
+    "gene": "GBA1",
+    "variant": "c.1226A>G, p.Asn409Ser",
+    "legacy_name": "N370S",
+    "note": "N370S (legacy, mature-protein numbering) and N409S (HGVS, includes the 39-residue signal peptide) name the SAME single substitution, not two candidate variants -- v1.1's 'N370S (and/or N409S)' phrasing was corrected in v1.1.1."
+  },
+  "compound_identity_freeze_requirements": [
+    "Exact stereoisomer synthesized/procured, or explicit racemic/diastereomeric-mixture statement (canonical SMILES here do not specify absolute stereochemistry).",
+    "Salt form vs. free base.",
+    "Purity threshold (e.g. >=95%) and analytical method used to confirm it.",
+    "LC-MS mass confirmation and NMR structural-identity records, archived per compound.",
+    "Stock solvent, concentration, and maximum final DMSO percentage per assay."
+  ],
+  "controls": {
+    "ambroxol": {"role": "positive_reference", "smiles": "C1=C(C(=C(C=C1Br)Br)N)CNC2CCC(CC2)O", "note": "Seed compound; mixed-type, pH-dependent GCase inhibitor acutely (more potent near neutral pH), and a separate cellular pharmacological chaperone -- see v1_1_1_correction_summary."},
+    "isofagomine_ifm": {"role": "mechanistically_distinct_chaperone_reference", "note": "Active-site chaperone reference (redocking benchmark's own reference ligand, PDB 3GXF); distinguishes 'any chaperone effect' from an Ambroxol-like allosteric/pH-dependent effect."},
+    "vehicle": {"role": "negative_control", "note": "DMSO, matched to test-compound stock concentration, in every cell-based and biochemical assay."},
+    "assay_specific_positive_controls": {"role": "assay_quality_control", "note": "hERG blocker, CYP substrate, etc. -- left to the executing lab's own validated protocols/vendor, not specified by this project."}
+  },
+  "assay_tiers": {
+    "tier_1": {
+      "run_on": "all 6 Tranche 1 candidates + Ambroxol + IFM + vehicle",
+      "assays": [
+        {"id": 1, "name": "analytical_solubility", "conditions": "pH 7.4 and pH 5.0; LC-UV/LC-MS confirmed concentration, not nephelometry alone", "priority_case": "GM_015 (worst predicted solubility, log solubility -4.19)"},
+        {"id": 2, "name": "cytotoxicity_viability", "conditions": "8-point dose-response, 24-48h", "priority_case": null},
+        {"id": "3a", "name": "gcase_binding_stabilization", "conditions": "thermal-shift/nanoDSF or heat-inactivation protection, purified recombinant GBA1 p.Asn409Ser (legacy N370S) GCase (not lysate), neutral pH", "priority_case": "all -- tests chaperone-binding mechanism independent of catalytic-effect sign"},
+        {"id": "3b", "name": "gcase_signed_catalytic_modulation", "conditions": "4-MUG with taurocholate, standardized alkaline stop, compound-only fluorescence controls, dose-response at pH 7.4 and pH 5.0, purified recombinant enzyme; sign-agnostic curve fitting (inhibition IC50 and/or activation EC50, residual activity, maximal signed effect, pH-selectivity ratio IC50(acidic)/IC50(neutral) for inhibitors); orthogonal natural-substrate confirmation required for finalists", "priority_case": "all -- direct experimental analogue of delta_cnnaffinity_neutral_minus_acidic"}
+      ]
+    },
+    "tier_2": {
+      "run_on": "only candidates passing the tier_1_to_tier_2 gate",
+      "assays": [
+        {"id": 4, "name": "cellular_chaperone_rescue", "conditions": "GBA1 p.Asn409Ser/p.Asn409Ser (legacy N370S/N370S) patient-derived fibroblasts (primary model; engineered line is secondary/assay-development only); primary endpoint = GBA1-specific (CBE-inhibitable-fraction or equivalent) lysosomal activity after washout; secondary = mature/Endo-H-resistant abundance + lysosomal localization; multi-dose, fixed duration, washout before lysate measurement; donor/genotype/passage/authentication/mycoplasma status and exact durations frozen in the executing lab's SOP annex", "priority_case": null},
+        {"id": 5, "name": "herg_counterscreen", "conditions": "thallium-flux is TRIAGE ONLY (selects which compounds proceed to patch-clamp); the 30x hERG index (see decision_gates.overall_pass) must be computed from a validated automated- or manual-patch-clamp IC50, never from the triage signal", "priority_case": "GM_054 (0.919), GM_034 (0.857); GM_057 (0.352) is the lowest-predicted-risk comparator"},
+        {"id": 6, "name": "metabolic_stability", "conditions": "human liver microsomes AND cryopreserved hepatocytes in parallel, LC-MS/MS", "priority_case": "GM_054 (invalid/negative predicted hepatocyte clearance -- needs real data to resolve)"},
+        {"id": 7, "name": "permeability_oral_cns_passive_and_efflux", "conditions": "Caco-2 bidirectional (oral/intestinal, Papp + efflux ratio); PAMPA-BBB (CNS PASSIVE permeability ONLY -- no transporters present, cannot yield an efflux ratio); MDCK-MDR1 (P-gp efflux ratio) AND a BCRP-competent or dual-transfected MDCK-MDR1/BCRP system (BCRP efflux ratio) -- three/four distinct measurements, never conflated", "priority_case": "GM_057 (BBB=0.540, HIA=0.784, both lowest in panel) -- priority across all permeability/efflux assays"}
+      ]
+    },
+    "tier_3": {
+      "run_on": "candidates passing tier_2 overall_pass",
+      "assays": [
+        {"id": 8, "name": "neuronal_validation", "conditions": "e.g. patient-iPSC-derived dopaminergic neurons or equivalent -- out of this document's scope; requires its own frozen protocol before execution"}
+      ]
+    }
+  },
+  "decision_gates": {
+    "tier_1_to_tier_2": {
+      "solubility": "analytically-confirmed concentration within 3x of nominal test concentration (assay 1)",
+      "therapeutic_index": "branch-aware (v1.1.1 fix): catalytic modulators (assay 3b yields a fitted IC50/EC50) require CC50 (assay 2) >= 10x that value at the more potent pH; stabilization-only candidates (positive assay 3a signal, no fitted 3b value) require CC50 >= 10x the stabilization assay's effective concentration, or >= 10x the max planned assay-4 exposure concentration if that is not well-defined",
+      "engagement": "neutral-pH engagement or stabilization (positive assay 3a signal, OR a defined minimum inhibitory/activating potency in assay 3b at pH 7.4) PLUS acceptable residual catalytic activity at acidic pH (assay 3b at pH 5.0) -- corrected in v1.1 from requiring neutral-pH activation specifically; does not presuppose the sign of the acute effect; 'positive'/'defined minimum'/'acceptable' are quantified via statistical_preregistration's minimum_effect_size",
+      "rule": "ALL must be satisfied to advance a compound to tier 2"
+    },
+    "overall_pass": {
+      "mandatory": {
+        "chaperone_rescue": "positive in patient-derived cells (assay 4 primary endpoint, post-washout), not just Tier 1 biochemical engagement",
+        "herg_discovery_index": "hERG IC50 from VALIDATED PATCH-CLAMP (assay 5) >= 30x cellular EC50 (assay 4) -- renamed in v1.1 from 'hERG safety margin': an early-discovery hERG-to-cellular-efficacy index, NOT a regulatory safety margin (regulatory interpretation requires projected unbound systemic exposure, which does not exist yet); must not be computed from the thallium-flux triage signal (v1.1.1 fix)",
+        "permeability": "oral (Caco-2 Papp), CNS passive (PAMPA-BBB Pe), AND CNS transporter efflux (MDCK-MDR1 P-gp ratio + BCRP-competent system ratio) all above the executing lab's own validated in-house cutoffs (assay 7) -- illustrative starting defaults: Caco-2 Papp(A-to-B) > 2e-6 cm/s with efflux ratio < 2; PAMPA-BBB Pe above the specific kit/vendor's own 'CNS+' cutoff -- confirm against the validated assay actually in use"
+      },
+      "optimization_flag_not_mandatory": {
+        "metabolic_stability": "human hepatocyte t1/2 >= 30 minutes (assay 6) -- v1.1.1 fix: moved out of the mandatory ALL-pass set (v1.1 contradicted itself by requiring 'ALL' while also calling this non-excluding) into an explicit, tracked flag; below-bar compounds are not excluded on this criterion alone but are flagged for metabolism-focused follow-up"
+      },
+      "rule": "ALL of the mandatory criteria (chaperone_rescue, herg_discovery_index, permeability) must be satisfied to prioritize a compound beyond this panel into tier 3 or a synthesis-scale-up decision; the optimization flag is reported and tracked but does not gate this decision"
+    },
+    "thresholds_are_defaults_not_validated": true
+  },
+  "statistical_preregistration": {
+    "replicate_counts": "n=3 independent biological replicates (separate passage/enzyme-prep/compound-dilution), each in n=3 technical replicates, for every assay in section 2",
+    "randomization_and_blinding": "compound identity coded on every plate map; plate position randomized per biological replicate",
+    "curve_fitting_model_and_acceptance_criteria": "four-parameter logistic, Hill slope floating (constrained to 1.0 on non-convergence, and reported which was used); R-squared >= 0.90 required for a reportable IC50/EC50, else reported as 'not determinable'",
+    "minimum_effect_size": ">=20% change from vehicle for catalytic-modulation/cellular-rescue readouts; >=2 degrees C delta-Tm for the thermal-shift/stabilization readout",
+    "confidence_interval_and_alpha": "95% CI, alpha = 0.05, two-sided, for every significance claim referenced by the decision gates",
+    "multiple_comparison_correction": "Benjamini-Hochberg false-discovery-rate correction across compound-by-condition comparisons within each assay",
+    "outlier_and_assay_failure_rules": "plate-level Z'-factor >= 0.5 required to use a plate (biochemical assays); ROUT or Grubbs' test (alpha=0.05) for technical-replicate outliers, applied identically to all compounds and controls",
+    "note": "v1.1 listed these as categories to specify; v1.1.1 specifies the actual default values, still adjustable per amendment_policy but no longer an open checklist."
+  },
+  "ph_dependence_hypothesis": {
+    "statement": "Ambroxol is a pH-dependent, MIXED-TYPE inhibitor of GCase acutely (more potent near neutral pH, much less potent at acidic/lysosomal pH) and separately increases lysosomal GCase abundance/activity in cells via a slower chaperone mechanism -- corrected in v1.1 from a same-signed 'activation' framing, and in v1.1.1 from 'competitive' to 'mixed-type' inhibition (Maegawa et al. explicitly reports mixed-type kinetics).",
+    "predicted_positive_cases": ["GM_057", "MM_002", "GM_035"],
+    "predicted_challenge_case": "GM_054",
+    "computational_status_being_tested": "candidate_screen_results/summary.json: ph_sensitivity_endpoint_status = exploratory_unvalidated (3/4 docking controls disagreed with Ambroxol's own direction) -- this experimental panel, not the docking proxy, is what would actually validate or refute the hypothesis."
+  },
+  "amendment_policy": "Same rule as every other frozen artifact in this project: compound membership in Tranche 1, the assay list, and decision-gate thresholds may not be changed after any wet-lab result exists for this panel. A gate may be revised only for a documented technical reason discovered during assay development, logged with rationale and a made_before_seeing_results flag -- exactly the discipline used for both the v1.1 and v1.1.1 amendments, made entirely pre-data. No compound may be added to or dropped from Tranche 1 because of assay performance.",
+  "scope_limits": [
+    "This project has no wet lab and executes none of these assays -- this is a specification, not a report of work performed.",
+    "No numeric value in this file or its companion .md is a real measurement; all are placeholders/priors from the computational pipeline.",
+    "The Maegawa et al. IC50 figures in the companion .md's amendment log are reproduced from external review's citation, not independently re-derived; consult the primary source before using them to size any assay.",
+    "Decision-gate thresholds (including the statistical_preregistration defaults and the illustrative permeability cutoffs) are reasonable field defaults, not validated against this specific chemotype or target."
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "benchmark": "DecisionBench-DD",
+  "component": "GCase redocking protocol (Experiment B)",
+  "protocol_version": "1.0",
+  "frozen_date": "2026-08-22",
+  "source": "GCASE_VALIDATION_SET.md 'Frozen evaluation design' and 'One methodological issue for DiffDock' sections",
+  "task_definition": {
+    "chosen_task": "A: pocket-conditioned redocking",
+    "rationale": "GCASE_VALIDATION_SET.md explicitly recommends this over blind docking: the question is 'once a pocket is selected, which method more reliably recovers the ligand pose', not pocket-finding ability. The crystal ligand is used ONLY to define the evaluation pocket before being removed -- never supplied as pose information to either model.",
+    "gnina_enforcement": "Search space restricted to the frozen docking box (see docking_boxes.json) via --center_x/y/z --size_x/y/z.",
+    "diffdock_enforcement": "DiffDock has no native pocket-restriction flag; it is blind-by-design over the input structure. Approximated by giving DiffDock a ligand-centered, receptor-CROPPED structure (69-122 of 497-1988 residues kept, see diffdock.receptor_cropping below), not the full protein. External review correctly flagged that this is NOT equivalent to GNINA's precise 6-A-padded box search -- cropping removes sequence/structural context and reveals the ligand region as an artificial boundary, which a native pocket-box mechanism would not do. The correct label for this run is 'DiffDock-L with ligand-centered receptor cropping', not an unqualified 'pocket-conditioned DiffDock' -- both terms are used with that distinction in mind throughout this file from this point on. A second, native full-receptor DiffDock track has been proposed as a secondary sensitivity analysis but is not yet run -- it needs additional GPU compute and is a scope decision for the user, not implemented unilaterally."
+  },
+  "receptor_preparation": {
+    "input": "receptors/<PDB_ID>_receptor_raw.pdb (protein-only, blank/primary-altloc atoms, produced by decisionbench_dd_configs_v1.0/gcase_validation extraction step)",
+    "tool": "PDB2PQR",
+    "tool_version": "3.7.1",
+    "parameters": {
+      "force_field": "AMBER",
+      "titration_state_method": "propka",
+      "ph": 7.4,
+      "keep_chain": true,
+      "output_format": "PDB (--pdb-output)"
+    },
+    "ph_rationale": "Single frozen physiological pH (7.4) applied uniformly across all 14 cases rather than per-structure, to avoid a per-case parameter choice made after inspecting results. Consistent with 3GXF's own deposited description ('neutral pH').",
+    "output": "receptors_prepared/<PDB_ID>_prepared.pdb",
+    "per_structure_warnings_summary": {
+      "9F9Z": {"missing_atom_warnings": 3, "multiple_occupancy_warnings": 0, "backbone_gaps": 0, "debump_failures": 0},
+      "9FA3": {"missing_atom_warnings": 3, "multiple_occupancy_warnings": 63, "backbone_gaps": 0, "debump_failures": 0},
+      "9FA6": {"missing_atom_warnings": 3, "multiple_occupancy_warnings": 28, "backbone_gaps": 0, "debump_failures": 0},
+      "9FAD": {"missing_atom_warnings": 4, "multiple_occupancy_warnings": 0, "backbone_gaps": 1, "debump_failures": 0, "note": "Gap ALA380-VAL382 is 19.3-20.5 A from the ligand centroid -- not pocket-adjacent."},
+      "9FAL": {"missing_atom_warnings": 4, "multiple_occupancy_warnings": 50, "backbone_gaps": 1, "debump_failures": 0},
+      "9FAY": {"missing_atom_warnings": 3, "multiple_occupancy_warnings": 30, "backbone_gaps": 0, "debump_failures": 0},
+      "9FAZ": {"missing_atom_warnings": 3, "multiple_occupancy_warnings": 24, "backbone_gaps": 0, "debump_failures": 0},
+      "9FB2": {"missing_atom_warnings": 3, "multiple_occupancy_warnings": 66, "backbone_gaps": 0, "debump_failures": 0},
+      "9FDI": {"missing_atom_warnings": 3, "multiple_occupancy_warnings": 36, "backbone_gaps": 0, "debump_failures": 0},
+      "8P3E": {"missing_atom_warnings": 6, "multiple_occupancy_warnings": 0, "backbone_gaps": 0, "debump_failures": 0},
+      "8P41": {"missing_atom_warnings": 6, "multiple_occupancy_warnings": 17, "backbone_gaps": 0, "debump_failures": 2, "note": "'Unable to debump' warnings on 2 residues -- pdb2pqr's automatic steric-clash resolution failed to fully resolve; not fatal, structure still produced."},
+      "3GXF": {"missing_atom_warnings": 0, "multiple_occupancy_warnings": 0, "backbone_gaps": 0, "debump_failures": 2, "note": "'Unable to debump SER A 345'."},
+      "6Q1N": {"missing_atom_warnings": 197, "multiple_occupancy_warnings": 0, "backbone_gaps": 3, "note": "High missing-atom count is mostly rebuilt surface side-chain atoms (Lys NZ, Arg NH1/NH2, Gln/Glu terminal O/N), typical for a 2.53 A structure. Backbone gaps ~344-347/348 (both chains) verified 10.6-12 A from ligand centroid; both catalytic residues Glu235 and Glu340 are fully resolved in both chains -- kept, not excluded (see gcase_validation_set_v1.0.json inclusion criterion 7 discussion)."},
+      "6Q1P": {"missing_atom_warnings": 191, "multiple_occupancy_warnings": 0, "backbone_gaps": 3, "note": "Same as 6Q1N (2.80 A structure, same disordered loop, same catalytic-residue integrity check)."}
+    },
+    "multiple_occupancy_handling": "PDB2PQR keeps the highest-occupancy conformer and drops the rest automatically; this is expected/routine for the many partial-occupancy fragment-soak structures in the 9F* series and is not a technical exclusion.",
+    "pocket_proximity_qc": {
+      "method": "For every residue flagged by a 'Missing atom' or 'Unable to debump' warning in the four structures with such warnings (3GXF, 6Q1N, 6Q1P, 8P41), computed the minimum distance from any atom of that residue to the reference ligand's heavy-atom centroid.",
+      "threshold_angstrom": 6.0,
+      "result": "3GXF: 1 flagged residue (SER 345, chain A -- the same debump failure named in external review), 0 within 6 A. 6Q1N: 14 flagged residues, 0 within 6 A. 6Q1P: 14 flagged residues, 0 within 6 A. 8P41: 3 flagged residues, 0 within 6 A. All flagged atoms are distal side-chain completions on surface residues (Lys NZ, Arg NH1/NH2, Gln/Glu terminal O/N) or, for 3GXF's SER345, on a different chain (A) than the one the case's ligand is bound to (D) -- not pocket-lining in any case.",
+      "audit_report": "receptor_pocket_proximity_qc.json",
+      "note": "Supersedes the earlier, narrower check that covered only the 9FAD/6Q1N/6Q1P BACKBONE GAP subset of warnings, not debump failures or the full missing-atom-warning set (external review caught this gap)."
+    }
+  },
+  "ligand_preparation": {
+    "reference_for_rmsd_only": "reference_ligands/<PDB_ID>_<COMP_ID>.sdf (heavy-atom-only, bond orders assigned from RCSB canonical SMILES, deposited experimental coordinates). Used ONLY as the ground-truth reference for RMSD scoring, never supplied to either docking model.",
+    "docking_input_smiles_source": "decisionbench_dd_configs_v1.0/gcase_validation/gcase_validation_set_v1.0.json per-case 'docking_input_smiles' (RCSB canonical isomeric SMILES for the case's ligand_comp_id).",
+    "protonation": {
+      "tool": "dimorphite-dl 2.0.2",
+      "ph_min": 7.4,
+      "ph_max": 7.4,
+      "ph_rationale": "Same physiological pH as receptor protonation (PDB2PQR), applied uniformly.",
+      "variant_selection_rule": "dimorphite-dl can return multiple protonation-state variants when a site's predicted pKa sits near the given pH. Selection is content-based, not positional (variant list order was found not to be reliably dominant-state-first): (1) discard any variant that fails to parse in RDKit; (2) exclude variants with a CHARGED sulfonamide nitrogen of EITHER sign ([N+] or [N-] attached to S(=O)(=O)) -- simple aryl/alkyl sulfonamide NH has pKa ~10, so the neutral form should dominate at pH 7.4 regardless of substitution; (3) among the remaining pool, pick the variant with the most protonated basic-amine sites ([NH3+]/[NH2+]/[NH+]), reflecting aliphatic amine pKa ~9-10; (4) ties broken by canonical-SMILES lexicographic order for determinism. v1.1 fix (2026-08-26, external review): step (2) originally excluded only the anionic sulfonamide case, so a PROTONATED sulfonamide nitrogen (a false-positive match for step (3)'s ammonium pattern) could win the tie-break -- mis-assigned 3 of 14 cases (9FAY, 9FAZ, 9FB2) to net +2 instead of the correct +1. See gcase_validation_set_v1.0.json's 2026-08-26 amendment and decisionbench_dd_docking/prepare_ligands.py.",
+      "result_field": "gcase_validation_set_v1.0.json per-case 'docking_input_protonated_smiles'",
+      "audit_report": "ligand_docking_input_report.json (variant count, selection flag, embedding/MMFF status per case)",
+      "all_14_cases_status": "All 14 resolved cleanly (selection_flag=ok, no fallback needed)."
+    },
+    "conformer_generation_for_gnina": {
+      "method": "RDKit ETKDGv3 embedding + MMFF94 optimization (maxIters=2000)",
+      "seed": 42,
+      "output": "docking_input_ligands/<PDB_ID>_ligand_input.sdf -- this is GNINA's -l input.",
+      "note": "This is a fresh 3D conformer generated from the protonated SMILES, NOT derived from or seeded by the crystal pose."
+    },
+    "docking_input_for_diffdock": "The bare protonated SMILES string (docking_input_protonated_smiles) -- DiffDock generates its own 3D pose via its diffusion process and does not take a pre-embedded conformer.",
+    "stereochemistry": "Isomeric SMILES (stereo-resolved) used throughout, since the whole point of e.g. the 9FA6 case is testing pose recovery for a specific resolved enantiomer, not a racemic/unspecified structure."
+  },
+  "docking_box": {
+    "definition": "center = midpoint of reference ligand's heavy-atom bounding box; size = ligand bounding-box extent + 2x padding per axis",
+    "padding_angstrom": 6.0,
+    "padding_rationale": "GCASE_VALIDATION_SET.md: 'Freeze one padding value, e.g. 6 A on each side.' Adopted as-is.",
+    "computed_from": "reference_ligands/<PDB_ID>_<COMP_ID>.sdf heavy-atom coordinates",
+    "values_file": "docking_boxes.json (per-case center_x/y/z, size_x/y/z in Angstrom, computed 2026-08-22)"
+  },
+  "gnina": {
+    "execution_mode": "dockerized, official gnina/gnina image, GPU passthrough (docker run --gpus all)",
+    "invocation": "docker run --rm --gpus all -v <repo_root>:/workspace gnina/gnina:latest gnina -r /workspace/.../receptors_prepared/<PDB_ID>_prepared.pdb -l /workspace/.../docking_input_ligands/<PDB_ID>_ligand_input.sdf --center_x <cx> --center_y <cy> --center_z <cz> --size_x <sx> --size_y <sy> --size_z <sz> --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o <PDB_ID>_gnina_poses.sdf --log <PDB_ID>_gnina.log -- implemented in decisionbench_dd_docking/run_gnina.py, which reads box values from docking_boxes.json and builds the docker volume mounts via decisionbench_dd_docking/docker_utils.py.",
+    "num_modes": 5,
+    "exhaustiveness": 8,
+    "exhaustiveness_rationale": "GNINA/Vina documented default. Not tuned upward or downward after seeing any result, per this project's standing rule of using documented tool defaults for the primary run.",
+    "seed": 42,
+    "seed_rationale": "GNINA's search is stochastic; a single fixed seed is used for the primary run (14 structures is too small a set to additionally justify a multi-seed replicate design within timeline, unlike the generator benchmark's 3 replicates). Report this as a limitation if raised in the manuscript.",
+    "cnn_scoring": "rescore",
+    "cnn_scoring_rationale": "GNINA default mode: empirical (Vina-like) scoring drives the search/pose ranking, CNN rescoring is applied to the resulting poses. This is GNINA's documented default behavior, not a hand-picked setting.",
+    "top_pose_ranking_field": "With --cnn_scoring rescore, GNINA's output SDF (-o) is ordered by CNNscore (the post-hoc CNN rescoring of each Vina-generated pose), not by the original empirical/Vina score -- rank 1 (first model in the output SDF) is the pose with the highest CNNscore. decisionbench_dd_docking.rmsd treats pose-file order as rank order for both tools without re-sorting by any score field itself.",
+    "output_pose_count_for_scoring": 5
+  },
+  "diffdock": {
+    "variant": "DiffDock-L",
+    "variant_rationale": "DESCRIPTION.md Section 5: 'DiffDock-L is the current default version in the official DiffDock repository and is designed for improved docking generalization.'",
+    "execution_mode": "dockerized official image rbgcsail/diffdock (gcorso/DiffDock repo, commit 85c49b60d3e0b0182a59ee43a34a6d7036981284 verified), NOT NVIDIA's hosted DiffDock NIM REST API (health.api.nvidia.com/v1/biology/mit/diffdock), whose exact underlying checkpoint/version is not independently confirmed to be DiffDock-L. The hosted NIM may be used later as an informal cross-check, not as the primary result.",
+    "docker_image_verified_facts": {
+      "image_has_no_entrypoint_only_cmd": "docker run ... rbgcsail/diffdock <cmd> fully overrides the default CMD.",
+      "workdir": "/home/appuser/DiffDock (baked into the image; relative paths like default_inference_args.yaml resolve there without an explicit cd).",
+      "conda_env_name": "diffdock",
+      "non_interactive_invocation": "micromamba run -n diffdock <cmd> -- confirmed to work in this exact image because the Dockerfile itself uses this pattern for its own build step and default CMD.",
+      "readme_discrepancy_found": "The README's prose for single-complex mode names a --ligand flag that does not exist in inference.py's argparse; the real flag is --ligand_description. Confirmed directly against inference.py's get_parser(). For this reason, batch/CSV mode (which has a full, working example command in the README) is used here instead of single-complex mode.",
+      "batch_mode_invocation": "python -m inference --config default_inference_args.yaml --protein_ligand_csv <csv> --out_dir <dir> --samples_per_complex <n>",
+      "csv_columns": "complex_name,protein_path,ligand_description,protein_sequence -- ligand_description accepts either a file path or a bare SMILES string; protein_sequence left empty when protein_path is given.",
+      "output_layout": "<out_dir>/<complex_name>/rank{N}_confidence{score}.sdf for every rank 1..samples_per_complex, PLUS a second, unsuffixed copy of the top pose only at <out_dir>/<complex_name>/rank1.sdf. decisionbench_dd_docking/run_diffdock.py's merge_ranked_sdfs() reads only the confidence-suffixed files (regex-matched and sorted by rank number) specifically to avoid double-counting rank 1 via that extra bare-named duplicate.",
+      "runs_as_non_root_uid": "Container runs as user appuser (uid 1000). Hit in practice: a host-created output directory with default permissions (755) denies that uid write access, so DiffDock's os.makedirs() on a fresh per-complex output directory raises PermissionError. Fixed by decisionbench_dd_docking/docker_utils.py:ensure_container_writable_dir(), which chmods the host-side output directory to 0o777 before the container runs, rather than trying to match host/container UIDs via --user."
+    },
+    "implemented_in": "decisionbench_dd_docking/run_diffdock.py",
+    "receptor_cropping": {
+      "method": "All receptor residues with any atom within a cropping radius of the docking box center are kept; the rest are removed before DiffDock inference.",
+      "cropping_radius_angstrom": 15.0,
+      "rationale": "DiffDock has no native pocket-restriction parameter and is blind-by-design over its input structure. To keep the comparison 'pocket-conditioned vs pocket-conditioned' (not 'pocket-conditioned vs blind', which GCASE_VALIDATION_SET.md explicitly flags as an invalid mixed comparison), the input receptor is pre-cropped to the pocket vicinity. 15 A is a generous margin beyond the docking box itself (box sizes are ~14-23 A per axis, i.e. roughly a 7-11 A half-extent from the box center) so the crop does not itself hand the model an implausibly small/artificial pocket, while still preventing whole-protein blind search."
+    },
+    "num_samples": 5,
+    "num_samples_rationale": "Matches GNINA's num_modes=5 for a like-for-like Success@1/Success@5 comparison.",
+    "inference_steps": "DiffDock-L documented default, not overridden: inference_steps=20 (actual_steps=19), no_final_step_noise=true. Verified directly against default_inference_args.yaml at commit 85c49b60d3e0b0182a59ee43a34a6d7036981284 -- this file has no single scalar 'random seed' field (randomness is controlled by no_random/no_random_pocket flags, both left at their documented defaults, not by a settable integer seed like GNINA's --seed).",
+    "output_pose_count_for_scoring": 5
+  },
+  "rmsd_scoring": {
+    "atom_set": "heavy atoms only",
+    "atom_set_rationale": "Field-standard practice (CASF, PoseBusters, DockRMSD-style benchmarks); also matches this pipeline's reference ligand SDFs, which are heavy-atom only. Neither GNINA nor DiffDock output explicit hydrogens in their pose predictions.",
+    "symmetry_handling": "RDKit rdMolAlign.CalcRMS ONLY, explicitly not GetBestRMS: CalcRMS searches over symmetry-equivalent atom-label permutations (so a docked pose with a rotated/flipped symmetric ring or a swapped pair of chemically-equivalent substituents is not penalized for an arbitrary atom-labeling choice) but performs NO rigid-body realignment. GetBestRMS additionally re-translates/re-rotates the probe onto the reference before scoring, which would silently discard exactly the pose/placement error this benchmark exists to measure. See decisionbench_dd_docking/rmsd.py's module docstring and its test_translation_is_not_silently_realigned_away regression test.",
+    "primary_endpoint": "Success@1_2A = count(complexes where RMSD of the top-1 ranked pose <= 2.0 A) / 14",
+    "secondary_endpoints": [
+      "Success@5_2A = count(complexes where min RMSD across top-5 poses <= 2.0 A) / 14",
+      "median top-1 RMSD",
+      "mean/median best-of-5 RMSD",
+      "failure rate (tool errors out / produces no usable pose)",
+      "pose validity rate -- see pose_validity below",
+      "runtime per complex"
+    ],
+    "pose_validity": {
+      "status": "implemented and frozen 2026-08-26, before any further result inspection",
+      "implemented_in": "decisionbench_dd_docking/pose_validity.py",
+      "scope_honesty": "A deliberately simplified proxy, not a PoseBusters reimplementation: checks RDKit-sanitizable valences, all bond lengths within 0.7-2.2 A, no non-bonded heavy-atom pair closer than 1.5 A (internal steric clash), and no ligand-heavy-atom-to-receptor-heavy-atom distance closer than 1.5 A (severe protein-ligand clash, flat cutoff -- not per-element VDW-radius-scaled like real PoseBusters). Still does NOT check ring planarity/flatness or torsion-angle plausibility.",
+      "reported_as": "top1_valid (bool) per case and top1_pose_valid_pct in evaluate_docking.py's summary."
+    },
+    "stratified_reporting": {
+      "allosteric": 11,
+      "active_site_chaperone": 3,
+      "note": "Report both strata separately in addition to the N=14 overall result; do not draw strong conclusions from the N=3 active-site stratum alone (GCASE_VALIDATION_SET.md)."
+    },
+    "known_output_artifacts_corrected": {
+      "diffdock_sulfonamide_charge_artifact_2026_08_27": {
+        "discovered": "After the 2026-08-26 GPU re-run (all 14 cases, corrected +1 protonation for 9FAY/9FAZ/9FB2) came back, DiffDock-L's poses for exactly those same 3 cases still could not be RMSD-scored: CalcRMS reported no substructure correspondence despite matching heavy-atom counts.",
+        "root_cause": "Direct inspection of the raw rank*.sdf `M  CHG` block showed DiffDock-L's own output assigns formal charge +1 to BOTH the ligand's genuine protonated amine ([NH3+], correct) AND its neutral tertiary sulfonamide nitrogen (incorrect) -- net pose charge +2 against a net +1 input (docking_input_protonated_smiles). This is the same nitrogen/substructure class prepare_ligands.py's BAD_SULFONAMIDE_CHARGE rule already excludes when selecting a protonation state (2026-08-26 fix); DiffDock's own ligand-ingestion pipeline reproduces an analogous mis-assignment independently, on its output side. Confirmed to be a pure labeling artifact, not a geometric difference: manually zeroing just that one atom's formal charge and re-sanitizing (no atom added, removed, or moved) restored a full substructure match and a normal-looking RMSD for all 3 cases.",
+        "fix": "decisionbench_dd_docking/rmsd.py:_fix_known_pose_charge_artifact() detects DiffDock-L's exact BAD_SULFONAMIDE_CHARGE substructure on a loaded POSE (never on the frozen reference) and neutralizes only that atom's charge before RMSD scoring. Applied uniformly to every scored pose from both tools (a no-op for the 11/14 cases and all GNINA poses, which don't contain this substructure with a spurious charge) -- not a per-case special case.",
+        "why_this_is_a_representation_fix_not_a_scoring_change": "Neither GNINA nor DiffDock is being evaluated on its ability to predict or preserve protonation state -- both are given the same fixed, pre-registered net-charge ligand identity as input (docking_input_protonated_smiles / docking_input_ligand_file). RMSD is a purely geometric heavy-atom-position metric; a charge label with zero accompanying coordinate difference is a bug in how the tool serializes its own output, not a property of the predicted pose. This is the same category of fix as the 2026-08-25 reference-ligand charge resync -- a mechanical/representation bug found after seeing crashed/NA results, not a change to a scoring threshold or success criterion.",
+        "auditability": "Every correction is counted and reported, never silent: CaseResult.n_poses_charge_artifact_fixed, per_case_rmsd.csv's n_poses_charge_artifact_fixed column, and evaluate_docking.py's summary.md both surface exactly which cases and how many poses were affected. Result: 15 poses total (5/5 poses each for 9FAY, 9FAZ, 9FB2 diffdock) -- 0 for every other case/tool.",
+        "verification_commands": "python -c \"from rdkit import Chem; m=Chem.SDMolSupplier('docking_runs/diffdock/9FAY_poses.sdf',removeHs=False)[0]; print(Chem.GetFormalCharge(Chem.RemoveHs(m)))\"  # prints 2, not the expected 1 -- reproduces the raw artifact before the fix is applied",
+        "regression_tests": "decisionbench_dd_docking/tests/test_rmsd.py: test_known_pose_charge_artifact_is_neutralized_and_flagged, test_score_case_recovers_rmsd_and_reports_charge_artifact_fix_count; the pre-existing test_same_atom_count_different_formal_charge_raises_rmsderror_not_runtimeerror (a genuinely different, unrelated charge mismatch) still passes unchanged, confirming the fix is scoped to this one substructure, not a general charge-blind fallback."
+      },
+      "median_off_by_one_bug_2026_08_27": {
+        "discovered": "While independently reproducing a reviewer's summary numbers by hand from per_case_rmsd.csv (rather than trusting the tool's own output) to fact-check the 2026-08-27 feedback, evaluate_docking.py's own reported 'Median top-1 RMSD' (5.11 A GNINA, 4.81 A DiffDock) did not match a plain statistics.median() computation over the same 14 values (4.64 A / 4.26 A).",
+        "root_cause": "evaluate_docking.py computed the median as sorted(values)[len(values) // 2], which returns the upper-middle element, not the average of the two middle elements, for any even-length list (n=14 here). A pure arithmetic bug, unrelated to any specific case's chemistry or geometry.",
+        "fix": "Switched to statistics.median() in evaluate_docking.py; also added median_best_of_n_rmsd and all_pose_valid_pct (both previously computable by hand from per_case_rmsd.csv but not surfaced in summary.md/json) so reviewers don't have to recompute aggregates externally. Regression test: decisionbench_dd_docking/tests/test_evaluate_docking.py:test_median_top1_rmsd_averages_middle_two_for_even_case_count.",
+        "scope": "Affects only the reported 'median top-1/best-of-N RMSD' summary statistics. Does not affect Success@1, Success@5, per-case RMSDs, pose validity, or any other endpoint -- those were already computed by direct counting/lookup, not this buggy helper."
+      }
+    }
+  },
+  "external_review_response_2026_08_27_second_message": {
+    "context": "A third feedback message, scored against the complete post-charge-artifact-fix docking_results/ (commit 1aff5d5, all 14 cases both tools, zero NA/failures). Every specific number in its tables (Success@1/5, both medians as this pipeline reported them pre-fix, per-case rank/RMSD values, pose-validity counts (11/14, 45/70), the two 'no valid pose in any of 5' cases, the paired-success set overlaps, and the exact McNemar/sign-test p=0.031 for the 6-vs-0 discordant Success@5 pairs) was independently reproduced from per_case_rmsd.csv and confirmed correct -- the first review of this project's docking results with no fabricated or unsubstantiated claims found.",
+    "valid_findings_acted_on": [
+      "Label the DiffDock comparator precisely as 'DiffDock-L with ligand-centered 15 A receptor cropping', not just 'cropped' -- updated evaluate_docking.py's summary.md header (the exact 15 A figure was already frozen in redocking_protocol_v1.0.json:diffdock.receptor_cropping.cropping_radius_angstrom, just not echoed in the human-facing summary).",
+      "Define every pose-validity check/threshold inline rather than pointing only at source -- added to summary.md's header (bond length range, both clash cutoffs, explicit 'not official PoseBusters' caveat).",
+      "Surface median-best-of-N and all-pose validity rate in the generated summary instead of requiring manual recomputation from the CSV -- added (see median_off_by_one_bug_2026_08_27, discovered while doing exactly this recomputation)."
+    ],
+    "verified_as_already_true_not_a_gap": {
+      "targeted_correction_not_independent_replicate": "Confirmed by diff: DiffDock's per-case RMSDs are byte-identical across ALL 14 cases (not just the 11 unaffected ones) between the very first real docking commit (33c2614) and the final corrected run (1aff5d5), despite 9FAY/9FAZ/9FB2's DiffDock input SMILES genuinely changing between those runs. GNINA's 11 unaffected cases are likewise byte-identical (expected: GNINA uses a fixed --seed 42). This confirms both that this was a targeted correction (not an independent stochastic replicate) and, as a previously-undocumented methods-relevant finding, that under the pinned rbgcsail/diffdock container and invocation used here, repeated executions were empirically reproducible (byte-identical) across all 14 cases, and the interface exposed no seed control -- consistent with default_inference_args.yaml exposing no settable random-seed field (diffdock.inference_steps note above). This is an empirical observation under the tested environment, NOT a claim that DiffDock is inherently or universally deterministic: identical outputs could reflect internal fixed seeding or deterministic execution specific to this image, and do not establish the behavior of every DiffDock deployment. Manuscript limitation: because stochastic uncertainty could not be estimated under these conditions, DiffDock results here should be reported as a single run, not an ensemble over random seeds.",
+      "charge_fix_changed_only_representation": "Directly verified programmatically for all 15 affected poses (9FAY/9FAZ/9FB2 x 5 poses each): max heavy-atom coordinate delta before vs after the fix = 0.0 A; bond table (connectivity) identical; per-atom chiral tags identical. Pose rank is untouched by construction (the fix operates on an already-rank-ordered pose list without reordering).",
+      "5_poses_per_case_not_20": "gnina.num_modes=5 and diffdock.num_samples=5 throughout; per_case_rmsd.csv's n_poses_scored column is 5 for every one of the 28 rows in this result set. No result described anywhere in this repo uses a 20-pose configuration."
+    },
+    "deferred_to_user_decision": {
+      "official_posebusters_run": "Not run. The existing pose_validity.py proxy's exact thresholds are now fully disclosed inline (see above); switching to the real PoseBusters suite is a scope/tooling decision for the user, not something to unilaterally add.",
+      "manuscript_wording": "The paired McNemar/sign-test result (p=0.031 on 6-vs-0 discordant Success@5 pairs) was independently verified as correctly computed, but per the reviewer's own caveat it was not part of this protocol's pre-registered endpoints (rmsd_scoring.secondary_endpoints) -- reporting it as an explicitly-labeled exploratory/descriptive statistic in the paper (not a pre-registered hypothesis test) is a reasonable and accurate way to use it, but is a manuscript-writing decision left to the user rather than something added to this frozen protocol after the fact.",
+      "tool_selection_recommendation": "The reviewer's recommendation (GNINA for pose generation, retain top-5, add a reranking stage; DiffDock-L as a supplementary consensus method) is consistent with the verified data (GNINA: 14/14 lower best-of-5 RMSD, 100% pose validity, but only 3/8 near-native poses ranked first; DiffDock: 2/14 near-native at all, 3/14 top-1 poses geometrically invalid) but is a paper-writing/tool-selection decision for the user, not a protocol change."
+    }
+  },
+  "docking_inputs_frozen_before_execution": true,
+  "docking_inputs_frozen_before_execution_scope_note": "Scoped explicitly to what GNINA/DiffDock actually receive as input (receptor prep, ligand prep, docking box, tool settings) -- all fixed before the first docking run for a given case. This does NOT claim the downstream RMSD-scoring pipeline was never touched after docking output existed: two amendments (2026-08-25 reference-ligand charge resync, 2026-08-26 protonation-rule fix) were made after seeing that scoring crashed / reviewing the first real results, and are logged as such in gcase_validation_set_v1.0.json with their own made_before_seeing_docking_results flags rather than folded into this blanket field. Renamed from the earlier 'frozen_before_docking' precisely because that name invited exactly this ambiguity.",
+  "amendment_policy": "Per GCASE_VALIDATION_SET.md's own closing rule: no structure may be dropped later because one model performs badly on it. A case may only be removed for a predefined technical exclusion (e.g. missing LOI coordinates, unusable ligand density) discovered during preparation, and such removal must be logged here before any docking result is inspected. No removals have been made as of this freeze; the 6Q1N/6Q1P backbone-gap finding was evaluated and both cases were kept (see receptor_preparation.per_structure_warnings_summary).",
+  "external_review_response_2026_08_26": {
+    "valid_findings_acted_on": [
+      "Ligand protonation selection rule bug (9FAY/9FAZ/9FB2 wrongly net +2) -- confirmed and fixed, see gcase_validation_set_v1.0.json amendment and decisionbench_dd_docking/prepare_ligands.py. GNINA and DiffDock-L must be re-run for exactly these 3 cases.",
+      "DiffDock receptor cropping should not be described as equivalent to GNINA's precise box conditioning -- relabeled as 'ligand-centered receptor cropping' throughout; see diffdock.receptor_cropping.",
+      "Receptor-local QC should explicitly report distance-to-ligand for every debump-failed/missing-atom-warning residue, not only backbone gaps -- see receptor_preparation.pocket_proximity_qc.",
+      "Explicit numeric values for DiffDock inference steps and GNINA's top-pose ranking field were vague ('documented default') -- filled in above with the actual verified numbers/behavior.",
+      "Pose-validity endpoint should be implemented and frozen, not left as a TODO, before further result inspection -- see rmsd_scoring.pose_validity."
+    ],
+    "finding_rejected_with_evidence": {
+      "claim": "A table asserting GNINA exhaustiveness was 'previously frozen' at 32 (attached protocol: 8), num_modes/DiffDock samples at 20 (attached: 5), and DiffDock at '3 stochastic seeds' (attached: unspecified), characterizing this as undocumented protocol drift.",
+      "finding": "No historical basis exists for any of those three numbers anywhere in this project. `git log -p` over DESCRIPTION.md, GCASE_VALIDATION_SET.md, and every revision of this file shows exhaustiveness=8 and num_modes/samples=5 as the ONLY values ever set -- 5 traces directly to GCASE_VALIDATION_SET.md's explicit 'Top 1-5 poses' wording. The '3 seeds' figure does not refer to docking at all: it is DESCRIPTION.md's unrelated GenMol/MolMIM generator-benchmark table ('Random seeds | same 3 seeds | same 3 seeds', Section 3), for a completely different experiment (independent replicate generation runs, not docking). Treated as a fabricated/misattributed comparison, not acted on. Values were NOT changed to 32/20/3, since there is nothing to 'restore' to.",
+      "verification_commands": "git log --all -p -- DESCRIPTION.md GCASE_VALIDATION_SET.md decisionbench_dd_configs_v1.0/gcase_validation/redocking_protocol_v1.0.json | grep -iE 'exhaustiveness|samples_per_complex|num_modes'; grep -n 'Top 1' GCASE_VALIDATION_SET.md; grep -n 'Random seeds' DESCRIPTION.md"
+    },
+    "deferred_to_user_decision": {
+      "finding": "Recommendation to run a second, native (uncropped) DiffDock track alongside the cropped one, as a two-track sensitivity design.",
+      "status": "Not implemented -- requires additional GPU compute on the user's instance and is a genuine experimental-design scope decision, not a bug fix. Presented to the user as an option, not applied unilaterally."
+    }
+  },
+  "external_review_response_2026_08_27": {
+    "context": "A second audit message scored the committed docking_results/ snapshot (commit 33c2614, taken before the 2026-08-26 protonation fix and before pose-validity existed) and again asserted the same 'protocol drift' table from the first review.",
+    "valid_findings_acted_on": [
+      "Result provenance was incomplete (no record of exact Docker image/digest, input-file hashes, or per-case runtime behind docking_runs/) -- implemented decisionbench_dd_docking/provenance.py; run_gnina.py and run_diffdock.py now each write <out-dir>/<tool>/manifest.json (resolved image digest, sha256 of protocol/case-list files actually read, this repo's git commit, per-case cmd/runtime/exit status). See RUNNING_ON_GPU_INSTANCE.md step 4.",
+      "Pose validity did not check protein-ligand clashes, only ligand-internal geometry -- extended decisionbench_dd_docking/pose_validity.py with a protein-clash check (flat 1.5 A heavy-atom cutoff against the same prepared/cropped receptor used for that tool's docking run); wired through rmsd.score_case and evaluate_docking.py. Re-running evaluate_docking.py on the existing (partially stale) docking_runs/ output already shows this check actively discriminating between tools -- e.g. DiffDock case 9FAL now has 5/5 poses flagged invalid on protein clash, GNINA's box-constrained poses do not -- confirming it isn't a no-op."
+    ],
+    "finding_rejected_again_with_evidence": {
+      "claim": "The same table as the 2026-08-26 review reasserting GNINA exhaustiveness=32/num_modes=20 and 'DiffDock: 3 stochastic seeds' as previously-frozen values that this protocol silently drifted away from.",
+      "finding": "Re-ran the identical verification and got the identical null result: `git log --all -p` across DESCRIPTION.md, GCASE_VALIDATION_SET.md, and every revision of this file still shows no commit, anywhere, ever setting exhaustiveness to 32, num_modes/samples to 20, or a DiffDock seed count of 3. The claim is unchanged from the first review and is rejected again on the same evidence (see external_review_response_2026_08_26.finding_rejected_with_evidence.verification_commands, re-run and re-confirmed). Restated here rather than silently dropped so this isn't mistaken for an oversight on a second pass.",
+      "note": "The stale numbers the second audit scored (9FAY/9FAZ/9FB2 showing as failures/NA) are explained by something real -- those 3 cases still have not been re-docked since the 2026-08-26 protonation fix -- not by the fabricated drift claim."
+    },
+    "already_fixed_in_working_tree_before_this_review_landed": "DiffDock inference-step count being unspecified in the frozen protocol was flagged again; this was already closed in the 2026-08-26 response (diffdock.docker_image_verified_facts: inference_steps=20, actual_steps=19) prior to this second review, so no new action was needed here.",
+    "still_blocking": "9FAY, 9FAZ, 9FB2 GNINA+DiffDock-L re-runs on the corrected (net +1, not +2) protonated ligands have not been confirmed done. docking_results/ cannot be treated as final/paper-ready until they are."
+  },
+  "bounded_reranking_sensitivity_analysis_2026_08_27": {
+    "status": "implemented as a non-primary sensitivity readout, per this protocol's rmsd_scoring section and candidate_screen_v1.0/downstream_gcase_screening_protocol.md section 10.",
+    "implemented_in": "decisionbench_dd_docking/rerank_sensitivity.py (shared selector logic), redocking_rerank_sensitivity.py, candidate_screen_rerank_sensitivity.py.",
+    "selectors": "Exactly the three pre-specified in section 10: native CNNscore-descending rank (the primary result's own rule), CNN_VS descending, minimizedAffinity ascending. No selector was added, removed, or chosen based on outcomes.",
+    "redocking_result": "GNINA Success@1 (n=14): native_rank1 = 3/14 (21.4%, reproduces the frozen primary result exactly -- see docking_results/redocking_rerank_sensitivity.csv), cnn_vs_desc = 4/14 (28.6%), minimized_affinity_asc = 5/14 (35.7%). Consistent with this project's own earlier finding that GNINA found a near-native pose in Top-5 for 8/14 cases but ranked only 3/14 first -- both alternate selectors recover more of those buried correct poses. Does not change the frozen primary Success@1/Success@5 numbers.",
+    "candidate_screen_result": "Best-of-5 rescue (fixed pass bar = Ambroxol's native-rank1 CNNaffinity): native rank-1 passes 16/69, best-of-5 passes 27/69, 11 candidates rescued (GM_009, GM_017, GM_026, GM_028, GM_036, GM_041, GM_042, GM_043, GM_046, GM_051, GM_066) -- see candidate_screen_results/best_of_5_rescue.csv. Fixed-selector Y_structural_proxy(GenMol): native_rank1 = 5.00% (frozen primary), cnn_vs_desc = 6.67%, minimized_affinity_asc = 3.67% -- see candidate_screen_results/selector_sensitivity.csv.",
+    "does_not_change": "The frozen primary results (redocking Success@1=21.4%/Success@5=57.1%; candidate screen 15 GenMol + 1 MolMIM structural-proxy pass) are unchanged. This is reported as a prioritization/robustness signal, not a new qualification gate or an independently-validated best selector.",
+    "external_review_response_2026_08_27_third_message": {
+      "context": "A review of this sensitivity analysis's own output. Every specific claim (candidate-screen selector counts 16/21/12/27, the rescued-candidate rank distribution 2:6/3:1/4:4/5:0, the 4-vs-7 occupancy-vs-affinity breakdown for why each of the 11 rescued candidates failed at native rank-1, the redocking median RMSDs 4.64/3.80/3.74 A, and the specific per-case rescues -- CNN_VS rescues only 6Q1N, minimizedAffinity rescues both 3GXF and 6Q1N with zero native successes lost -- was independently reproduced from the raw CSVs and confirmed exactly correct. No fabrications found.",
+      "valid_findings_acted_on": [
+        "Archive a candidate-level, per-selector turnover table (selected pose rank, CNNscore/CNNaffinity/CNN_VS/minimizedAffinity, geometry validity, occupancy, pass/fail) so gains/losses/retentions between selectors are auditable directly, not just visible as net aggregate counts -- added candidate_screen_results/candidate_selector_turnover.csv (one row per candidate per selector) and median RMSD per selector to docking_results/redocking_rerank_sensitivity.md.",
+        "Explicitly separate the 16 frozen primary passers from the 11 exploratory Top-5-reserve candidates in reported output, and never headline a combined '27 qualified' figure -- added an 'Advancement population' section to candidate_screen_results/rerank_sensitivity.md stating this split plainly."
+      ],
+      "operational_decision_confirmed": "No reranking selector is adopted to replace native CNNscore rank-1. Per the review's own reasoning (a selector cannot be validated by how well it performs on the same 14/69 cases used to propose it, and minimizedAffinity's selector-dependent gain on redocking Success@1 corresponds to a LOSS on candidate-screen yield, 16->12, i.e. 'best redocking selector' does not transfer to 'best candidate-screen selector'), this project does not change its primary pose-selection rule based on this analysis.",
+      "next_step_confirmed": "ADMET, scaffold-diversity, and patent triage of the 16 frozen primary structural-proxy passers, per the review's stated next core step."
+    }
+  }
+}

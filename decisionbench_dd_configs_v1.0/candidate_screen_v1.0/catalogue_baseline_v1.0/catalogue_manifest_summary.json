@@ -1,0 +1,61 @@
+{
+  "schema_version": "DecisionBench-DD_catalogue_baseline_v1.0",
+  "level": "1 (chemical qualification only; no docking run in this script)",
+  "seed_smiles": "C1=C(C(=C(C=C1Br)Br)N)CNC2CCC(CC2)O",
+  "seed_canonical_smiles": "Nc1c(Br)cc(Br)cc1CNC1CCC(O)CC1",
+  "rdkit_version": "2026.03.5",
+  "source": "ZINC (files.docking.org/2D), reactivity A/B/C/E, purchasability A/B (in stock)",
+  "selection_rule": "top 300 by ECFP4/Morgan Tanimoto similarity to seed (radius 2, 2048 bits), descending, ties broken by ZINC ID ascending, restricted to [0.3, 0.95) -- pre-specified and frozen in CATALOGUE_BASELINE_SCOPE_v1.0.md before this script was run",
+  "requested": 300,
+  "load_and_selection_counts": {
+    "raw_lines_all_tranches": 9322808,
+    "rdkit_parseable": 9322802,
+    "unique_by_project_canonical_smiles": 9320110,
+    "in_similarity_band_before_top300_cut": 804,
+    "top_n_taken": 300
+  },
+  "gate_stage_counts": {
+    "valid": 300,
+    "unique": 300,
+    "not_exact_seed": 300,
+    "similarity_band_0.30_to_0.95": 300,
+    "qed": 300,
+    "sa_score": 300,
+    "molecular_weight": 300,
+    "clogp": 300,
+    "tpsa": 300,
+    "no_pains": 286,
+    "chemically_qualified": 258
+  },
+  "qualified_unique": 258,
+  "qualified_yield_of_requested": 0.86,
+  "overlap_with_existing_69_candidate_pool": {
+    "existing_pool_size": 69,
+    "n_catalogue_qualifiers_also_in_existing_pool": 0,
+    "overlapping_canonical_smiles": []
+  },
+  "gates": {
+    "valid": "RDKit MolFromSmiles succeeds",
+    "deduplication": "globally across all downloaded tranches, by this project's own isomeric canonical SMILES; first occurrence retained (ZINC's own dedup/property metadata not trusted)",
+    "not_exact_seed": true,
+    "ecfp4": {
+      "radius": 2,
+      "n_bits": 2048,
+      "tanimoto_min_inclusive": 0.3,
+      "tanimoto_max_exclusive": 0.95
+    },
+    "qed_min_inclusive": 0.5,
+    "sa_max_inclusive": 5.0,
+    "mw_da": [
+      200,
+      550
+    ],
+    "clogp": [
+      0,
+      5
+    ],
+    "tpsa_a2_max_inclusive": 100,
+    "pains": "none",
+    "brenk": "only the single seed-position dibrominated-core aniline occurrence is allowlisted"
+  }
+}

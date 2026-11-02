@@ -1,0 +1,5 @@
+tool,stage,count,of_requested
+genmol,chemically_qualified,0,300
+genmol,structural_proxy_pass,0,300
+molmim,chemically_qualified,10,300
+molmim,structural_proxy_pass,2,300

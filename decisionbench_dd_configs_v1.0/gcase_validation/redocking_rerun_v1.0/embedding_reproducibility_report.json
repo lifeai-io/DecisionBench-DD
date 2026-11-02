@@ -1,0 +1,156 @@
+[
+  {
+    "pdb_id": "9F9Z",
+    "frozen_smiles": "Cc1cccc(C)c1OC[C@H](C)[NH3+]",
+    "rerun_smiles": "Cc1cccc(C)c1OC[C@H](C)[NH3+]",
+    "smiles_changed": false,
+    "rerun_embed_ok": true,
+    "rerun_mmff_converged": true,
+    "max_coord_delta_all_atoms_A": 0.0138,
+    "max_coord_delta_heavy_atoms_A": 0.0107,
+    "note": null
+  },
+  {
+    "pdb_id": "9FA3",
+    "frozen_smiles": "O=S(=O)(NCC1CC1)c1ccccc1",
+    "rerun_smiles": "O=S(=O)(NCC1CC1)c1ccccc1",
+    "smiles_changed": false,
+    "rerun_embed_ok": true,
+    "rerun_mmff_converged": true,
+    "max_coord_delta_all_atoms_A": 0.2791,
+    "max_coord_delta_heavy_atoms_A": 0.2253,
+    "note": null
+  },
+  {
+    "pdb_id": "9FA6",
+    "frozen_smiles": "[NH3+]C[C@@H](O)CNS(=O)(=O)c1ccccc1F",
+    "rerun_smiles": "[NH3+]C[C@@H](O)CNS(=O)(=O)c1ccccc1F",
+    "smiles_changed": false,
+    "rerun_embed_ok": true,
+    "rerun_mmff_converged": true,
+    "max_coord_delta_all_atoms_A": 10.493,
+    "max_coord_delta_heavy_atoms_A": 8.4759,
+    "note": null
+  },
+  {
+    "pdb_id": "9FAD",
+    "frozen_smiles": "Cc1ccc(S(=O)(=O)NC[C@H](C)[NH3+])cc1",
+    "rerun_smiles": "Cc1ccc(S(=O)(=O)NC[C@H](C)[NH3+])cc1",
+    "smiles_changed": false,
+    "rerun_embed_ok": true,
+    "rerun_mmff_converged": true,
+    "max_coord_delta_all_atoms_A": 4.4925,
+    "max_coord_delta_heavy_atoms_A": 3.8638,
+    "note": null
+  },
+  {
+    "pdb_id": "9FAL",
+    "frozen_smiles": "[NH3+][C@H](CNS(=O)(=O)c1cc(F)cc(F)c1)c1ccccc1",
+    "rerun_smiles": "[NH3+][C@H](CNS(=O)(=O)c1cc(F)cc(F)c1)c1ccccc1",
+    "smiles_changed": false,
+    "rerun_embed_ok": true,
+    "rerun_mmff_converged": true,
+    "max_coord_delta_all_atoms_A": 2.5649,
+    "max_coord_delta_heavy_atoms_A": 1.841,
+    "note": null
+  },
+  {
+    "pdb_id": "9FAY",
+    "frozen_smiles": "CN(C[C@@H]([NH3+])c1ccccc1)S(=O)(=O)c1cc(F)cc(F)c1",
+    "rerun_smiles": "CN(C[C@@H]([NH3+])c1ccccc1)S(=O)(=O)c1cc(F)cc(F)c1",
+    "smiles_changed": false,
+    "rerun_embed_ok": true,
+    "rerun_mmff_converged": true,
+    "max_coord_delta_all_atoms_A": 0.139,
+    "max_coord_delta_heavy_atoms_A": 0.1251,
+    "note": null
+  },
+  {
+    "pdb_id": "9FAZ",
+    "frozen_smiles": "CN(C[C@H]([NH3+])c1ccccc1)S(=O)(=O)c1cc(F)cc(F)c1",
+    "rerun_smiles": "CN(C[C@H]([NH3+])c1ccccc1)S(=O)(=O)c1cc(F)cc(F)c1",
+    "smiles_changed": false,
+    "rerun_embed_ok": true,
+    "rerun_mmff_converged": true,
+    "max_coord_delta_all_atoms_A": 0.2956,
+    "max_coord_delta_heavy_atoms_A": 0.2193,
+    "note": null
+  },
+  {
+    "pdb_id": "9FB2",
+    "frozen_smiles": "C=C(C)c1cccc([C@@H]([NH3+])CN(C)S(=O)(=O)c2cc(F)cc(F)c2)c1",
+    "rerun_smiles": "C=C(C)c1cccc([C@@H]([NH3+])CN(C)S(=O)(=O)c2cc(F)cc(F)c2)c1",
+    "smiles_changed": false,
+    "rerun_embed_ok": true,
+    "rerun_mmff_converged": true,
+    "max_coord_delta_all_atoms_A": 2.0229,
+    "max_coord_delta_heavy_atoms_A": 0.4231,
+    "note": null
+  },
+  {
+    "pdb_id": "9FDI",
+    "frozen_smiles": "c1ccc(CC2CC[NH2+]CC2)cc1",
+    "rerun_smiles": "c1ccc(CC2CC[NH2+]CC2)cc1",
+    "smiles_changed": false,
+    "rerun_embed_ok": true,
+    "rerun_mmff_converged": true,
+    "max_coord_delta_all_atoms_A": 0.151,
+    "max_coord_delta_heavy_atoms_A": 0.1109,
+    "note": null
+  },
+  {
+    "pdb_id": "8P3E",
+    "frozen_smiles": "O=C(Nc1ccc(Cl)cc1)c1cccc(S(=O)(=O)Nc2ccccc2C(=O)[O-])c1",
+    "rerun_smiles": "O=C(Nc1ccc(Cl)cc1)c1cccc(S(=O)(=O)Nc2ccccc2C(=O)[O-])c1",
+    "smiles_changed": false,
+    "rerun_embed_ok": true,
+    "rerun_mmff_converged": true,
+    "max_coord_delta_all_atoms_A": 0.1736,
+    "max_coord_delta_heavy_atoms_A": 0.1479,
+    "note": null
+  },
+  {
+    "pdb_id": "8P41",
+    "frozen_smiles": "O=C(CSCc1cc(C(F)(F)F)cc(C(F)(F)F)c1)Nc1ccc(Cl)cc1C(=O)[O-]",
+    "rerun_smiles": "O=C(CSCc1cc(C(F)(F)F)cc(C(F)(F)F)c1)Nc1ccc(Cl)cc1C(=O)[O-]",
+    "smiles_changed": false,
+    "rerun_embed_ok": true,
+    "rerun_mmff_converged": true,
+    "max_coord_delta_all_atoms_A": 0.3913,
+    "max_coord_delta_heavy_atoms_A": 0.3913,
+    "note": null
+  },
+  {
+    "pdb_id": "3GXF",
+    "frozen_smiles": "OC[C@H]1C[NH2+]C[C@@H](O)[C@@H]1O",
+    "rerun_smiles": "OC[C@H]1C[NH2+]C[C@@H](O)[C@@H]1O",
+    "smiles_changed": false,
+    "rerun_embed_ok": true,
+    "rerun_mmff_converged": true,
+    "max_coord_delta_all_atoms_A": 0.2584,
+    "max_coord_delta_heavy_atoms_A": 0.209,
+    "note": null
+  },
+  {
+    "pdb_id": "6Q1N",
+    "frozen_smiles": "CSCC[C@H]1[NH2+]C[C@@H](O)[C@H](O)[C@H]1O",
+    "rerun_smiles": "CSCC[C@H]1[NH2+]C[C@@H](O)[C@H](O)[C@H]1O",
+    "smiles_changed": false,
+    "rerun_embed_ok": true,
+    "rerun_mmff_converged": true,
+    "max_coord_delta_all_atoms_A": 0.4546,
+    "max_coord_delta_heavy_atoms_A": 0.354,
+    "note": null
+  },
+  {
+    "pdb_id": "6Q1P",
+    "frozen_smiles": "CC(C)CCCS(=O)(=O)C[C@H]1[NH2+]C[C@@H](O)[C@H](O)[C@H]1O",
+    "rerun_smiles": "CC(C)CCCS(=O)(=O)C[C@H]1[NH2+]C[C@@H](O)[C@H](O)[C@H]1O",
+    "smiles_changed": false,
+    "rerun_embed_ok": true,
+    "rerun_mmff_converged": true,
+    "max_coord_delta_all_atoms_A": 5.1249,
+    "max_coord_delta_heavy_atoms_A": 3.0352,
+    "note": null
+  }
+]

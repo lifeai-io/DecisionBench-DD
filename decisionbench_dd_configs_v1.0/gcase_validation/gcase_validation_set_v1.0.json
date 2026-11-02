@@ -1,0 +1,494 @@
+{
+  "benchmark": "DecisionBench-DD",
+  "component": "GCase redocking validation set (Experiment B)",
+  "protocol_version": "1.0",
+  "frozen_date": "2026-08-21",
+  "source": "GCASE_VALIDATION_SET.md",
+  "target": "Human GBA1 / GCase (glucocerebrosidase)",
+  "n_cases": 14,
+  "site_strata": {
+    "allosteric": 11,
+    "active_site_chaperone": 3
+  },
+  "inclusion_criteria": [
+    "Human GCase/GBA1",
+    "Experimentally determined by X-ray crystallography",
+    "Resolution <= 3.0 Angstrom",
+    "Explicit small-molecule ligand of interest",
+    "Non-covalent binding",
+    "Ligand coordinates present",
+    "Protein residues surrounding the ligand sufficiently resolved",
+    "Ligand is not simply solvent, ion, buffer, glycan, or crystallization additive",
+    "Structure retained regardless of whether GNINA or DiffDock later performs badly"
+  ],
+  "explicit_exclusions": [
+    {
+      "pdb_id": "9ELB",
+      "reason": "Covalent inhibitor complex; not an apples-to-apples redocking test."
+    },
+    {
+      "pdb_id": "5LVX",
+      "reason": "Quinazoline modulator covalently attached to Lys346; belongs in a separate covalent-docking benchmark."
+    },
+    {
+      "pdb_id": "3KE0",
+      "reason": "N370S structure; listed small molecules are glycans/sulfate/glycerol, not a drug-like experimental ligand pose. Reserved for a future receptor-state robustness experiment."
+    },
+    {
+      "pdb_id": "3KEH",
+      "reason": "Same as 3KE0."
+    },
+    {
+      "pdb_id": "3GXI",
+      "reason": "Apo GCase at acidic pH; no ligand. Reserved for receptor-state experiments. Neutral-pH ligand-bound counterpart is 3GXF (included)."
+    }
+  ],
+  "ligand_instance_selection_hierarchy": [
+    "Highest RSCC",
+    "Lowest RSR (tie)",
+    "Highest occupancy (tie)",
+    "Lowest ligand B-factor (tie)",
+    "Lowest chain/instance identifier (tie)"
+  ],
+  "ligand_instance_selection_source": "RCSB GraphQL API (data.rcsb.org/graphql), nonpolymer_entity_instances -> rcsb_nonpolymer_instance_validation_score (RSCC, RSR, average_occupancy, is_best_instance). Full raw query results are not committed (regenerable); the resolved per-case values are recorded below for audit.",
+  "non_loi_exclusion_list": {
+    "description": "Chemical component IDs treated as crystallization additives / solvents / ions / glycans, not candidate ligands of interest, when scanning each structure's nonpolymer entities.",
+    "ions": [
+      "NA",
+      "K",
+      "CL",
+      "CA",
+      "MG",
+      "ZN",
+      "MN",
+      "FE",
+      "FE2",
+      "NI",
+      "CO",
+      "CU",
+      "CU1",
+      "CD",
+      "HG",
+      "BA",
+      "SR",
+      "CS",
+      "LI",
+      "RB",
+      "SO4",
+      "PO4",
+      "NO3",
+      "ACT",
+      "CIT",
+      "OXL",
+      "FMT",
+      "BR",
+      "IOD",
+      "AZI"
+    ],
+    "cryoprotectants_buffers_solvents": [
+      "GOL",
+      "EDO",
+      "PEG",
+      "PG4",
+      "PGE",
+      "1PE",
+      "MPD",
+      "DMS",
+      "BME",
+      "TRS",
+      "HEPES",
+      "MES",
+      "EPE",
+      "IPA",
+      "EOH",
+      "IMD",
+      "ACY",
+      "BU3",
+      "BU2",
+      "1BO",
+      "MRD",
+      "P6G",
+      "PE4",
+      "PE8",
+      "P33",
+      "CXE",
+      "TCE",
+      "DTT",
+      "BOG",
+      "LDA",
+      "OCT",
+      "BAQ"
+    ],
+    "glycans": [
+      "NAG",
+      "BMA",
+      "MAN",
+      "FUC",
+      "GAL",
+      "NDG",
+      "BGC",
+      "GLC",
+      "SIA",
+      "XYL"
+    ],
+    "other_additives": [
+      "GSH",
+      "TLA",
+      "BTB",
+      "PLP",
+      "FLC"
+    ]
+  },
+  "amendments": [
+    {
+      "date": "2026-08-21",
+      "change": "Added BAQ (pyrrolidin-2-one, MW 85.1 -- essentially the core of NMP, a common crystallization solvent) to non_loi_exclusion_list.",
+      "reason": "9FAL's nonpolymer entities initially scanned as containing two LOI candidates (A1IBQ and BAQ). BAQ is too small/generic to plausibly be the intended drug-discovery ligand and is a known crystallization-solvent fragment. Reclassifying it resolves 9FAL to its one real LOI (A1IBQ), consistent with GCASE_VALIDATION_SET.md only naming 9FA6 as a multi-LOI case.",
+      "made_before_seeing_docking_results": true
+    },
+    {
+      "date": "2026-08-21",
+      "change": "Resolved 9FA6's two-different-LOI case (A1IBE, S-enantiomer vs A1IBG, R-enantiomer of the same C9H13FN2O3S scaffold) in favor of A1IBG as the primary redocking case.",
+      "reason": "GCASE_VALIDATION_SET.md's frozen selection hierarchy (RSCC -> RSR -> occupancy -> B-factor -> chain id) only covers multiple instances of the SAME ligand of interest, not two different LOI compounds bound simultaneously. Extended the same underlying principle ('best experimental ligand-quality evidence') to this case: A1IBG's best instance has RSCC 0.935 / RSR 0.103 / occupancy 0.76, materially better than A1IBE's best instance (RSCC 0.819 / RSR 0.228 / occupancy 0.53). Decided by the user, not unilaterally, since the frozen doc does not cover this case.",
+      "made_before_seeing_docking_results": true
+    },
+    {
+      "date": "2026-08-21",
+      "change": "3GXF: selected the RCSB-flagged is_best_instance ligand copy (chain D, resseq 512) over chain B/resseq 517, despite the latter having marginally higher RSCC (0.995 vs 0.994) and marginally lower RSR (0.026 vs 0.031).",
+      "reason": "The literal RSCC/RSR gap (~0.001-0.005) is noise-level; RCSB's own composite best-instance designation was used as the practical tiebreaker rather than the raw two-number hierarchy in this near-tie.",
+      "made_before_seeing_docking_results": true
+    },
+    {
+      "date": "2026-08-22",
+      "change": "Switched reference_ligands/ from legacy PDB to SDF (heavy atoms only, bonds/orders assigned via RCSB chem-comp SMILES template, coordinates from the deposited experimental structure).",
+      "reason": "CRITICAL BUG, caught before any docking ran: the initial extraction wrote reference ligands as legacy PDB via Bio.PDB's PDBIO. Legacy PDB's residue-name field is only 3 characters wide; the nine 9F* ligand component IDs (e.g. A1IBD) are 5 characters, so PDBIO silently wrote them anyway, shifting every downstream fixed-width column -- including X/Y/Z coordinates -- by 2 characters. Any fixed-column reader (BioPython's own PDBParser, and any docking tool reading PDB by column position, not just whitespace-split) would silently misparse coordinates. Verified directly: reading the standard PDB column offsets (30:38, 38:46, 46:54) off an affected line returned garbled, unusable numbers. This is also why RCSB has no legacy-PDB download for these entries at all (confirmed: 404) -- the format cannot represent them. Fixed by re-parsing from the (unaffected) mmCIF source, perceiving heavy-atom connectivity from 3D geometry (rdDetermineBonds.DetermineConnectivity), assigning correct bond orders via AllChem.AssignBondOrdersFromTemplate against each ligand's RCSB canonical SMILES, and writing SDF (no fixed-column format limitation). Receptor files were never affected (protein residue codes are always <=3 characters). All 14 SDFs round-trip through RDKit cleanly; 9FA6's independently-perceived 3D chirality came out R, cross-confirming both the RCSB SMILES stereo descriptor and the earlier enantiomer decision. Hydrogens are intentionally dropped from the reference ligand files (heavy-atom RMSD is the field-standard practice -- GNINA/DiffDock poses are heavy-atom only too).",
+      "made_before_seeing_docking_results": true
+    },
+    {
+      "date": "2026-08-25",
+      "change": "Rebuilt reference_ligands/*.sdf bond-order assignment to use each case's docking_input_protonated_smiles (pH 7.4, dimorphite-dl) as the AssignBondOrdersFromTemplate template, instead of the plain neutral RCSB canonical SMILES used at first extraction. Heavy-atom 3D coordinates are untouched (verified: max coordinate delta 0.0 across all 14 cases before/after) -- only the formal-charge/bond-order labels on the same atoms changed.",
+      "reason": "BUG, found while scoring the first real GNINA/DiffDock-L results (not before -- see made_before_seeing_docking_results below): decisionbench_dd_docking.rmsd.symmetry_aware_rmsd (rdMolAlign.CalcRMS) does substructure-match-based atom correspondence, which by default requires matching formal charges atom-for-atom. The original reference ligands were built neutral, but every docking pose reflects the protonated SMILES actually fed to the tools (docking_input_ligands/, docking_input_protonated_smiles) -- net charges of +1/+2/-1 depending on the case. That charge mismatch made CalcRMS raise 'No sub-structure match found' for 10 of 14 cases outright, not a chemistry problem, a representation inconsistency between two stages of this project's own pipeline.",
+      "made_before_seeing_docking_results": false,
+      "why_this_does_not_violate_the_no_post_hoc_threshold_change_rule": "This is not a qualification threshold, scoring formula, or gate -- it's a mechanical bond-order/charge-labeling fix applied identically and structurally to all 14 cases and both tools, required just to get RMSD to compute at all (the pipeline crashed before producing any Success@1/@5 numbers, so there was no favorable-vs-unfavorable result to react to). Heavy-atom coordinates, which are what RMSD actually measures, are provably unchanged.",
+      "audit_report": "reference_ligand_reprotonation_report.json (old/new net charge and max coordinate delta per case)"
+    },
+    {
+      "date": "2026-08-26",
+      "change": "Fixed the ligand-protonation variant-selection rule to exclude a PROTONATED sulfonamide nitrogen ([NH+] attached to S(=O)(=O)), not just a deprotonated one ([N-]), before counting 'good ammonium' sites. Corrected 3 of 14 cases -- 9FAY, 9FAZ, 9FB2 -- from net charge +2 to the chemically correct +1. Re-embedded docking_input_ligands/*.sdf for those 3 and re-synced reference_ligands/*.sdf's bond-order template to match (coordinate delta 0.0, same pattern as the prior amendment). The other 11 cases were unaffected (re-ran the full 14-case selection to confirm: only these 3 changed).",
+      "reason": "External review caught this: a sulfonamide nitrogen, even N,N-disubstituted, is far too weak a base (electron-withdrawing sulfonyl group) to be protonated at pH 7.4 -- a genuine aliphatic amine (pKaH ~9-10) is the correct protonation site. The original selection rule's GOOD_AMMONIUM SMARTS ([NH3+,NH2+,NH+]) matched a protonated sulfonamide N just as readily as a real amine, and its 'maximize ammonium count' tie-break rewarded the spurious double-protonation over the chemically correct single-protonation variant that dimorphite-dl had also proposed.",
+      "made_before_seeing_docking_results": false,
+      "why_this_does_not_violate_the_no_post_hoc_threshold_change_rule": "Not a qualification threshold or scoring change -- a chemistry correctness fix to the protonation-state assignment, caught by review before any RMSD result was produced FOR THESE 3 CASES specifically (GNINA/DiffDock had already run once on the old, wrong protonation state, but that prior run's Success@1/@5 numbers for these 3 cases are being discarded, not selectively kept or compared against).",
+      "requires_rerun": ["9FAY", "9FAZ", "9FB2"],
+      "requires_rerun_note": "Docking INPUT changed (different net charge -> different 3D-embedded starting conformer) for these 3 cases. GNINA and DiffDock-L must be re-run on the GPU instance for exactly these 3 PDB IDs; the other 11 cases' existing docking_runs/ output remains valid and does not need to be re-run.",
+      "implemented_in": "decisionbench_dd_docking/prepare_ligands.py",
+      "audit_report": "ligand_docking_input_report.json"
+    }
+  ],
+  "cases": [
+    {
+      "pdb_id": "9F9Z",
+      "resolution_angstrom": 2.279,
+      "site_stratum": "allosteric",
+      "ligand_comp_id": "A1IBI",
+      "auth_chain": "A",
+      "auth_seq_id": 704,
+      "alt_id_selected": null,
+      "validation": {
+        "RSCC": 0.893,
+        "RSR": 0.112,
+        "average_occupancy": 0.8
+      },
+      "reference_ligand_file": "reference_ligands/9F9Z_A1IBI.sdf",
+      "receptor_raw_file": "receptors/9F9Z_receptor_raw.pdb",
+      "receptor_prepared_file": "receptors_prepared/9F9Z_prepared.pdb",
+      "docking_input_smiles": "Cc1cccc(c1OC[C@H](C)N)C",
+      "docking_input_protonated_smiles": "Cc1cccc(C)c1OC[C@H](C)[NH3+]",
+      "docking_input_ligand_file": "docking_input_ligands/9F9Z_ligand_input.sdf",
+      "receptor_cropped_for_diffdock_file": "receptors_cropped_for_diffdock/9F9Z_cropped.pdb"
+    },
+    {
+      "pdb_id": "9FA3",
+      "resolution_angstrom": 1.36,
+      "site_stratum": "allosteric",
+      "ligand_comp_id": "A1IBC",
+      "auth_chain": "A",
+      "auth_seq_id": 606,
+      "alt_id_selected": null,
+      "validation": {
+        "RSCC": 0.896,
+        "RSR": 0.141,
+        "average_occupancy": 0.62
+      },
+      "reference_ligand_file": "reference_ligands/9FA3_A1IBC.sdf",
+      "receptor_raw_file": "receptors/9FA3_receptor_raw.pdb",
+      "receptor_prepared_file": "receptors_prepared/9FA3_prepared.pdb",
+      "docking_input_smiles": "c1ccc(cc1)S(=O)(=O)NCC2CC2",
+      "docking_input_protonated_smiles": "O=S(=O)(NCC1CC1)c1ccccc1",
+      "docking_input_ligand_file": "docking_input_ligands/9FA3_ligand_input.sdf",
+      "receptor_cropped_for_diffdock_file": "receptors_cropped_for_diffdock/9FA3_cropped.pdb"
+    },
+    {
+      "pdb_id": "9FA6",
+      "resolution_angstrom": 1.49,
+      "site_stratum": "allosteric",
+      "ligand_comp_id": "A1IBG",
+      "auth_chain": "A",
+      "auth_seq_id": 606,
+      "alt_id_selected": "B",
+      "validation": {
+        "RSCC": 0.935,
+        "RSR": 0.103,
+        "average_occupancy": 0.76
+      },
+      "note": "Multi-LOI case; see amendments. Alternate LOI A1IBE (chain A, resseq 605/607) can be reported as a supplementary case.",
+      "reference_ligand_file": "reference_ligands/9FA6_A1IBG.sdf",
+      "receptor_raw_file": "receptors/9FA6_receptor_raw.pdb",
+      "receptor_prepared_file": "receptors_prepared/9FA6_prepared.pdb",
+      "docking_input_smiles": "c1ccc(c(c1)F)S(=O)(=O)NC[C@@H](CN)O",
+      "docking_input_protonated_smiles": "[NH3+]C[C@@H](O)CNS(=O)(=O)c1ccccc1F",
+      "docking_input_ligand_file": "docking_input_ligands/9FA6_ligand_input.sdf",
+      "receptor_cropped_for_diffdock_file": "receptors_cropped_for_diffdock/9FA6_cropped.pdb"
+    },
+    {
+      "pdb_id": "9FAD",
+      "resolution_angstrom": 1.8,
+      "site_stratum": "allosteric",
+      "ligand_comp_id": "A1IBD",
+      "auth_chain": "A",
+      "auth_seq_id": 605,
+      "alt_id_selected": null,
+      "validation": {
+        "RSCC": 0.942,
+        "RSR": 0.096,
+        "average_occupancy": 0.72
+      },
+      "reference_ligand_file": "reference_ligands/9FAD_A1IBD.sdf",
+      "receptor_raw_file": "receptors/9FAD_receptor_raw.pdb",
+      "receptor_prepared_file": "receptors_prepared/9FAD_prepared.pdb",
+      "docking_input_smiles": "Cc1ccc(cc1)S(=O)(=O)NC[C@H](C)N",
+      "docking_input_protonated_smiles": "Cc1ccc(S(=O)(=O)NC[C@H](C)[NH3+])cc1",
+      "docking_input_ligand_file": "docking_input_ligands/9FAD_ligand_input.sdf",
+      "receptor_cropped_for_diffdock_file": "receptors_cropped_for_diffdock/9FAD_cropped.pdb"
+    },
+    {
+      "pdb_id": "9FAL",
+      "resolution_angstrom": 1.39,
+      "site_stratum": "allosteric",
+      "ligand_comp_id": "A1IBQ",
+      "auth_chain": "A",
+      "auth_seq_id": 606,
+      "alt_id_selected": null,
+      "validation": {
+        "RSCC": 0.972,
+        "RSR": 0.066,
+        "average_occupancy": 0.84
+      },
+      "note": "BAQ (pyrrolidin-2-one) at resseq 607 excluded as a crystallization additive; see amendments.",
+      "reference_ligand_file": "reference_ligands/9FAL_A1IBQ.sdf",
+      "receptor_raw_file": "receptors/9FAL_receptor_raw.pdb",
+      "receptor_prepared_file": "receptors_prepared/9FAL_prepared.pdb",
+      "docking_input_smiles": "c1ccc(cc1)[C@@H](CNS(=O)(=O)c2cc(cc(c2)F)F)N",
+      "docking_input_protonated_smiles": "[NH3+][C@H](CNS(=O)(=O)c1cc(F)cc(F)c1)c1ccccc1",
+      "docking_input_ligand_file": "docking_input_ligands/9FAL_ligand_input.sdf",
+      "receptor_cropped_for_diffdock_file": "receptors_cropped_for_diffdock/9FAL_cropped.pdb"
+    },
+    {
+      "pdb_id": "9FAY",
+      "resolution_angstrom": 1.4,
+      "site_stratum": "allosteric",
+      "ligand_comp_id": "A1IBR",
+      "auth_chain": "A",
+      "auth_seq_id": 609,
+      "alt_id_selected": null,
+      "validation": {
+        "RSCC": 0.967,
+        "RSR": 0.068,
+        "average_occupancy": 0.93
+      },
+      "reference_ligand_file": "reference_ligands/9FAY_A1IBR.sdf",
+      "receptor_raw_file": "receptors/9FAY_receptor_raw.pdb",
+      "receptor_prepared_file": "receptors_prepared/9FAY_prepared.pdb",
+      "docking_input_smiles": "CN(C[C@H](c1ccccc1)N)S(=O)(=O)c2cc(cc(c2)F)F",
+      "docking_input_protonated_smiles": "CN(C[C@@H]([NH3+])c1ccccc1)S(=O)(=O)c1cc(F)cc(F)c1",
+      "docking_input_ligand_file": "docking_input_ligands/9FAY_ligand_input.sdf",
+      "receptor_cropped_for_diffdock_file": "receptors_cropped_for_diffdock/9FAY_cropped.pdb"
+    },
+    {
+      "pdb_id": "9FAZ",
+      "resolution_angstrom": 1.63,
+      "site_stratum": "allosteric",
+      "ligand_comp_id": "A1IBP",
+      "auth_chain": "A",
+      "auth_seq_id": 612,
+      "alt_id_selected": null,
+      "validation": {
+        "RSCC": 0.893,
+        "RSR": 0.119,
+        "average_occupancy": 0.71
+      },
+      "reference_ligand_file": "reference_ligands/9FAZ_A1IBP.sdf",
+      "receptor_raw_file": "receptors/9FAZ_receptor_raw.pdb",
+      "receptor_prepared_file": "receptors_prepared/9FAZ_prepared.pdb",
+      "docking_input_smiles": "CN(C[C@@H](c1ccccc1)N)S(=O)(=O)c2cc(cc(c2)F)F",
+      "docking_input_protonated_smiles": "CN(C[C@H]([NH3+])c1ccccc1)S(=O)(=O)c1cc(F)cc(F)c1",
+      "docking_input_ligand_file": "docking_input_ligands/9FAZ_ligand_input.sdf",
+      "receptor_cropped_for_diffdock_file": "receptors_cropped_for_diffdock/9FAZ_cropped.pdb"
+    },
+    {
+      "pdb_id": "9FB2",
+      "resolution_angstrom": 1.14,
+      "site_stratum": "allosteric",
+      "ligand_comp_id": "A1IBO",
+      "auth_chain": "A",
+      "auth_seq_id": 612,
+      "alt_id_selected": null,
+      "validation": {
+        "RSCC": 0.969,
+        "RSR": 0.068,
+        "average_occupancy": 0.93
+      },
+      "reference_ligand_file": "reference_ligands/9FB2_A1IBO.sdf",
+      "receptor_raw_file": "receptors/9FB2_receptor_raw.pdb",
+      "receptor_prepared_file": "receptors_prepared/9FB2_prepared.pdb",
+      "docking_input_smiles": "CC(=C)c1cccc(c1)[C@H](CN(C)S(=O)(=O)c2cc(cc(c2)F)F)N",
+      "docking_input_protonated_smiles": "C=C(C)c1cccc([C@@H]([NH3+])CN(C)S(=O)(=O)c2cc(F)cc(F)c2)c1",
+      "docking_input_ligand_file": "docking_input_ligands/9FB2_ligand_input.sdf",
+      "receptor_cropped_for_diffdock_file": "receptors_cropped_for_diffdock/9FB2_cropped.pdb"
+    },
+    {
+      "pdb_id": "9FDI",
+      "resolution_angstrom": 1.41,
+      "site_stratum": "allosteric",
+      "ligand_comp_id": "A1IB1",
+      "auth_chain": "A",
+      "auth_seq_id": 607,
+      "alt_id_selected": null,
+      "validation": {
+        "RSCC": 0.931,
+        "RSR": 0.083,
+        "average_occupancy": 0.85
+      },
+      "reference_ligand_file": "reference_ligands/9FDI_A1IB1.sdf",
+      "receptor_raw_file": "receptors/9FDI_receptor_raw.pdb",
+      "receptor_prepared_file": "receptors_prepared/9FDI_prepared.pdb",
+      "docking_input_smiles": "c1ccc(cc1)CC2CCNCC2",
+      "docking_input_protonated_smiles": "c1ccc(CC2CC[NH2+]CC2)cc1",
+      "docking_input_ligand_file": "docking_input_ligands/9FDI_ligand_input.sdf",
+      "receptor_cropped_for_diffdock_file": "receptors_cropped_for_diffdock/9FDI_cropped.pdb"
+    },
+    {
+      "pdb_id": "8P3E",
+      "resolution_angstrom": 1.75,
+      "site_stratum": "allosteric",
+      "ligand_comp_id": "WSI",
+      "auth_chain": "B",
+      "auth_seq_id": 501,
+      "alt_id_selected": null,
+      "validation": {
+        "RSCC": 0.918,
+        "RSR": 0.12,
+        "average_occupancy": 1.0
+      },
+      "reference_ligand_file": "reference_ligands/8P3E_WSI.sdf",
+      "receptor_raw_file": "receptors/8P3E_receptor_raw.pdb",
+      "receptor_prepared_file": "receptors_prepared/8P3E_prepared.pdb",
+      "docking_input_smiles": "c1ccc(c(c1)C(=O)O)NS(=O)(=O)c2cccc(c2)C(=O)Nc3ccc(cc3)Cl",
+      "docking_input_protonated_smiles": "O=C(Nc1ccc(Cl)cc1)c1cccc(S(=O)(=O)Nc2ccccc2C(=O)[O-])c1",
+      "docking_input_ligand_file": "docking_input_ligands/8P3E_ligand_input.sdf",
+      "receptor_cropped_for_diffdock_file": "receptors_cropped_for_diffdock/8P3E_cropped.pdb"
+    },
+    {
+      "pdb_id": "8P41",
+      "resolution_angstrom": 1.83,
+      "site_stratum": "allosteric",
+      "ligand_comp_id": "WYC",
+      "auth_chain": "A",
+      "auth_seq_id": 509,
+      "alt_id_selected": null,
+      "validation": {
+        "RSCC": 0.894,
+        "RSR": 0.12,
+        "average_occupancy": 1.0
+      },
+      "reference_ligand_file": "reference_ligands/8P41_WYC.sdf",
+      "receptor_raw_file": "receptors/8P41_receptor_raw.pdb",
+      "receptor_prepared_file": "receptors_prepared/8P41_prepared.pdb",
+      "docking_input_smiles": "c1cc(c(cc1Cl)C(=O)O)NC(=O)CSCc2cc(cc(c2)C(F)(F)F)C(F)(F)F",
+      "docking_input_protonated_smiles": "O=C(CSCc1cc(C(F)(F)F)cc(C(F)(F)F)c1)Nc1ccc(Cl)cc1C(=O)[O-]",
+      "docking_input_ligand_file": "docking_input_ligands/8P41_ligand_input.sdf",
+      "receptor_cropped_for_diffdock_file": "receptors_cropped_for_diffdock/8P41_cropped.pdb"
+    },
+    {
+      "pdb_id": "3GXF",
+      "resolution_angstrom": 2.4,
+      "site_stratum": "active_site_chaperone",
+      "ligand_comp_id": "IFM",
+      "auth_chain": "D",
+      "auth_seq_id": 512,
+      "alt_id_selected": null,
+      "validation": {
+        "RSCC": 0.994,
+        "RSR": 0.031,
+        "average_occupancy": 1.0
+      },
+      "note": "See amendments re: near-tie with chain B/517.",
+      "reference_ligand_file": "reference_ligands/3GXF_IFM.sdf",
+      "receptor_raw_file": "receptors/3GXF_receptor_raw.pdb",
+      "receptor_prepared_file": "receptors_prepared/3GXF_prepared.pdb",
+      "docking_input_smiles": "C1[C@@H]([C@H]([C@@H](CN1)O)O)CO",
+      "docking_input_protonated_smiles": "OC[C@H]1C[NH2+]C[C@@H](O)[C@@H]1O",
+      "docking_input_ligand_file": "docking_input_ligands/3GXF_ligand_input.sdf",
+      "receptor_cropped_for_diffdock_file": "receptors_cropped_for_diffdock/3GXF_cropped.pdb"
+    },
+    {
+      "pdb_id": "6Q1N",
+      "resolution_angstrom": 2.526,
+      "site_stratum": "active_site_chaperone",
+      "ligand_comp_id": "P9V",
+      "auth_chain": "B",
+      "auth_seq_id": 623,
+      "alt_id_selected": null,
+      "validation": {
+        "RSCC": 0.842,
+        "RSR": 0.15,
+        "average_occupancy": 1.0
+      },
+      "reference_ligand_file": "reference_ligands/6Q1N_P9V.sdf",
+      "receptor_raw_file": "receptors/6Q1N_receptor_raw.pdb",
+      "receptor_prepared_file": "receptors_prepared/6Q1N_prepared.pdb",
+      "docking_input_smiles": "CSCC[C@@H]1[C@@H]([C@H]([C@@H](CN1)O)O)O",
+      "docking_input_protonated_smiles": "CSCC[C@H]1[NH2+]C[C@@H](O)[C@H](O)[C@H]1O",
+      "docking_input_ligand_file": "docking_input_ligands/6Q1N_ligand_input.sdf",
+      "receptor_cropped_for_diffdock_file": "receptors_cropped_for_diffdock/6Q1N_cropped.pdb"
+    },
+    {
+      "pdb_id": "6Q1P",
+      "resolution_angstrom": 2.796,
+      "site_stratum": "active_site_chaperone",
+      "ligand_comp_id": "P8Y",
+      "auth_chain": "B",
+      "auth_seq_id": 622,
+      "alt_id_selected": null,
+      "validation": {
+        "RSCC": 0.922,
+        "RSR": 0.122,
+        "average_occupancy": 1.0
+      },
+      "reference_ligand_file": "reference_ligands/6Q1P_P8Y.sdf",
+      "receptor_raw_file": "receptors/6Q1P_receptor_raw.pdb",
+      "receptor_prepared_file": "receptors_prepared/6Q1P_prepared.pdb",
+      "docking_input_smiles": "CC(C)CCCS(=O)(=O)C[C@@H]1[C@@H]([C@H]([C@@H](CN1)O)O)O",
+      "docking_input_protonated_smiles": "CC(C)CCCS(=O)(=O)C[C@H]1[NH2+]C[C@@H](O)[C@H](O)[C@H]1O",
+      "docking_input_ligand_file": "docking_input_ligands/6Q1P_ligand_input.sdf",
+      "receptor_cropped_for_diffdock_file": "receptors_cropped_for_diffdock/6Q1P_cropped.pdb"
+    }
+  ],
+  "file_layout": {
+    "raw_pdb/<PDB_ID>.cif": "Full mmCIF structure as downloaded from RCSB (files.rcsb.org). Legacy .pdb format is unavailable for the 9F* entries because their 5-character ligand component IDs (e.g. A1IBE) do not fit the legacy PDB format's 3-character residue-name field.",
+    "receptors/<PDB_ID>_receptor_raw.pdb": "All standard polymer (protein) residues only -- waters, ions, glycans, and every heteroatom (including the reference ligand itself) removed. Only the primary altloc/blank-altloc atoms kept. Not yet protonated.",
+    "receptors_prepared/<PDB_ID>_prepared.pdb": "Protonated at pH 7.4 via PDB2PQR 3.7.1 (AMBER force field, PROPKA titration), missing side-chain atoms rebuilt, output as PDB. See redocking_protocol_v1.0.json for the frozen parameters and per-structure warnings (backbone gaps, alternate occupancies) logged during preparation.",
+    "reference_ligands/<PDB_ID>_<COMP_ID>.sdf": "The single selected ligand-of-interest instance, HEAVY ATOMS ONLY, with bond orders assigned from the RCSB canonical SMILES template and 3D coordinates from the deposited experimental structure at the alt_id_selected conformer. See the 2026-08-22 amendment above for why this is SDF, not PDB.",
+    "extraction_report_ligands.json": "Per-case audit: heavy-atom count, template bond-order assignment success, and formula cross-check against the RCSB chem-comp record."
+  },
+  "next_step": "Prepare proteins/ligands + freeze GNINA/DiffDock redocking protocol (receptor cleanup, protonation, docking box, number of poses, DiffDock-L settings, symmetry-aware RMSD) before any docking run -- see GCASE_VALIDATION_SET.md's own stated next timeline item."
+}

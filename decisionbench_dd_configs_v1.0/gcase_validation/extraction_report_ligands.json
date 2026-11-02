@@ -1,0 +1,142 @@
+[
+  {
+    "pdb_id": "9F9Z",
+    "comp_id": "A1IBI",
+    "n_heavy_atoms": 13,
+    "template_assignment_ok": true,
+    "template_error": null,
+    "rdkit_formula_heavy_plus_implicitH": "C11HNO",
+    "rcsb_formula": "C11H17NO",
+    "sdf_file": "decisionbench_dd_configs_v1.0/gcase_validation/reference_ligands/9F9Z_A1IBI.sdf"
+  },
+  {
+    "pdb_id": "9FA3",
+    "comp_id": "A1IBC",
+    "n_heavy_atoms": 14,
+    "template_assignment_ok": true,
+    "template_error": null,
+    "rdkit_formula_heavy_plus_implicitH": "C10NO2S",
+    "rcsb_formula": "C10H13NO2S",
+    "sdf_file": "decisionbench_dd_configs_v1.0/gcase_validation/reference_ligands/9FA3_A1IBC.sdf"
+  },
+  {
+    "pdb_id": "9FA6",
+    "comp_id": "A1IBG",
+    "n_heavy_atoms": 16,
+    "template_assignment_ok": true,
+    "template_error": null,
+    "rdkit_formula_heavy_plus_implicitH": "C9HFN2O3S",
+    "rcsb_formula": "C9H13FN2O3S",
+    "sdf_file": "decisionbench_dd_configs_v1.0/gcase_validation/reference_ligands/9FA6_A1IBG.sdf"
+  },
+  {
+    "pdb_id": "9FAD",
+    "comp_id": "A1IBD",
+    "n_heavy_atoms": 15,
+    "template_assignment_ok": true,
+    "template_error": null,
+    "rdkit_formula_heavy_plus_implicitH": "C10HN2O2S",
+    "rcsb_formula": "C10H16N2O2S",
+    "sdf_file": "decisionbench_dd_configs_v1.0/gcase_validation/reference_ligands/9FAD_A1IBD.sdf"
+  },
+  {
+    "pdb_id": "9FAL",
+    "comp_id": "A1IBQ",
+    "n_heavy_atoms": 21,
+    "template_assignment_ok": true,
+    "template_error": null,
+    "rdkit_formula_heavy_plus_implicitH": "C14HF2N2O2S",
+    "rcsb_formula": "C14H14F2N2O2S",
+    "sdf_file": "decisionbench_dd_configs_v1.0/gcase_validation/reference_ligands/9FAL_A1IBQ.sdf"
+  },
+  {
+    "pdb_id": "9FAY",
+    "comp_id": "A1IBR",
+    "n_heavy_atoms": 22,
+    "template_assignment_ok": true,
+    "template_error": null,
+    "rdkit_formula_heavy_plus_implicitH": "C15HF2N2O2S",
+    "rcsb_formula": "C15H16F2N2O2S",
+    "sdf_file": "decisionbench_dd_configs_v1.0/gcase_validation/reference_ligands/9FAY_A1IBR.sdf"
+  },
+  {
+    "pdb_id": "9FAZ",
+    "comp_id": "A1IBP",
+    "n_heavy_atoms": 22,
+    "template_assignment_ok": true,
+    "template_error": null,
+    "rdkit_formula_heavy_plus_implicitH": "C15HF2N2O2S",
+    "rcsb_formula": "C15H16F2N2O2S",
+    "sdf_file": "decisionbench_dd_configs_v1.0/gcase_validation/reference_ligands/9FAZ_A1IBP.sdf"
+  },
+  {
+    "pdb_id": "9FB2",
+    "comp_id": "A1IBO",
+    "n_heavy_atoms": 25,
+    "template_assignment_ok": true,
+    "template_error": null,
+    "rdkit_formula_heavy_plus_implicitH": "C18HF2N2O2S",
+    "rcsb_formula": "C18H20F2N2O2S",
+    "sdf_file": "decisionbench_dd_configs_v1.0/gcase_validation/reference_ligands/9FB2_A1IBO.sdf"
+  },
+  {
+    "pdb_id": "9FDI",
+    "comp_id": "A1IB1",
+    "n_heavy_atoms": 13,
+    "template_assignment_ok": true,
+    "template_error": null,
+    "rdkit_formula_heavy_plus_implicitH": "C12N",
+    "rcsb_formula": "C12H17N",
+    "sdf_file": "decisionbench_dd_configs_v1.0/gcase_validation/reference_ligands/9FDI_A1IB1.sdf"
+  },
+  {
+    "pdb_id": "8P3E",
+    "comp_id": "WSI",
+    "n_heavy_atoms": 29,
+    "template_assignment_ok": true,
+    "template_error": null,
+    "rdkit_formula_heavy_plus_implicitH": "C20ClN2O5S",
+    "rcsb_formula": "C20H15ClN2O5S",
+    "sdf_file": "decisionbench_dd_configs_v1.0/gcase_validation/reference_ligands/8P3E_WSI.sdf"
+  },
+  {
+    "pdb_id": "8P41",
+    "comp_id": "WYC",
+    "n_heavy_atoms": 30,
+    "template_assignment_ok": true,
+    "template_error": null,
+    "rdkit_formula_heavy_plus_implicitH": "C18ClF6NO3S",
+    "rcsb_formula": "C18H12ClF6NO3S",
+    "sdf_file": "decisionbench_dd_configs_v1.0/gcase_validation/reference_ligands/8P41_WYC.sdf"
+  },
+  {
+    "pdb_id": "3GXF",
+    "comp_id": "IFM",
+    "n_heavy_atoms": 10,
+    "template_assignment_ok": true,
+    "template_error": null,
+    "rdkit_formula_heavy_plus_implicitH": "C6NO3",
+    "rcsb_formula": "C6H13NO3",
+    "sdf_file": "decisionbench_dd_configs_v1.0/gcase_validation/reference_ligands/3GXF_IFM.sdf"
+  },
+  {
+    "pdb_id": "6Q1N",
+    "comp_id": "P9V",
+    "n_heavy_atoms": 13,
+    "template_assignment_ok": true,
+    "template_error": null,
+    "rdkit_formula_heavy_plus_implicitH": "C8NO3S",
+    "rcsb_formula": "C8H17NO3S",
+    "sdf_file": "decisionbench_dd_configs_v1.0/gcase_validation/reference_ligands/6Q1N_P9V.sdf"
+  },
+  {
+    "pdb_id": "6Q1P",
+    "comp_id": "P8Y",
+    "n_heavy_atoms": 19,
+    "template_assignment_ok": true,
+    "template_error": null,
+    "rdkit_formula_heavy_plus_implicitH": "C12H4NO5S",
+    "rcsb_formula": "C12H25NO5S",
+    "sdf_file": "decisionbench_dd_configs_v1.0/gcase_validation/reference_ligands/6Q1P_P8Y.sdf"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "pdb_id": "9F9Z",
+    "old_charge": 0,
+    "new_charge": 1,
+    "max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "9FA3",
+    "old_charge": 0,
+    "new_charge": 0,
+    "max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "9FA6",
+    "old_charge": 0,
+    "new_charge": 1,
+    "max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "9FAD",
+    "old_charge": 0,
+    "new_charge": 1,
+    "max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "9FAL",
+    "old_charge": 0,
+    "new_charge": 1,
+    "max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "9FAY",
+    "old_charge": 0,
+    "new_charge": 2,
+    "max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "9FAZ",
+    "old_charge": 0,
+    "new_charge": 2,
+    "max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "9FB2",
+    "old_charge": 0,
+    "new_charge": 2,
+    "max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "9FDI",
+    "old_charge": 0,
+    "new_charge": 1,
+    "max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "8P3E",
+    "old_charge": 0,
+    "new_charge": -1,
+    "max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "8P41",
+    "old_charge": 0,
+    "new_charge": -1,
+    "max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "3GXF",
+    "old_charge": 0,
+    "new_charge": 1,
+    "max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "6Q1N",
+    "old_charge": 0,
+    "new_charge": 1,
+    "max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "6Q1P",
+    "old_charge": 0,
+    "new_charge": 1,
+    "max_coord_delta": 0.0
+  }
+]

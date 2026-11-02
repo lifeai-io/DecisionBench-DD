@@ -1,0 +1,165 @@
+{
+  "n_cases": 14,
+  "frozen_success_at_1": "3/14",
+  "rerun_success_at_1": "4/14",
+  "n_cases_success_at_1_changed": 3,
+  "frozen_success_at_5": "8/14",
+  "rerun_success_at_5": "9/14",
+  "n_cases_success_at_5_changed": 1,
+  "per_case": [
+    {
+      "pdb_id": "9F9Z",
+      "frozen_top1_rmsd": 0.8885936399294552,
+      "rerun_top1_rmsd": 0.4752760663348929,
+      "frozen_success_at_1": "True",
+      "rerun_success_at_1": "True",
+      "success_at_1_changed": false,
+      "frozen_success_at_5": "True",
+      "rerun_success_at_5": "True",
+      "success_at_5_changed": false
+    },
+    {
+      "pdb_id": "9FA3",
+      "frozen_top1_rmsd": 2.2075504789569043,
+      "rerun_top1_rmsd": 4.8843907600787695,
+      "frozen_success_at_1": "False",
+      "rerun_success_at_1": "False",
+      "success_at_1_changed": false,
+      "frozen_success_at_5": "False",
+      "rerun_success_at_5": "False",
+      "success_at_5_changed": false
+    },
+    {
+      "pdb_id": "9FA6",
+      "frozen_top1_rmsd": 5.890985166071546,
+      "rerun_top1_rmsd": 5.860823587389403,
+      "frozen_success_at_1": "False",
+      "rerun_success_at_1": "False",
+      "success_at_1_changed": false,
+      "frozen_success_at_5": "True",
+      "rerun_success_at_5": "True",
+      "success_at_5_changed": false
+    },
+    {
+      "pdb_id": "9FAD",
+      "frozen_top1_rmsd": 6.044171143672224,
+      "rerun_top1_rmsd": 7.759900003694206,
+      "frozen_success_at_1": "False",
+      "rerun_success_at_1": "False",
+      "success_at_1_changed": false,
+      "frozen_success_at_5": "True",
+      "rerun_success_at_5": "True",
+      "success_at_5_changed": false
+    },
+    {
+      "pdb_id": "9FAL",
+      "frozen_top1_rmsd": 5.24386414197811,
+      "rerun_top1_rmsd": 4.903749363108853,
+      "frozen_success_at_1": "False",
+      "rerun_success_at_1": "False",
+      "success_at_1_changed": false,
+      "frozen_success_at_5": "False",
+      "rerun_success_at_5": "True",
+      "success_at_5_changed": true
+    },
+    {
+      "pdb_id": "9FAY",
+      "frozen_top1_rmsd": 5.556948049146141,
+      "rerun_top1_rmsd": 6.297561896696791,
+      "frozen_success_at_1": "False",
+      "rerun_success_at_1": "False",
+      "success_at_1_changed": false,
+      "frozen_success_at_5": "False",
+      "rerun_success_at_5": "False",
+      "success_at_5_changed": false
+    },
+    {
+      "pdb_id": "9FAZ",
+      "frozen_top1_rmsd": 0.8816209214230963,
+      "rerun_top1_rmsd": 0.8903763785358111,
+      "frozen_success_at_1": "True",
+      "rerun_success_at_1": "True",
+      "success_at_1_changed": false,
+      "frozen_success_at_5": "True",
+      "rerun_success_at_5": "True",
+      "success_at_5_changed": false
+    },
+    {
+      "pdb_id": "9FB2",
+      "frozen_top1_rmsd": 7.266797964413212,
+      "rerun_top1_rmsd": 7.569164423210794,
+      "frozen_success_at_1": "False",
+      "rerun_success_at_1": "False",
+      "success_at_1_changed": false,
+      "frozen_success_at_5": "True",
+      "rerun_success_at_5": "True",
+      "success_at_5_changed": false
+    },
+    {
+      "pdb_id": "9FDI",
+      "frozen_top1_rmsd": 1.5341531001224697,
+      "rerun_top1_rmsd": 5.557039254162929,
+      "frozen_success_at_1": "True",
+      "rerun_success_at_1": "False",
+      "success_at_1_changed": true,
+      "frozen_success_at_5": "True",
+      "rerun_success_at_5": "True",
+      "success_at_5_changed": false
+    },
+    {
+      "pdb_id": "8P3E",
+      "frozen_top1_rmsd": 4.171224740553655,
+      "rerun_top1_rmsd": 5.422907895438922,
+      "frozen_success_at_1": "False",
+      "rerun_success_at_1": "False",
+      "success_at_1_changed": false,
+      "frozen_success_at_5": "False",
+      "rerun_success_at_5": "False",
+      "success_at_5_changed": false
+    },
+    {
+      "pdb_id": "8P41",
+      "frozen_top1_rmsd": 5.107335402862567,
+      "rerun_top1_rmsd": 5.74352087062747,
+      "frozen_success_at_1": "False",
+      "rerun_success_at_1": "False",
+      "success_at_1_changed": false,
+      "frozen_success_at_5": "False",
+      "rerun_success_at_5": "False",
+      "success_at_5_changed": false
+    },
+    {
+      "pdb_id": "3GXF",
+      "frozen_top1_rmsd": 3.434291719408822,
+      "rerun_top1_rmsd": 1.705007641038596,
+      "frozen_success_at_1": "False",
+      "rerun_success_at_1": "True",
+      "success_at_1_changed": true,
+      "frozen_success_at_5": "True",
+      "rerun_success_at_5": "True",
+      "success_at_5_changed": false
+    },
+    {
+      "pdb_id": "6Q1N",
+      "frozen_top1_rmsd": 8.730364843816886,
+      "rerun_top1_rmsd": 1.9557581716955317,
+      "frozen_success_at_1": "False",
+      "rerun_success_at_1": "True",
+      "success_at_1_changed": true,
+      "frozen_success_at_5": "True",
+      "rerun_success_at_5": "True",
+      "success_at_5_changed": false
+    },
+    {
+      "pdb_id": "6Q1P",
+      "frozen_top1_rmsd": 3.396996579720324,
+      "rerun_top1_rmsd": 2.7908791041911023,
+      "frozen_success_at_1": "False",
+      "rerun_success_at_1": "False",
+      "success_at_1_changed": false,
+      "frozen_success_at_5": "False",
+      "rerun_success_at_5": "False",
+      "success_at_5_changed": false
+    }
+  ]
+}

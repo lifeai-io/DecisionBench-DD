@@ -1,0 +1,89 @@
+{
+  "tool": "diffdock",
+  "docker_image": "rbgcsail/diffdock",
+  "docker_image_digest": "rbgcsail/diffdock@sha256:1b7bb3adb332fdc9648a0ec53dec2f790cfbb816d7478d2bd93f1cdea3b269f0",
+  "git_commit": "3efb2ce7586a08df64fca2c989d7dc2cc6734505",
+  "input_file_hashes_sha256": {
+    "redocking_protocol": "d7076310b5bfa058860bb536243c073e05a4b2fc8ba8362d27d747ff6e6896f7",
+    "case_list": "38bc7ab5ab02a39b84c74783feb63a54d26c173accf1c84ca5987a83bd4fc23c"
+  },
+  "run_started_at_utc": "2026-08-26T03:01:21.910787+00:00",
+  "run_finished_at_utc": "2026-08-26T03:06:00.573060+00:00",
+  "cases": [
+    {
+      "pdb_id": "9F9Z",
+      "n_poses_written": 5,
+      "success": true
+    },
+    {
+      "pdb_id": "9FA3",
+      "n_poses_written": 5,
+      "success": true
+    },
+    {
+      "pdb_id": "9FA6",
+      "n_poses_written": 5,
+      "success": true
+    },
+    {
+      "pdb_id": "9FAD",
+      "n_poses_written": 5,
+      "success": true
+    },
+    {
+      "pdb_id": "9FAL",
+      "n_poses_written": 5,
+      "success": true
+    },
+    {
+      "pdb_id": "9FAY",
+      "n_poses_written": 5,
+      "success": true
+    },
+    {
+      "pdb_id": "9FAZ",
+      "n_poses_written": 5,
+      "success": true
+    },
+    {
+      "pdb_id": "9FB2",
+      "n_poses_written": 5,
+      "success": true
+    },
+    {
+      "pdb_id": "9FDI",
+      "n_poses_written": 5,
+      "success": true
+    },
+    {
+      "pdb_id": "8P3E",
+      "n_poses_written": 5,
+      "success": true
+    },
+    {
+      "pdb_id": "8P41",
+      "n_poses_written": 5,
+      "success": true
+    },
+    {
+      "pdb_id": "3GXF",
+      "n_poses_written": 5,
+      "success": true
+    },
+    {
+      "pdb_id": "6Q1N",
+      "n_poses_written": 5,
+      "success": true
+    },
+    {
+      "pdb_id": "6Q1P",
+      "n_poses_written": 5,
+      "success": true
+    }
+  ],
+  "gpu": true,
+  "batch_cmd": "docker run --rm --gpus all -v /home/user/DecisionBench-DD:/workspace rbgcsail/diffdock sh -c 'micromamba run -n diffdock python -m inference --config default_inference_args.yaml --protein_ligand_csv /workspace/docking_runs/diffdock_batch_input.csv --out_dir /workspace/docking_runs/diffdock_raw --samples_per_complex 5'",
+  "batch_runtime_seconds": 278.61,
+  "batch_returncode": 0,
+  "samples_per_complex": 5
+}

@@ -1,0 +1,22 @@
+{
+  "benchmark": "DecisionBench-DD v1.0",
+  "tool": "<genmol|molmim>",
+  "run_id": "<replicate_01|replicate_02|replicate_03>",
+  "request_config_file": "<filename>",
+  "request_started_at_iso8601": "<required>",
+  "request_finished_at_iso8601": "<required>",
+  "endpoint": "<required>",
+  "service_or_model_version": "<record from service/container if available>",
+  "container_image_or_api_build": "<if available>",
+  "hardware": {
+    "gpu_model": "<required if self-hosted; otherwise hosted_api>",
+    "gpu_count": "<if known>",
+    "peak_vram_gb": "<if measurable>"
+  },
+  "runtime_seconds": "<required>",
+  "http_status": "<required>",
+  "requested_molecules": 100,
+  "returned_records": "<fill after run>",
+  "raw_response_file": "<required>",
+  "notes": ""
+}

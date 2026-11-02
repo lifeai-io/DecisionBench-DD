@@ -1,0 +1,51 @@
+{
+  "benchmark": "DecisionBench-DD",
+  "protocol_version": "1.0",
+  "frozen_date": "2026-08-14",
+  "case_study": "Ambroxol / human GBA1 (GCase)",
+  "seed_molecule": {
+    "name": "Ambroxol",
+    "generator_input_smiles_frozen": "C1=C(C(=C(C=C1Br)Br)N)CNC2CCC(CC2)O",
+    "canonical_smiles_for_downstream_identity_and_metrics": "Nc1c(Br)cc(Br)cc1CNC1CCC(O)CC1"
+  },
+  "replicates_per_tool": 3,
+  "requested_molecules_per_replicate": 100,
+  "run_ids": [
+    "replicate_01",
+    "replicate_02",
+    "replicate_03"
+  ],
+  "primary_generator_endpoint": "chemical-qualified candidate yield / requested molecules",
+  "important_rules": [
+    "Use the exact same literal Ambroxol input SMILES in both generator requests.",
+    "Canonicalize molecules only in the common downstream evaluation pipeline.",
+    "Do not enable server-side uniqueness filtering; duplicates must remain observable.",
+    "Do not enable server-side structural filtering; common downstream filters are applied after generation.",
+    "Do not remove invalid, duplicate, or low-quality outputs before saving raw responses.",
+    "Save raw API response before any RDKit processing.",
+    "Do not tune parameters between replicates.",
+    "Existing GenMol 3x1000 runs are a separate scaling/uniqueness stress test, not part of the primary 3x100 comparison."
+  ],
+  "known_native_objective_difference": {
+    "GenMol": "QED is used by the NIM as the output scoring/ranking method; temperature/noise govern sampling.",
+    "MolMIM": "CMA-ES actively optimizes QED while enforcing min_similarity=0.3.",
+    "analysis_rule": "Do not claim the internal optimization objectives are equivalent. Compare returned candidates using the common downstream evaluator and requested-molecule denominator."
+  },
+  "pilot_vs_primary": {
+    "prior_genmol_pilot": {
+      "num_molecules_per_run": 1000,
+      "temperature": 1.0,
+      "noise": 0.0,
+      "scoring": "QED",
+      "use": "exploratory scaling/uniqueness stress test only"
+    },
+    "primary_genmol": {
+      "num_molecules_per_run": 100,
+      "temperature": 1.0,
+      "noise": 1.0,
+      "scoring": "QED",
+      "use": "primary head-to-head benchmark"
+    },
+    "reason": "GenMol documentation states quality depends on temperature/noise. The primary run therefore uses documented NIM defaults rather than an already-observed exploratory parameter setting."
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "benchmark": "DecisionBench-DD",
+  "protocol_version": "1.2",
+  "frozen_date": "2026-08-14",
+  "source": "DESCRIPTION.md Section 4 (Pre-register the candidate gates)",
+  "version_history": [
+    {
+      "version": "1.0",
+      "change": "Required no critical structural alerts (PAINS + Brenk combined, absolute zero)."
+    },
+    {
+      "version": "1.1",
+      "date": "2026-08-17",
+      "change": "Changed structural-alert qualification to: No new Brenk structural alerts relative to the Ambroxol seed (plain set difference on alert-TYPE identifiers, A_new = A_i \\ A_seed). PAINS split out as a separate, absolute gate (N_PAINS = 0).",
+      "reason": "Fixture validation (synthetic data, not real GenMol/MolMIM output) demonstrated that the v1.0 rule structurally excluded Ambroxol itself and nearly all faithful on-scaffold analogues -- Ambroxol's free aromatic primary amine trips RDKit's Brenk 'aniline' alert -- making qualified yield degenerate (mostly measuring scaffold escape) rather than informative.",
+      "made_before_seeing_tool_comparison": true,
+      "basis_for_that_claim": "Derived from applying the alert catalogs to the seed molecule alone (frozen_date 2026-08-14 SMILES); no primary-run GenMol/MolMIM data existed when this amendment was made."
+    },
+    {
+      "version": "1.2",
+      "date": "2026-08-17",
+      "change": "Replaced v1.1's plain type-level set difference with an INSTANCE-aware, atom-mapped rule: a candidate Brenk occurrence counts as seed-inherited only if it has the same alert type AND its matched atoms equal a seed alert instance's atoms mapped onto the candidate via an MCS atom correspondence. Gate renamed no_new_structural_alerts_relative_to_seed -> no_new_unmapped_structural_alert_instances.",
+      "reason": "v1.1's type-only rule had a real, identified flaw: it could not distinguish 'the seed's own aniline' from 'an unrelated second aniline introduced elsewhere' -- both are just the type aniline under a plain set. A generator could freely proliferate or relocate an allowlisted alert type without penalty. The instance-aware rule requires positional correspondence to the seed's specific alert occurrence, not just type identity.",
+      "made_before_seeing_tool_comparison": true,
+      "basis_for_that_claim": "Identified and fixed by reasoning about the rule's definition and testing it on synthetic molecules (including benzidine, used only to probe RDKit's FilterCatalog matching behavior), not from any GenMol/MolMIM primary-run data.",
+      "implementation_note": "While implementing this, found and worked around a real RDKit behavior: FilterCatalogEntry.GetFilterMatches(mol) returns only the FIRST occurrence of a pattern per entry, even when a molecule has multiple disjoint matches. See seed_alert_catalog.json:known_rdkit_limitation_worked_around."
+    }
+  ],
+  "fingerprint": {
+    "type": "Morgan (ECFP4-equivalent)",
+    "radius": 2,
+    "n_bits": 2048,
+    "used_by_gates": ["not_exact_seed_copy", "not_seed_copy", "ambroxol_related"],
+    "used_by_metrics": ["tanimoto_to_seed", "internal_diversity"]
+  },
+  "structural_alert_catalogs": {
+    "PAINS": {
+      "sub_catalogs": ["PAINS_A", "PAINS_B", "PAINS_C"],
+      "rule": "absolute",
+      "seed_triggers_pains": false,
+      "note": "PAINS does not get seed-relative treatment (Section 5). If future fixture validation shows Ambroxol itself triggers a PAINS rule, that requires another explicitly versioned protocol amendment -- it is not implied by this one."
+    },
+    "BRENK": {
+      "sub_catalogs": ["BRENK"],
+      "rule": "seed_relative",
+      "seed_triggers_brenk": true
+    }
+  },
+  "seed_relative_alert_rule": {
+    "applies_to": "BRENK only, not PAINS",
+    "formal_definition": "Let M_seed = {m_1, ..., m_k} be the seed's own Brenk alert INSTANCES, each m = (alert_type, atom_set_in_seed). For candidate i, M_i is its corresponding set of instances (alert_type, atom_set_in_candidate). Given a seed-to-candidate atom correspondence f (see instance_mapping below), a candidate instance m=(t,S) is seed_inherited iff there exists a seed instance (t, S_seed) in M_seed with every atom of S_seed covered by f and f(S_seed) == S exactly. M_new,i = {m in M_i : m is not seed_inherited}. Candidate passes the gate iff |M_new,i| = 0.",
+    "supersedes_v1.1_definition": "v1.1 used a plain set difference on alert-TYPE identifiers only (A_new = A_i \\ A_seed), which could not distinguish the seed's own alert instance from an unrelated second occurrence of the same type. v1.2 requires positional correspondence via f, not just type identity -- fixing that specific, identified flaw.",
+    "seed_inherent_allowlist_file": "seed_alert_catalog.json",
+    "seed_inherent_allowlist_file_note": "Canonical frozen record of M_seed, including each instance's matched atom indices, generated once from the seed alone. The evaluator recomputes M_seed at runtime from the frozen seed SMILES and hard-fails (does not silently proceed) if it disagrees with this file, per the 'no additional alert after inspecting results' policy.",
+    "implemented_in": "decisionbench_dd_eval/chem_metrics.py: classify_brenk_instances()"
+  },
+  "instance_mapping": {
+    "method": "rdkit.Chem.rdFMCS.FindMCS([seed_mol, candidate_mol]) -> GetSubstructMatch on both mols using the same MCS query (uniquify=default first match) -> zip the two atom-index tuples to build f: seed_atom_idx -> candidate_atom_idx.",
+    "atom_compare": "CompareElements",
+    "bond_compare": "CompareOrder",
+    "ring_matches_ring_only": true,
+    "timeout_seconds": 10,
+    "correspondence_test": "A seed instance's atom set S_seed is only usable if EVERY atom in S_seed has an entry in f (partial coverage disqualifies that seed instance for this candidate, fail-safe toward 'new'). A candidate occurrence is seed_inherited only if its own matched atom set equals f(S_seed) EXACTLY for some seed instance of the same alert type.",
+    "known_simplification_not_resolved": "GetSubstructMatch returns only the first match RDKit finds for the MCS query. For a seed or candidate with symmetry-equivalent substructures, a different, equally valid atom correspondence could exist and change the classification. Not resolved by trying all automorphisms in this version -- documented so it can be revisited if it causes a misclassification on real data, not silently assumed away.",
+    "mcs_timeout_handling": "If the MCS search times out, the best-so-far mapping is still used; affected molecules are logged (alert_mapping_timed_out) and printed as a warning by the evaluator.",
+    "rdkit_matching_workaround": "FilterCatalogEntry.GetFilterMatches(mol) only returns each pattern's FIRST occurrence, not all disjoint matches -- verified on benzidine. get_brenk_instances() works around this by extracting the underlying SMARTS query mol and calling mol.GetSubstructMatches(pattern, uniquify=True) directly. See seed_alert_catalog.json:known_rdkit_limitation_worked_around."
+  },
+  "gate_order": [
+    "valid",
+    "unique",
+    "not_exact_seed_copy",
+    "ambroxol_related",
+    "not_seed_copy",
+    "qed",
+    "sa_score",
+    "molecular_weight",
+    "clogp",
+    "tpsa",
+    "pains",
+    "no_new_unmapped_structural_alert_instances"
+  ],
+  "gates": {
+    "valid": {
+      "description": "RDKit parses successfully",
+      "metric": "valid"
+    },
+    "unique": {
+      "description": "First occurrence of this canonical SMILES within its own replicate (within-run dedup, not pooled across replicates)",
+      "metric": "is_first_occurrence_in_run"
+    },
+    "not_exact_seed_copy": {
+      "description": "Not an exact Ambroxol copy (identity check on canonical SMILES, independent of the Tanimoto similarity band below)",
+      "metric": "not_exact_seed_match"
+    },
+    "not_seed_copy": {
+      "description": "ECFP4 Tanimoto similarity to seed < 0.95",
+      "metric": "tanimoto_to_seed",
+      "max": 0.95,
+      "inclusive_max": false
+    },
+    "ambroxol_related": {
+      "description": "ECFP4 Tanimoto similarity to seed >= 0.30",
+      "metric": "tanimoto_to_seed",
+      "min": 0.30,
+      "inclusive_min": true
+    },
+    "qed": {
+      "description": "QED >= 0.50",
+      "metric": "qed",
+      "min": 0.50,
+      "inclusive_min": true
+    },
+    "sa_score": {
+      "description": "Synthetic accessibility (Ertl) <= 5",
+      "metric": "sa_score",
+      "max": 5.0,
+      "inclusive_max": true
+    },
+    "molecular_weight": {
+      "description": "200-550 Da",
+      "metric": "mw",
+      "min": 200.0,
+      "max": 550.0,
+      "inclusive_min": true,
+      "inclusive_max": true
+    },
+    "clogp": {
+      "description": "cLogP in 0-5",
+      "metric": "clogp",
+      "min": 0.0,
+      "max": 5.0,
+      "inclusive_min": true,
+      "inclusive_max": true
+    },
+    "tpsa": {
+      "description": "TPSA <= 100 A^2",
+      "metric": "tpsa",
+      "max": 100.0,
+      "inclusive_max": true
+    },
+    "pains": {
+      "description": "Zero PAINS_A/B/C catalog hits. Absolute, not seed-relative (Section 5).",
+      "metric": "passes_pains_gate"
+    },
+    "no_new_unmapped_structural_alert_instances": {
+      "description": "PRIMARY structural-alert gate (v1.2). No Brenk alert OCCURRENCE that fails to map, atom-for-atom, onto a corresponding seed alert instance (see seed_relative_alert_rule / instance_mapping). Seed-inherited instances (e.g. Ambroxol's own aniline at its own position) are allowed; a second, independent occurrence of the same alert type is not. All instances are always reported, never silently dropped.",
+      "metric": "passes_seed_relative_alert_gate"
+    }
+  },
+  "funnel_stages": [
+    {"name": "requested", "cumulative_gates": []},
+    {"name": "valid", "cumulative_gates": ["valid"]},
+    {"name": "unique", "cumulative_gates": ["valid", "unique"]},
+    {"name": "not_exact_seed", "cumulative_gates": ["valid", "unique", "not_exact_seed_copy"]},
+    {"name": "similarity_band_0.30_to_0.95", "cumulative_gates": ["valid", "unique", "not_exact_seed_copy", "ambroxol_related", "not_seed_copy"]},
+    {"name": "qed", "cumulative_gates": ["valid", "unique", "not_exact_seed_copy", "ambroxol_related", "not_seed_copy", "qed"]},
+    {"name": "sa_score", "cumulative_gates": ["valid", "unique", "not_exact_seed_copy", "ambroxol_related", "not_seed_copy", "qed", "sa_score"]},
+    {"name": "molecular_weight", "cumulative_gates": ["valid", "unique", "not_exact_seed_copy", "ambroxol_related", "not_seed_copy", "qed", "sa_score", "molecular_weight"]},
+    {"name": "clogp", "cumulative_gates": ["valid", "unique", "not_exact_seed_copy", "ambroxol_related", "not_seed_copy", "qed", "sa_score", "molecular_weight", "clogp"]},
+    {"name": "tpsa", "cumulative_gates": ["valid", "unique", "not_exact_seed_copy", "ambroxol_related", "not_seed_copy", "qed", "sa_score", "molecular_weight", "clogp", "tpsa"]},
+    {"name": "no_pains", "cumulative_gates": ["valid", "unique", "not_exact_seed_copy", "ambroxol_related", "not_seed_copy", "qed", "sa_score", "molecular_weight", "clogp", "tpsa", "pains"]},
+    {"name": "chemically_qualified", "cumulative_gates": ["valid", "unique", "not_exact_seed_copy", "ambroxol_related", "not_seed_copy", "qed", "sa_score", "molecular_weight", "clogp", "tpsa", "pains", "no_new_unmapped_structural_alert_instances"]}
+  ],
+  "notes": [
+    "These are a predefined operational triage policy for comparing generators, not claims that molecules outside these thresholds cannot become drugs (DESCRIPTION.md Section 4).",
+    "Thresholds must not be changed after observing which tool wins (DESCRIPTION.md Section 15). See 'version_history' above for why the one exception (the structural-alert gate) does not violate that rule: it was derived from the seed alone, before any primary-run comparison existed.",
+    "Qualified candidate yield Y_chemical = N_pass_all_gates / N_requested, evaluated per replicate (denominator is requested_molecules_per_replicate, not N_valid).",
+    "'unique' is evaluated within a single replicate's output, matching the per-replicate Y_chemical denominator; pooled cross-replicate duplication is reported separately as a diagnostic, not as a gate.",
+    "Report three Brenk rates alongside Y_chemical (instance-level, v1.2): R_Brenk (fraction of valid molecules with ANY Brenk alert instance), R_seed_alert (fraction whose instances are ALL seed-inherited, none new), R_new_alert (fraction with >=1 new/unmapped instance). R_new_alert is the one used for qualification; the gap between R_Brenk and R_new_alert is itself evidence for this paper's central thesis.",
+    "Allowlisting a seed-inherited Brenk instance does not mean it is safe or biologically irrelevant -- it is a fixed, reported property of the starting chemotype, not a judgment about tolerability.",
+    "Not permitted: manually exempting alert instances molecule-by-molecule; adding new alert-instance exceptions to seed_alert_catalog.json after looking at benchmark winners; exempting a newly generated functional group merely because it appears frequently; removing structural-alert reporting from the analysis."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "3GXF": {
+    "total_flagged_residues": 1,
+    "within_6A_of_ligand_centroid": []
+  },
+  "6Q1N": {
+    "total_flagged_residues": 14,
+    "within_6A_of_ligand_centroid": []
+  },
+  "6Q1P": {
+    "total_flagged_residues": 14,
+    "within_6A_of_ligand_centroid": []
+  },
+  "8P41": {
+    "total_flagged_residues": 3,
+    "within_6A_of_ligand_centroid": []
+  }
+}

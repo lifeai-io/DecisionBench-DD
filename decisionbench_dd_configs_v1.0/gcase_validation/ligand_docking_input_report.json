@@ -1,0 +1,156 @@
+[
+  {
+    "pdb_id": "9F9Z",
+    "n_variants": 2,
+    "selection_flag": "ok",
+    "old_smiles": "Cc1cccc(C)c1OC[C@H](C)[NH3+]",
+    "new_smiles": "Cc1cccc(C)c1OC[C@H](C)[NH3+]",
+    "changed": false,
+    "embed_ok": true,
+    "mmff_converged": true,
+    "reference_ligand_max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "9FA3",
+    "n_variants": 2,
+    "selection_flag": "ok",
+    "old_smiles": "O=S(=O)(NCC1CC1)c1ccccc1",
+    "new_smiles": "O=S(=O)(NCC1CC1)c1ccccc1",
+    "changed": false,
+    "embed_ok": true,
+    "mmff_converged": true,
+    "reference_ligand_max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "9FA6",
+    "n_variants": 4,
+    "selection_flag": "ok",
+    "old_smiles": "[NH3+]C[C@@H](O)CNS(=O)(=O)c1ccccc1F",
+    "new_smiles": "[NH3+]C[C@@H](O)CNS(=O)(=O)c1ccccc1F",
+    "changed": false,
+    "embed_ok": true,
+    "mmff_converged": true,
+    "reference_ligand_max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "9FAD",
+    "n_variants": 4,
+    "selection_flag": "ok",
+    "old_smiles": "Cc1ccc(S(=O)(=O)NC[C@H](C)[NH3+])cc1",
+    "new_smiles": "Cc1ccc(S(=O)(=O)NC[C@H](C)[NH3+])cc1",
+    "changed": false,
+    "embed_ok": true,
+    "mmff_converged": true,
+    "reference_ligand_max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "9FAL",
+    "n_variants": 4,
+    "selection_flag": "ok",
+    "old_smiles": "[NH3+][C@H](CNS(=O)(=O)c1cc(F)cc(F)c1)c1ccccc1",
+    "new_smiles": "[NH3+][C@H](CNS(=O)(=O)c1cc(F)cc(F)c1)c1ccccc1",
+    "changed": false,
+    "embed_ok": true,
+    "mmff_converged": true,
+    "reference_ligand_max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "9FAY",
+    "n_variants": 4,
+    "selection_flag": "ok",
+    "old_smiles": "C[NH+](C[C@@H]([NH3+])c1ccccc1)S(=O)(=O)c1cc(F)cc(F)c1",
+    "new_smiles": "CN(C[C@@H]([NH3+])c1ccccc1)S(=O)(=O)c1cc(F)cc(F)c1",
+    "changed": true,
+    "embed_ok": true,
+    "mmff_converged": true,
+    "reference_ligand_max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "9FAZ",
+    "n_variants": 4,
+    "selection_flag": "ok",
+    "old_smiles": "C[NH+](C[C@H]([NH3+])c1ccccc1)S(=O)(=O)c1cc(F)cc(F)c1",
+    "new_smiles": "CN(C[C@H]([NH3+])c1ccccc1)S(=O)(=O)c1cc(F)cc(F)c1",
+    "changed": true,
+    "embed_ok": true,
+    "mmff_converged": true,
+    "reference_ligand_max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "9FB2",
+    "n_variants": 4,
+    "selection_flag": "ok",
+    "old_smiles": "C=C(C)c1cccc([C@@H]([NH3+])C[NH+](C)S(=O)(=O)c2cc(F)cc(F)c2)c1",
+    "new_smiles": "C=C(C)c1cccc([C@@H]([NH3+])CN(C)S(=O)(=O)c2cc(F)cc(F)c2)c1",
+    "changed": true,
+    "embed_ok": true,
+    "mmff_converged": true,
+    "reference_ligand_max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "9FDI",
+    "n_variants": 2,
+    "selection_flag": "ok",
+    "old_smiles": "c1ccc(CC2CC[NH2+]CC2)cc1",
+    "new_smiles": "c1ccc(CC2CC[NH2+]CC2)cc1",
+    "changed": false,
+    "embed_ok": true,
+    "mmff_converged": true,
+    "reference_ligand_max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "8P3E",
+    "n_variants": 2,
+    "selection_flag": "ok",
+    "old_smiles": "O=C(Nc1ccc(Cl)cc1)c1cccc(S(=O)(=O)Nc2ccccc2C(=O)[O-])c1",
+    "new_smiles": "O=C(Nc1ccc(Cl)cc1)c1cccc(S(=O)(=O)Nc2ccccc2C(=O)[O-])c1",
+    "changed": false,
+    "embed_ok": true,
+    "mmff_converged": true,
+    "reference_ligand_max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "8P41",
+    "n_variants": 1,
+    "selection_flag": "ok",
+    "old_smiles": "O=C(CSCc1cc(C(F)(F)F)cc(C(F)(F)F)c1)Nc1ccc(Cl)cc1C(=O)[O-]",
+    "new_smiles": "O=C(CSCc1cc(C(F)(F)F)cc(C(F)(F)F)c1)Nc1ccc(Cl)cc1C(=O)[O-]",
+    "changed": false,
+    "embed_ok": true,
+    "mmff_converged": true,
+    "reference_ligand_max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "3GXF",
+    "n_variants": 2,
+    "selection_flag": "ok",
+    "old_smiles": "OC[C@H]1C[NH2+]C[C@@H](O)[C@@H]1O",
+    "new_smiles": "OC[C@H]1C[NH2+]C[C@@H](O)[C@@H]1O",
+    "changed": false,
+    "embed_ok": true,
+    "mmff_converged": true,
+    "reference_ligand_max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "6Q1N",
+    "n_variants": 2,
+    "selection_flag": "ok",
+    "old_smiles": "CSCC[C@H]1[NH2+]C[C@@H](O)[C@H](O)[C@H]1O",
+    "new_smiles": "CSCC[C@H]1[NH2+]C[C@@H](O)[C@H](O)[C@H]1O",
+    "changed": false,
+    "embed_ok": true,
+    "mmff_converged": true,
+    "reference_ligand_max_coord_delta": 0.0
+  },
+  {
+    "pdb_id": "6Q1P",
+    "n_variants": 2,
+    "selection_flag": "ok",
+    "old_smiles": "CC(C)CCCS(=O)(=O)C[C@H]1[NH2+]C[C@@H](O)[C@H](O)[C@H]1O",
+    "new_smiles": "CC(C)CCCS(=O)(=O)C[C@H]1[NH2+]C[C@@H](O)[C@H](O)[C@H]1O",
+    "changed": false,
+    "embed_ok": true,
+    "mmff_converged": true,
+    "reference_ligand_max_coord_delta": 0.0
+  }
+]

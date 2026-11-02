@@ -1,0 +1,13 @@
+ligand_id,tool,receptor_state,n_poses,all_five_poses_returned,top1_cnnscore,top1_cnnaffinity,top1_minimized_affinity,top1_valid,top1_active_site_occupied,error
+CTRL_AMBROXOL,control,3KEH,5,True,0.8745661974,6.2046713829,-7.33088,True,True,
+CTRL_AMBROXOL,control,3KE0,5,True,0.6419334412,6.1753592491,-7.35831,True,True,
+CTRL_IFM,control,3KEH,5,True,0.806342423,5.0909104347,-5.0199,True,True,
+CTRL_IFM,control,3KE0,5,True,0.8767007589,5.2648587227,-5.21755,True,True,
+CTRL_P8Y,control,3KEH,5,True,0.7628489733,6.406648159,-5.38128,True,True,
+CTRL_P8Y,control,3KE0,5,True,0.9682050943,6.5477070808,-7.48671,True,True,
+CTRL_P9V,control,3KEH,5,True,0.7297775149,6.0676636696,-3.61284,True,True,
+CTRL_P9V,control,3KE0,5,True,0.8915653825,6.1138701439,-5.96257,True,True,
+MM5_001,molmim,3KEH,5,True,0.6192314625,4.9583201408,-5.4188,True,True,
+MM5_001,molmim,3KE0,5,True,0.5678364635,5.2890353203,-5.52761,True,True,
+MM5_002,molmim,3KEH,5,True,0.7528685331,5.9626002312,-6.57767,True,True,
+MM5_002,molmim,3KE0,5,True,0.5684146881,5.1761603355,-6.39168,True,True,

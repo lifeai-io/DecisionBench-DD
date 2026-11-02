@@ -1,0 +1,24 @@
+              _             
+             (_)            
+   __ _ _ __  _ _ __   __ _ 
+  / _` | '_ \| | '_ \ / _` |
+ | (_| | | | | | | | | (_| |
+  \__, |_| |_|_|_| |_|\__,_|
+   __/ |                    
+  |___/                     
+
+gnina v1.3.3 master:6fe1ce2   Built Jun 30 2026.
+gnina is based on smina and AutoDock Vina.
+Please cite appropriately.
+
+Commandline: gnina -r /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/receptors_prepared/3KEH_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/candidate_screen_v1.0/docking_input_ligands/GM_014_3KEH.sdf --center_x 41.59 --center_y 101.712 --center_z -7.128 --size_x 16.936 --size_y 15.006 --size_z 15.691 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/candidate_screen_runs/3KEH/GM_014_poses.sdf --log /workspace/candidate_screen_runs/3KEH/GM_014_gnina.log
+Using random seed: 42
+
+mode |  affinity  |  intramol  |    CNN     |   CNN
+     | (kcal/mol) | (kcal/mol) | pose score | affinity
+-----+------------+------------+------------+----------
+    1       -5.12       -1.01       0.3058      5.515
+    2       -5.65       -0.86       0.3037      5.641
+    3       -5.82       -1.02       0.3018      5.168
+    4       -5.73       -0.40       0.2801      5.399
+    5       -5.28       -1.08       0.2708      5.098

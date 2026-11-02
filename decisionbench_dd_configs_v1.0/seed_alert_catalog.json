@@ -1,0 +1,38 @@
+{
+  "seed": "Ambroxol",
+  "catalog": "RDKit Brenk",
+  "catalog_version": "1.2",
+  "generated_from_seed_smiles": "Nc1c(Br)cc(Br)cc1CNC1CCC(O)CC1",
+  "generated_with_rdkit_version": "2026.03.5",
+  "generated_date": "2026-08-17",
+  "regenerate_with": "decisionbench_dd_eval.chem_metrics.compute_seed_brenk_instances(Chem.MolFromSmiles(seed_canonical_smiles))",
+  "policy": "No additional alert instance may be added to this allowlist after primary benchmark results are inspected (qualification_gates_v1.0.json version_history / amendment record). The evaluator recomputes this set at runtime from the frozen seed SMILES and HARD-FAILS if it disagrees with the file below, rather than silently trusting either value.",
+  "atom_index_note": "matched_atom_indices are RDKit atom indices produced by re-parsing generated_from_seed_smiles with Chem.MolFromSmiles -- deterministic for a fixed RDKit version, since that string is itself a canonical SMILES. An RDKit upgrade that changes canonicalization or the Brenk pattern set would change these indices and correctly trip the runtime cross-check.",
+  "brenk_alert_instances": [
+    {
+      "seed_instance_id": "BRENK_SEED_001",
+      "alert_type": "aniline",
+      "matched_atom_indices": [0, 1, 2, 4, 5, 7, 8],
+      "status": "seed_inherent_allowlist"
+    }
+  ],
+  "alerts": [
+    {
+      "alert_id": "aniline",
+      "description": "aniline",
+      "filter_set": "Brenk",
+      "scope": "unwanted functionality due to potential tox reasons or unfavourable pharmacokinetic properties",
+      "reference": "Brenk R et al. Lessons Learnt from Assembling Screening Libraries for Drug Discovery for Neglected Diseases. ChemMedChem 3 (2008) 435-444. doi:10.1002/cmdc.200700139.",
+      "status": "seed_inherent_allowlist"
+    }
+  ],
+  "pains_check": {
+    "result": "Ambroxol triggers zero PAINS_A/B/C alerts.",
+    "implication": "Per qualification_gates_v1.0.json Section 5, PAINS remains an absolute gate for this seed; no PAINS amendment is needed."
+  },
+  "known_rdkit_limitation_worked_around": {
+    "issue": "FilterCatalogEntry.GetFilterMatches(mol) returns only the FIRST occurrence of a pattern per catalog entry, even when a molecule has multiple disjoint matches (verified directly on benzidine, Nc1ccccc1-c1ccc(N)cc1, which has two chemically separate anilines but reports one match).",
+    "workaround": "decisionbench_dd_eval.chem_metrics.get_brenk_instances extracts each entry's underlying SMARTS query mol via the first FilterMatch's GetPattern() and re-runs mol.GetSubstructMatches(pattern, uniquify=True) directly, which correctly enumerates every occurrence.",
+    "relevance": "Required for v1.2's instance-aware classification -- without this workaround, a candidate with two independent instances of an allowlisted alert type (e.g. Ambroxol's own aniline plus an unrelated second aniline) would silently look identical to a candidate with only the seed's own aniline."
+  }
+}

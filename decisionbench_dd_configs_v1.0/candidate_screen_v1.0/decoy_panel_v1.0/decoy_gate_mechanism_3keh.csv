@@ -1,0 +1,3 @@
+population,n,five_poses_returned,geometry_valid_top1,catalytic_contact_top1,cnnaffinity_ge_ambroxol,complete_structural_proxy
+Same-batch candidates,69,69,67,64,25,24
+Decoys,345,344,343,238,85,82

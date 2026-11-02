@@ -1,0 +1,4 @@
+{
+  "molecules": "[{\"sample\": \"C1=C(C(=C(C=C1Br)Br)N)CNC2CCC(CC2)O\", \"score\": 0.88}, {\"sample\": \"C1=C(C(=C(C=C1Br)Br)N)CNC2CCC(CC2)O\", \"score\": 0.88}, {\"sample\": \"C1=C(C(=C(C=C1Cl)Br)N)CNC2CCC(CC2)O\", \"score\": 0.82}, {\"sample\": \"CC(C)Cc1ccc(cc1)C(C)C(=O)O\", \"score\": 0.55}, {\"sample\": \"O=C1CSC(=S)N1\", \"score\": 0.35}, {\"sample\": \"CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC\", \"score\": 0.05}]",
+  "score_type": "QED"
+}

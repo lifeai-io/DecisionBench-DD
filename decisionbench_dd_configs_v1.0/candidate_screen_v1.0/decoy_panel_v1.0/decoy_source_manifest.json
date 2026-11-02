@@ -1,0 +1,52 @@
+{
+  "source_database": "ChEMBL",
+  "release": 37,
+  "file": "chembl_37_chemreps.txt.gz",
+  "url": "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/latest/chembl_37_chemreps.txt.gz",
+  "file_last_modified_on_server": "Fri, 29 May 2026 06:34:19 GMT",
+  "downloaded_utc": "2026-09-04T07:50:31.458077Z",
+  "file_size_bytes": 292540141,
+  "sha256": "ea6181ce8dc7af41974e35b92e1febb0c9dcbe2c62f7ccc4a5d983ac19f696e7",
+  "columns_used": [
+    "chembl_id",
+    "canonical_smiles"
+  ],
+  "filtering_pipeline": {
+    "candidate_envelope_used_for_stage_c": {
+      "mw_lo": 265.37595,
+      "mw_hi": 611.0329499999999,
+      "hac_lo": 15,
+      "hac_hi": 31,
+      "clogp_lo": 1.3206000000000002,
+      "clogp_hi": 5.7134,
+      "tpsa_lo": 17.259999999999998,
+      "tpsa_hi": 112.2
+    },
+    "similarity_exclusion_thresholds": {
+      "vs_any_candidate_ecfp4_tanimoto_gte": 0.35,
+      "vs_ambroxol_ecfp4_tanimoto_gte": 0.3
+    },
+    "allowed_elements": [
+      "Br",
+      "C",
+      "Cl",
+      "F",
+      "H",
+      "I",
+      "N",
+      "O",
+      "P",
+      "S"
+    ],
+    "stage_counts": {
+      "source_rows": 2897819,
+      "stage_a_pass": 2673415,
+      "stage_b_parsed": 2637170,
+      "stage_c_in_envelope": 1261863,
+      "excluded_exact_match": 1,
+      "excluded_sim_to_candidate": 713,
+      "excluded_sim_to_ambroxol": 42,
+      "eligible_final": 1261107
+    }
+  }
+}

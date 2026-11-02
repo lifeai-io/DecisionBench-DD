@@ -1,0 +1,24 @@
+              _             
+             (_)            
+   __ _ _ __  _ _ __   __ _ 
+  / _` | '_ \| | '_ \ / _` |
+ | (_| | | | | | | | | (_| |
+  \__, |_| |_|_|_| |_|\__,_|
+   __/ |                    
+  |___/                     
+
+gnina v1.3.3 master:6fe1ce2   Built Jun 30 2026.
+gnina is based on smina and AutoDock Vina.
+Please cite appropriately.
+
+Commandline: gnina -r /workspace/decisionbench_dd_configs_v1.0/gcase_validation/receptors_prepared/9FA3_prepared.pdb -l /workspace/decisionbench_dd_configs_v1.0/gcase_validation/docking_input_ligands/9FA3_ligand_input.sdf --center_x -17.66 --center_y -10.33 --center_z 8.08 --size_x 15.56 --size_y 16.68 --size_z 17.81 --num_modes 5 --exhaustiveness 8 --seed 42 --cnn_scoring rescore -o /workspace/docking_runs/gnina/9FA3_poses.sdf --log /workspace/docking_runs/gnina/9FA3_gnina.log
+Using random seed: 42
+
+mode |  affinity  |  intramol  |    CNN     |   CNN
+     | (kcal/mol) | (kcal/mol) | pose score | affinity
+-----+------------+------------+------------+----------
+    1       -6.68        0.01       0.6821      4.480
+    2       -5.75       -0.35       0.5688      3.803
+    3       -5.82       -0.21       0.5122      3.775
+    4       -6.17       -0.34       0.4953      3.763
+    5       -6.47       -0.17       0.4913      3.627

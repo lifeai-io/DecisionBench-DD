@@ -1,0 +1,22 @@
+{
+  "benchmark": "DecisionBench-DD v1.0",
+  "tool": "genmol",
+  "run_id": "replicate_03",
+  "request_config_file": "genmol_primary.json",
+  "request_started_at_iso8601": "2026-08-17T16:52:07.518457+00:00",
+  "request_finished_at_iso8601": "2026-08-17T16:52:10.698162+00:00",
+  "endpoint": "https://health.api.nvidia.com/v1/biology/nvidia/genmol/generate",
+  "service_or_model_version": "hosted_api",
+  "container_image_or_api_build": "hosted_api",
+  "hardware": {
+    "gpu_model": "hosted_api",
+    "gpu_count": null,
+    "peak_vram_gb": null
+  },
+  "runtime_seconds": 3.179,
+  "http_status": 200,
+  "requested_molecules": 100,
+  "returned_records": 100,
+  "raw_response_file": "raw/genmol_replicate_03.json",
+  "notes": ""
+}
